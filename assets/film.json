@@ -1,0 +1,10 @@
+{
+  "parts": [
+    "film.part-00.b64",
+    "film.part-01.b64",
+    "film.part-02.b64",
+    "film.part-03.b64"
+  ],
+  "sha256": "6e7805c9485a5c8dfc7d5a6c1377451e80f8781b113db3623134fcb4846f6791",
+  "bytes": 14712496
+}

@@ -1,26 +1,15 @@
-# Stance & Signal website
+# MatterTurn Ai
 
-This repo holds both the live source and the published static site:
+Private product demonstration migrated from Sites version 26, source commit c6a3b380e23a5666e7b1c96f99522332bc029711.
 
-- `app/` — Next.js source. Connected to Vercel for live preview/design iteration
-  (Vercel builds straight from this folder, Root Directory = `app`).
-- `site/` — static export of `app/`, published through GitHub Pages. Only updated
-  when a design is confirmed and ready to go out publicly — it does not
-  auto-sync with Vercel.
+## Development
+Use Node 24 and run `npm ci`, `npm run dev`. Validate with `npm run typecheck` and `npm run build`.
 
-Single-page homepage implementing Direction 02 (Cultural / Research Studio) from
-the visual direction board: full-bleed dark hero, hand-drawn system trace,
-asymmetric case split, a quiet pause section, and a black stance statement.
-English and Traditional Chinese are both built into the same page, switchable
-with the language toggle in the top nav (no separate `/zh/` routes).
+## Private deployment
+Keep Vercel Authentication enabled for **all deployments**, including production aliases. Do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
 
-To rebuild `site/` from `app/` and publish to GitHub Pages:
+## Intake migration limitation
+Sites used ChatGPT authenticated identity headers and Cloudflare R2 storage. These are not available on Vercel. The original source is preserved in `migration/`. The submissions endpoint returns 503 and never claims to save files. Persistent authenticated storage must be configured before intake is re-enabled. This migration does not copy existing submissions.
 
-```bash
-cd app
-BUILD_TARGET=pages npx next build --webpack
-cp -r out/. ../site/
-touch ../site/.nojekyll
-cd ..
-git add app site && git commit -m "..." && git push
-```
+## Preserved assets
+Nine languages, pages, layout, contact details, video and poster are retained. Video/poster filenames retain their historical names; their bytes are unchanged. Main brand text is MatterTurn Ai.

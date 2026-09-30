@@ -1,0 +1,53 @@
+import {env} from "cloudflare:workers";
+import {getChatGPTUser} from "@/app/chatgpt-auth";
+import {productBySlug} from "@/lib/products";
+
+export const dynamic = "force-dynamic";
+const MAX_FILE = 8 * 1024 * 1024;
+const TYPES = new Set(["application/pdf","text/plain","text/csv","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]);
+const EXT = new Set(["pdf","txt","csv","docx","xlsx"]);
+type Submission = {id:string;system:string;instruction:string;fileName:string|null;fileSize:number|null;createdAt:string;status:"Received for private review"};
+const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{"Cache-Control":"no-store"}});
+
+export async function GET(){
+  const user=await getChatGPTUser();
+  if(!user)return json({error:"Sign in to view your submissions."},401);
+  if(!env.BUCKET)return json({error:"Workspace storage is unavailable."},503);
+  try{
+    const list=await env.BUCKET.list({prefix:`users/${user.userId}/submissions/`,limit:100});
+    const records=await Promise.all(list.objects.filter(o=>o.key.endsWith(".json")).map(async o=>{
+      const object=await env.BUCKET!.get(o.key);
+      return object?await object.json<Submission>():null;
+    }));
+    return json({submissions:records.filter((x):x is Submission=>x!==null).sort((a,b)=>b.createdAt.localeCompare(a.createdAt))});
+  }catch{ return json({error:"Could not load submissions. Please try again."},503); }
+}
+
+export async function POST(request:Request){
+  const user=await getChatGPTUser();
+  if(!user)return json({error:"Sign in to submit a request."},401);
+  if(!env.BUCKET)return json({error:"Workspace storage is unavailable."},503);
+  const length=Number(request.headers.get("content-length"));
+  if(length && length>MAX_FILE+65536)return json({error:"The upload is too large. Limit files to 8 MB."},413);
+  try{
+    const form=await request.formData();
+    const system=String(form.get("system")??"");
+    const instruction=String(form.get("instruction")??"").trim();
+    if(!productBySlug(system))return json({error:"Choose a valid system."},400);
+    if(instruction.length<15||instruction.length>3000)return json({error:"Describe the decision in 15–3000 characters."},400);
+    const incoming=form.get("file");
+    const file=incoming instanceof File && incoming.size>0?incoming:null;
+    if(file){
+      const extension=file.name.split(".").pop()?.toLowerCase()??"";
+      if(file.size>MAX_FILE)return json({error:"The file must be no larger than 8 MB."},413);
+      if(!EXT.has(extension)||!TYPES.has(file.type))return json({error:"Use a PDF, DOCX, XLSX, CSV or TXT file."},400);
+    }
+    const id=crypto.randomUUID();
+    const prefix=`users/${user.userId}/submissions/${id}`;
+    const record:Submission={id,system,instruction,fileName:file?.name??null,fileSize:file?.size??null,createdAt:new Date().toISOString(),status:"Received for private review"};
+    if(file)await env.BUCKET.put(`${prefix}/input`,file.stream(),{httpMetadata:{contentType:file.type},customMetadata:{owner:user.userId,name:encodeURIComponent(file.name)}});
+    try{await env.BUCKET.put(`${prefix}.json`,JSON.stringify(record),{httpMetadata:{contentType:"application/json"}});}
+    catch(error){if(file)await env.BUCKET.delete(`${prefix}/input`);throw error;}
+    return json({submission:record},201);
+  }catch{return json({error:"Submission could not be saved. Please try again."},503);}
+}
