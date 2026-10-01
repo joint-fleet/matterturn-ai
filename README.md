@@ -56,7 +56,7 @@ A per-system, honestly-labeled index — not nine equal "products." See [`system
 
 ## 6. Public cases
 
-Published, public-safe case results — client/professional cases, engineering/learning cases, and historical fixtures are kept clearly distinct. Not every entry has an independently linked source record; where one doesn't, that's stated on the entry itself rather than implied. See [`cases/library/`](cases/library/) for seven representative cases organized by what each one proves — judgment, blocked, reassessment, failure, historical blind validation, synthetic stress test — and [`company/case-and-failure-history.md`](company/case-and-failure-history.md) for the fuller, per-system history.
+Published, public-safe case results — client/professional cases, engineering/learning cases, and historical fixtures are kept clearly distinct. Not every entry has an independently linked source record; where one doesn't, that's stated on the entry itself rather than implied. See [`cases/library/`](cases/library/) for eight representative cases organized by what each one proves — judgment, blocked, reassessment, failure, historical blind validation, synthetic stress test — and [`company/case-and-failure-history.md`](company/case-and-failure-history.md) for the fuller, per-system history.
 
 ## 7. Engineering evidence
 

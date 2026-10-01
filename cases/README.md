@@ -2,7 +2,7 @@
 
 Index of MatterTurn public-safe case material.
 
-**[Public Case Library →](library/)** — seven representative, re-verified cases organized by what each one proves (judgment, blocked, reassessment, failure, historical blind validation, synthetic stress test), not by which system produced it. This answers "what did MatterTurn actually produce" with results, not methods.
+**[Public Case Library →](library/)** — eight representative, re-verified cases organized by what each one proves (judgment, blocked, reassessment, failure, historical blind validation, synthetic stress test), not by which system produced it. This answers "what did MatterTurn actually produce" with results, not methods.
 
 For the fuller, per-system picture of development, validation, and failure history — not just what's released at full public-case detail here — see [`company/case-and-failure-history.md`](../company/case-and-failure-history.md). Three kinds of entries live here below this index, and they are never mixed together:
 

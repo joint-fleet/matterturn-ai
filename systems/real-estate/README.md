@@ -10,4 +10,18 @@
 
 **Public-safe case:** [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system) has published one public-safe real-case result; see [`cases/`](../../cases/).
 
+**What you can use this for** (each backed by real case or documented-capability evidence — see the website's [problem pages](../../website/) for the fuller version of each):
+
+- Estimate a property's value under an acquisition model
+- Analyze comparable rent for office, retail, or warehouse space
+- Test debt capacity and debt-service coverage
+- Test whether a refinancing or capital-recycling assumption holds up
+- Review development cost and feasibility — teardown, renovate, or hold
+- Review market demand and competitive positioning
+- Prepare an underwriting conclusion — or learn why one isn't supportable yet
+- Review operating performance for an income-producing asset
+- Prepare an investment-committee-style synthesis across all of the above
+
+**What you actually get.** One system, nine professional capabilities, one integrated judgment — not nine separate add-ons: investment analysis & problem diagnosis, asset valuation, underwriting, finance & debt analysis, development & cost review, market analysis, legal & regulatory review, operations review, and senior investment judgment.
+
 **Link:** Product page on the [website](../../website/) (`/systems/real-estate`); source repository: [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system).

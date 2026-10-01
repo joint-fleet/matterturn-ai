@@ -29,6 +29,6 @@ export function HomeView({locale}:{locale:Locale}){
     <TrustFlow locale={locale}/>
     <EvidenceHub locale={locale}/>
     <CaseLibrary locale={locale}/>
-    <section id="approach" className="approach-section"><div className="shell approach-inner"><p className="overline">{m.approachKicker}</p><h2>{m.approachTitle1}<br/>{m.approachTitle2}</h2><div className="approach-grid"><p>{m.approach1}</p><p>{m.approach2}</p></div><Link className="light-link" href={pathFor(locale,"/workspace")}>{m.startACase} <ArrowIcon/></Link></div></section>
+    <section id="approach" className="approach-section"><div className="shell approach-inner"><p className="overline">{m.approachKicker}</p><h2>{m.approachTitle1}<br/>{m.approachTitle2}</h2><div className="approach-grid"><p>{m.approach1}</p><p>{m.approach2}</p></div><div className="approach-actions"><Link className="light-link" href={pathFor(locale,"/workspace")}>{m.startACase} <ArrowIcon/></Link>{locale==="en"?<Link className="light-link" href="/capability-network">Capability network <ArrowIcon/></Link>:null}</div></div></section>
     </main><footer dir={direction} className="footer shell"><span>© MatterTurn Ai</span><span>{m.privateReview}</span><Link href="#top">{m.backTop} <ArrowIcon direction="up"/></Link></footer></>;
 }

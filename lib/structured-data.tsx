@@ -55,6 +55,34 @@ export function systemJsonLd({
   };
 }
 
+/**
+ * Problem-page JSON-LD. Same CreativeWork-not-Service reasoning as
+ * systemJsonLd above applies — no claim this is an orderable service.
+ * additionalProperty carries the facts a GEO crawler should be able to
+ * quote: who it's for, what's analyzed, what's received, and the limits.
+ */
+export function problemPageJsonLd(
+  page: {systemSlug: string; problemSlug: string; title: string; summary: string; who: string; analyzes: string[]; receives: string[]; limits: string},
+  systemTitle: string,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: page.title,
+    description: page.summary,
+    url: `${siteUrl}/systems/${page.systemSlug}/${page.problemSlug}`,
+    inLanguage: "en",
+    isPartOf: {"@type": "CreativeWork", name: systemTitle, url: `${siteUrl}/systems/${page.systemSlug}`},
+    creator: {"@type": "Organization", name: brandName, url: siteUrl},
+    audience: {"@type": "Audience", audienceType: page.who},
+    additionalProperty: [
+      {"@type": "PropertyValue", name: "What is analyzed", value: page.analyzes.join("; ")},
+      {"@type": "PropertyValue", name: "What you receive", value: page.receives.join("; ")},
+      {"@type": "PropertyValue", name: "Important limits", value: page.limits},
+    ],
+  };
+}
+
 export function breadcrumbJsonLd(locale: Locale, items: {name: string; path: string}[]) {
   return {
     "@context": "https://schema.org",

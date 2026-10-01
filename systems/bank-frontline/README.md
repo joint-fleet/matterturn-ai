@@ -9,4 +9,13 @@
 
 **Current public status:** In development, targeting a "Phase 10" engineering milestone including a red-team acceptance pass. These facts are disclosed as an internal description, not linked to a public build log or test report. See [`company/engineering-evidence.md`](../../company/engineering-evidence.md) for the full fact list and its Candidate labeling.
 
+**What you can use this for:**
+
+- Evaluate a customer who raises several problems at once, keeping each one's decision logic genuinely separate
+- Determine what can proceed immediately versus what is blocked, with the specific reason named
+- Distinguish what a customer reported from what is actually confirmed
+- Reassess after human approval and real-world execution diverge from the plan
+
+**What you actually get:** structured fact intake, multi-issue state tracking, policy and eligibility gating, conflict surfacing, separation of approval/execution/verification, and communication guardrails. Demonstrated today on one synthetic, non-production case — see [the case](../../cases/library/bank-composite-case.md).
+
 **Link:** Product page on the [website](../../website/) (`/systems/banking-frontline`).

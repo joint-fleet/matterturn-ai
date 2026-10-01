@@ -2,12 +2,14 @@ import type {MetadataRoute} from "next";
 import {siteUrl} from "@/lib/site-config";
 import {locales, prefix} from "@/lib/i18n";
 import {products} from "@/lib/products";
+import {problemPages} from "@/lib/problem-pages";
 
 /**
  * Enumerates current public-facing routes and their locale variants.
- * Generating this does not make the site indexable — app/robots.ts and the
- * vercel.json X-Robots-Tag header still disallow indexing while the site is
- * in internal / controlled-review mode.
+ * Generating this does not make the site indexable — app/robots.ts and
+ * next.config.ts's X-Robots-Tag header (both keyed off
+ * isPublicIndexingEnabled in lib/site-config.ts) still disallow indexing
+ * while that flag is off.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ["", "/systems", "/projects", "/about", "/about/team", "/about/founders", "/about/mission", "/contact"];
@@ -25,5 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
+  // GEO problem pages are English-only this round — no locale alternates.
+  for (const p of problemPages) {
+    entries.push({url: `${siteUrl}/systems/${p.systemSlug}/${p.problemSlug}`});
+  }
+  entries.push({url: `${siteUrl}/capability-network`});
   return entries;
 }
