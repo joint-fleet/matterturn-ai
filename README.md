@@ -51,11 +51,11 @@ A per-system, honestly-labeled index — not nine equal "products." See [`system
 
 ## 6. Public cases
 
-Published, public-safe case results — client/professional cases, engineering/synthetic cases, and historical fixtures are kept clearly distinct. See [`cases/`](cases/).
+Published, public-safe case results — client/professional cases, engineering/learning cases, and historical fixtures are kept clearly distinct. Not every entry has an independently linked source record; where one doesn't, that's stated on the entry itself rather than implied. See [`cases/`](cases/).
 
 ## 7. Engineering evidence
 
-Concentrated, fact-only, source-linked engineering evidence per system — tests, CI, runtime behavior, real-device pipelines, failure handling. No private source code. See [`company/engineering-evidence.md`](company/engineering-evidence.md).
+Public-safe engineering facts per system. Only Real Estate currently has a fact-by-fact Formal / Candidate / Research-only breakdown with public source links; other systems' facts are disclosed as internal description unless a source link is given. No private source code. See [`company/engineering-evidence.md`](company/engineering-evidence.md).
 
 ## 8. Capability reuse & failure memory
 
@@ -63,8 +63,10 @@ How MatterTurn avoids rebuilding every mechanism from zero for each new domain, 
 
 ## 9. Maturity map
 
+These are system-level stages, not fact-level labels — they say how far a system is overall, not that every fact about it is independently verified. Only Real Estate currently has the finer Formal / Candidate / Research-only breakdown (see [`company/engineering-evidence.md`](company/engineering-evidence.md)). Real Estate's "proven" status itself reflects engineering verification — tests, CI, a formal runtime, one published case — not independently verified professional effectiveness or commercial ROI, which remain unestablished for every system here.
+
 - **Proven / advanced engineering** — Real Estate Judgment System.
-- **Active engineering / validation** — Banking Frontline, Travel, Financial Securities, International Market & Brand, Morocco Local Life, Sales Opportunity.
+- **Active engineering / validation** — Banking Frontline, Travel, Financial Securities, Cross-border Goods Trade, International Market & Brand, Morocco Local Life, Sales Opportunity.
 - **Design / research** — Medical Business and other early-stage systems.
 
 Full per-system detail: [`systems/README.md`](systems/README.md).

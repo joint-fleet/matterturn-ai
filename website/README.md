@@ -14,7 +14,9 @@ The website is a Next.js app at the repository root. Use Node 24, run `npm ci`, 
 
 ## Private deployment
 
-Keep Vercel Authentication enabled for **all deployments**, including production aliases. Do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
+**This section's accuracy is currently unresolved — read the caveat before relying on it.** The Vercel project's API-reported config shows `ssoProtection.enabled: true` with `deploymentType: "all_except_custom_domains"`, which was previously (incorrectly) read here as meaning production is protected, since none of the project's current domains are custom domains. A direct, unauthenticated check against the live site found: the production alias (`matterturn-ai.vercel.app`) returns **HTTP 200** with the MatterTurn page, while a PR Preview deployment returns **HTTP 302** to Vercel login. That means **production currently appears reachable without Vercel Authentication**, which contradicts the API field's apparent meaning. This discrepancy is not resolved — do not treat production as either protected or unprotected with confidence until the Owner verifies the actual protection scope in the Vercel dashboard directly.
+
+Intended policy, pending that verification: keep Vercel Authentication enabled for **all deployments**, including production aliases, and do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
 
 ## Intake migration limitation
 

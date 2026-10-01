@@ -20,6 +20,8 @@ Next system
 
 Internally, MatterTurn tracks this through a central capability-asset mechanism (capability, candidate, failure and composition records, organized by expert-role families, with reuse-before-build as a standing rule). This repository does not publish that registry's internal identifiers, counts, or structure — those are reconstruction-enabling implementation detail. What's below is the public-safe shape of how it works.
 
+**This page describes engineering practice and a governing design rule, not a demonstrated public instance.** No source-system → candidate-capability → receiving-system example is published or linked from this repository yet. Treat the flow and the reuse/never-reuse lists below as a statement of how MatterTurn intends to and internally reports working, not as independently verified evidence of a specific capability moving between two named systems.
+
 ## What actually gets reused
 
 - Evidence discipline — how a claim is traced back to its source and kept auditable.

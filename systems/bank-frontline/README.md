@@ -7,6 +7,6 @@
 
 **Judgment supported:** ObservedFact / Proposition structuring across multiple concurrent issues, policy applicability and conflict handling across decision contexts, action prerequisites gated by human approval, execution kept separate from independent readback, world-state versioning with selective reevaluation, and durable state with persistence, restart recovery, and idempotency.
 
-**Current public status:** In development, targeting a Phase 10 engineering milestone including a red-team acceptance pass. See [`company/engineering-evidence.md`](../../company/engineering-evidence.md) for the full fact list.
+**Current public status:** In development, targeting a "Phase 10" engineering milestone including a red-team acceptance pass. These facts are disclosed as an internal description, not linked to a public build log or test report. See [`company/engineering-evidence.md`](../../company/engineering-evidence.md) for the full fact list and its Candidate labeling.
 
 **Link:** Product page on the [website](../../website/) (`/systems/banking-frontline`).

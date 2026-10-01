@@ -3,7 +3,7 @@
 Index of MatterTurn public-safe case material. Three kinds of entries live here, and they are never mixed together:
 
 - **Client / Professional Case** — a real client or professional decision, generalized/redacted, never identifying the client, asset, or private evidence.
-- **Engineering / Synthetic Case** — a real engineering run (including a real failure and its fix) on synthetic or self-generated data, disclosed to demonstrate how MatterTurn builds and corrects itself — not a client result.
+- **Engineering / Learning Case** — a described engineering run (including a failure and its fix) on synthetic or self-generated data, disclosed to demonstrate how MatterTurn builds and corrects itself — not a client result, and not necessarily independently sourced from this repository.
 - **Historical Fixture** — a frozen test input/output used to validate a system's structure, disclosed as a fixture, never implied as a performance or returns result.
 
 ## Client / Professional Case
@@ -14,11 +14,11 @@ Source: [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet
 
 ## Engineering / Learning Case
 
-**Sales Opportunity — a self-correction run.** A research-and-capture pipeline ran, hit a real result-integrity failure, preserved that original failure instead of hiding it, had its classifier fixed, reran fresh, and still concluded `0 valid candidate` / `0 verified opportunity`. No synthetic customer identity or commercial claim is attached to this entry — it exists to show that the system is allowed to conclude there is no opportunity, and that a failure gets fixed and kept on record rather than quietly discarded. See [`systems/sales-opportunity/`](../systems/sales-opportunity/).
+**Sales Opportunity — a described self-correction run.** MatterTurn describes a research-and-capture pipeline that hit a result-integrity failure, preserved that original failure instead of hiding it, had its classifier fixed, reran, and still concluded `0 valid candidate` / `0 verified opportunity`. **No independent run date, log, or source artifact is linked from this repository** — this is disclosed as a description of real internal engineering work, not demonstrated with an attached record. It exists to show that the system is allowed to conclude there is no opportunity, and that a failure gets fixed and kept on record rather than quietly discarded. See [`systems/sales-opportunity/`](../systems/sales-opportunity/).
 
 ## Historical Fixture
 
-**Financial Securities — evidence/state/horizon test fixtures.** Historical fixtures exist to validate the Evidence → State → Horizon → Transmission → Judgment structure described in [`systems/financial-securities/`](../systems/financial-securities/). Their existence is disclosed; their output is a structural test result, not a trading performance or returns claim.
+**Financial Securities — evidence/state/horizon test fixtures.** MatterTurn describes historical fixtures used internally to validate the Evidence → State → Horizon → Transmission → Judgment structure in [`systems/financial-securities/`](../systems/financial-securities/). **No fixture file or test-run output is linked from this repository** — their existence is disclosed, not demonstrated here. In any case their output would be a structural test result, not a trading performance or returns claim.
 
 ---
 

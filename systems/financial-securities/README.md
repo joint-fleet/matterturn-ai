@@ -13,6 +13,6 @@ Evidence → State → Horizon → Transmission → Judgment
 
 A single real-world event can simultaneously change fundamental reality, market information, time horizon, valuation assumptions, risk, and optionality. The system is built to keep these distinguishable rather than collapsing them into a single "bullish / bearish" label.
 
-**Public-safe engineering evidence:** historical fixtures exist for testing this evidence/state/horizon structure. Their existence is disclosed here; their output is not a performance or returns claim.
+**Public-safe engineering evidence:** historical fixtures exist internally for testing this evidence/state/horizon structure. No fixture file or test-run output is linked from this repository — their existence is disclosed as a description, not demonstrated here. In any case, their output would not be a performance or returns claim.
 
 **Link:** Product page on the [website](../../website/) (`/systems/financial-markets`).
