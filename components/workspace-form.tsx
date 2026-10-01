@@ -1,5 +1,5 @@
 "use client";
-import {useEffect,useState} from "react";
+import {useState} from "react";
 import {ArrowIcon} from "./arrow-icon";
 import {useSearchParams} from "next/navigation";
 import {type Locale,messages} from "@/lib/i18n";
@@ -25,11 +25,10 @@ export function WorkspaceForm({locale}:{locale:Locale}){
   const [instruction,setInstruction]=useState("");
   const [file,setFile]=useState<File|null>(null);
   const [records,setRecords]=useState<Submission[]>([]);
-  const [loading,setLoading]=useState(true);
+  const loading=false;
   const [sending,setSending]=useState(false);
   const [message,setMessage]=useState("");
   const [error,setError]=useState(false);
-  useEffect(()=>{setLoading(false)},[]);
   async function submit(event:React.FormEvent<HTMLFormElement>){
     event.preventDefault();const fileInput=event.currentTarget.elements.namedItem("file") as HTMLInputElement;setSending(true);setMessage("");setError(false);
     const form=new FormData();form.append("system",system);form.append("instruction",instruction);if(file)form.append("file",file);

@@ -77,6 +77,8 @@ const missions:Record<Locale,Mission>={
   }
 };
 
+export function missionStatement(locale:Locale){return missions[locale].statement;}
+
 export function MissionStory({locale}:{locale:Locale}){
   const mission=missions[locale];
   return <article className="mission-story">

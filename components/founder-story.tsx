@@ -95,6 +95,8 @@ const stories:Record<Locale,Story>={
   }
 };
 
+export function founderLead(locale:Locale){return stories[locale].lead;}
+
 export function FounderStory({locale}:{locale:Locale}){
   const story=stories[locale];
   return <article className="founder-story">
