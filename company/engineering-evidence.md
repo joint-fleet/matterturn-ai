@@ -24,13 +24,7 @@ Public-safe engineering facts, organized by system. A fact-by-fact breakdown by 
 
 **Synthetic institutional engineering system — not connected to a real bank, not approved for real customer decisions.** This limitation is stated here, not buried in a footnote, because it is itself part of what makes the engineering credible.
 
-**Candidate (internally described, not independently sourced from this repository):**
-- ObservedFact / Proposition structuring for customer questions, with multiple concurrent issues tracked per case.
-- Policy applicability and conflict handling across decision contexts.
-- Action prerequisites and a human-approval gate before any action is taken.
-- Execution kept separate from independent readback (what the system did vs. what actually happened are checked independently).
-- World-state versioning and selective reevaluation (only the affected state is reassessed when something changes).
-- Durable state with persistence, restart recovery, and idempotency — engineering work targeting a "Phase 10" milestone of this synthetic system's development, including a red-team acceptance pass. No public build log, test report, or acceptance record is linked here yet.
+**Candidate (internally described, not independently sourced from this repository):** engineering work covering customer-context structuring, policy applicability, a human-approval gate before any action, independent verification of execution outcomes, and durable, recoverable state. No public build log, test report, or acceptance record is linked here yet.
 
 ## Travel
 
@@ -63,7 +57,7 @@ A single real-world event can simultaneously change fundamental reality, market 
 
 ## Sales Opportunity
 
-Not a mature sales product. Its strongest public-safe fact is a self-correction case described in [`cases/`](../cases/) as an Engineering / Learning Case: a research-and-capture pipeline hit a result-integrity failure, the failure was preserved rather than hidden, the classifier that caused it was fixed, the pipeline was rerun, and the result was still `0 verified opportunity`. **This description currently has no independent run date, log, or source artifact linked from this repository** — it is disclosed as a description of real internal engineering work, not demonstrated with an attached record. The system being allowed to conclude there is no opportunity is a design property, not a defect.
+Not a mature sales product. Its strongest public-safe fact is a self-correction case described in [`cases/`](../cases/) as an Engineering / Learning Case: a described internal run concluded `0 verified opportunity` after an earlier pipeline issue was found, preserved rather than hidden, and fixed. **This description currently has no independent run date, log, or source artifact linked from this repository.** The system being allowed to conclude there is no opportunity is a design property, not a defect.
 
 ## International Market & Brand, Morocco Local Life, Medical Business
 

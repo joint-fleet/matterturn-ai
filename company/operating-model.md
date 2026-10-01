@@ -62,9 +62,9 @@ Central assets
 Next system
 ```
 
-**What the founder does:** identify high-value judgment problems, decompose expert reasoning into a workflow, define product and commercial direction, organize agents and domain-expert input around that workflow, test it through real cases, preserve what's learned (including failures), and decide what becomes a reusable capability for the next system. See [`company/expert-workflows.md`](expert-workflows.md) and [`company/capability-evolution.md`](capability-evolution.md).
+**What the founder does:** defines each system's direction, organizes the expert workflow and domain input behind it, tests it through real cases, and decides what's learned — including failures — becomes a reusable capability. See [`company/expert-workflows.md`](expert-workflows.md) and [`company/capability-evolution.md`](capability-evolution.md).
 
-**What AI agents do, inside a defined boundary:** research, coding, testing, documentation, comparison, implementation support, and evidence handling within the scope a workflow step defines for them. Agents are tools operating inside a workflow the founder designed and reviews — not an independent decision-making party, and not a stand-in for a human expert at the points (senior synthesis, approval, review) where a workflow requires one.
+**What AI agents do:** agents support research, engineering, testing and structured evidence work within founder-defined boundaries. They are tools operating inside a workflow the founder designs and reviews — not an independent decision-making party, and not a stand-in for a human expert where a workflow requires one.
 
 ## What this means for maturity claims
 
