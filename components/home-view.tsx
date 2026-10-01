@@ -23,6 +23,6 @@ export function HomeView({locale}:{locale:Locale}){
       <div className="hero-rule"><span>{m.reality}</span><span>{m.evidence}</span><span>{m.judgment}</span><span>{m.action}</span></div></section>
     <BrandFilm locale={locale}/>
     <SystemsCatalog locale={locale}/>
-    <section id="approach" className="approach-section"><div className="shell approach-inner"><p className="overline">{m.approachKicker}</p><h2>{m.approachTitle1}<br/>{m.approachTitle2}</h2><div className="approach-grid"><p>{m.approach1}</p><p>{m.approach2}</p></div><Link className="light-link" href={pathFor(locale,"/workspace")}>{m.openWorkspace} <ArrowIcon/></Link></div></section>
+    <section id="approach" className="approach-section"><div className="shell approach-inner"><p className="overline">{m.approachKicker}</p><h2>{m.approachTitle1}<br/>{m.approachTitle2}</h2><div className="approach-grid"><p>{m.approach1}</p><p>{m.approach2}</p></div><Link className="light-link" href={pathFor(locale,"/workspace")}>{m.startACase} <ArrowIcon/></Link></div></section>
     </main><footer dir={direction} className="footer shell"><span>© MatterTurn Ai</span><span>{m.privateReview}</span><Link href="#top">{m.backTop} <ArrowIcon direction="up"/></Link></footer></>;
 }
