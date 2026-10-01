@@ -7,6 +7,7 @@ MatterTurn's private foundation (judgment runtime, case evidence, orchestration)
 - Structuring a professional decision around explicit evidence, assumptions, and risk.
 - Tracing a conclusion back to the facts and assumptions it depends on.
 - Distinguishing an irrelevant change from one that invalidates a specific assumption.
+- One published, public-safe real-case result (real estate acquisition screening) — see [`cases/`](../cases/).
 
 ## Competition prototype (in progress)
 

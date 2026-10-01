@@ -1,35 +1,46 @@
 # MatterTurn Ai
 
-MatterTurn builds judgment systems that keep professional decisions connected to changing reality.
+## What MatterTurn is
 
-Generic AI gives answers. MatterTurn is built around a narrower, harder question: after reality changes — a new event, a new piece of evidence, a new market condition — does a professional's prior judgment still hold? If not, what specifically needs re-judging, and what action follows? The goal isn't to alert on every change; it's to decide whether the change actually matters to a decision someone already made.
+MatterTurn builds judgment systems that keep professional decisions connected to changing reality. Each system organizes real evidence, assumptions, and expert review around one real commercial or professional question, and returns a reviewable result — not an autonomous decision.
 
-## In this repository
+## Why it is different
 
-- [**Company**](company/) — vision, principles, capabilities, and how we work.
-- [**Systems**](systems/) — public-safe index of MatterTurn's judgment system categories.
-- [**Competitions**](competitions/) — active public competition entries, e.g. [Chiang Mai Build Lab 2026](competitions/chiang-mai-build-lab-2026/).
-- [**Demos**](demos/) — long-term product concepts shown publicly ahead of full production, e.g. [RWA Judgment Continuity](demos/rwa-judgment-continuity/).
-- [**Cases**](cases/) — public case studies (none published yet; see [`cases/README.md`](cases/README.md)).
-- [**Research**](research/) — public research write-ups (none published yet; see [`research/README.md`](research/README.md)).
-- [**Website**](website/) — the live product website, built from this repository (see [`website/README.md`](website/README.md) for current layout).
+Generic AI gives answers. MatterTurn is built around a narrower, harder question: after reality changes — a new event, a new piece of evidence, a new market condition — does a professional's prior judgment still hold? If not, what specifically needs re-judging, and what action follows? The goal isn't to alert on every change; it's to decide whether the change actually matters to a decision someone already made, and to reopen only the parts of that decision the change actually affects.
 
-## What's public vs. private
+## Core capabilities
 
-This repository shows MatterTurn's public-facing company material, system descriptions, competition entries, and demo concepts. It deliberately does **not** include MatterTurn's core judgment runtime, private case evidence, internal orchestration, or any reconstruction-enabling professional assets — those stay in private repositories. Where a capability shown here is still a prototype or a plan rather than a verified, production capability, that status is stated explicitly rather than implied away. See [`company/capabilities.md`](company/capabilities.md).
+- Structuring a professional decision around explicit evidence, assumptions, and risk.
+- Tracing a conclusion back to the facts and assumptions it depends on.
+- Distinguishing an irrelevant change from one that invalidates a specific assumption.
+- Selectively reopening only the affected parts of a prior judgment, preserving the rest.
 
-## Development
+Full breakdown by maturity (verified / prototype / planned): [`company/capabilities.md`](company/capabilities.md).
 
-The website is a Next.js app at the repository root. Use Node 24, run `npm ci`, then `npm run dev`. Validate with `npm run typecheck` and `npm run build`. See [`website/README.md`](website/README.md) for the current repository-layout note, and the sections below (preserved from the previous README) for deployment and migration details.
+## Systems
 
-## Private deployment
+Public-safe, system-by-system index — real estate, financial securities, banking frontline, travel, cross-border trade, international market & brand, Morocco local life, sales opportunity, and medical business. See [`systems/`](systems/).
 
-Keep Vercel Authentication enabled for **all deployments**, including production aliases. Do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
+## Competitions
 
-## Intake migration limitation
+Active public competition entries, e.g. [Chiang Mai Build Lab 2026](competitions/chiang-mai-build-lab-2026/).
 
-The original Sites-era intake used ChatGPT authenticated identity headers and Cloudflare R2 storage, neither available on Vercel. The original source is preserved in `migration/`. The submissions endpoint returns 503 and never claims to save files. Persistent authenticated storage must be configured before intake is re-enabled. This migration does not copy existing submissions.
+## Demos
 
-## Preserved assets
+Long-term product concepts shown publicly ahead of full production, e.g. [RWA Judgment Continuity](demos/rwa-judgment-continuity/).
 
-Nine languages, pages, layout, contact details, video and poster are retained. Video/poster filenames retain their historical names; their bytes are unchanged. Main brand text is MatterTurn Ai.
+## Public cases
+
+Published, public-safe case results, each linked from its own source repository — no private evidence copied in. See [`cases/`](cases/).
+
+## Research
+
+Public research write-ups, once cleared for public release. See [`research/`](research/).
+
+## Website
+
+The live product website, built from this repository. See [`website/README.md`](website/README.md) for current layout, development, and deployment notes.
+
+## Public/private boundary
+
+This repository shows MatterTurn's public-facing company material, system descriptions, competition entries, demo concepts, and linked public cases. It deliberately does **not** include MatterTurn's core judgment runtime, private case evidence, internal orchestration, or any reconstruction-enabling professional assets — those stay in private repositories. Where a capability shown here is still a prototype or a plan rather than a verified, production capability, that status is stated explicitly rather than implied away. See [`company/capabilities.md`](company/capabilities.md) and [`company/principles.md`](company/principles.md).

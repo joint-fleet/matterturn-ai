@@ -7,3 +7,19 @@ The MatterTurn Ai marketing/product website (Next.js app, deployed on Vercel as 
 **Recommendation for a future round:** move the Next.js app into `website/` as a path-preserving `git mv`, update the Vercel project's Root Directory to `website/`, and verify a full deploy (preview, then production) before relying on the new layout — as its own isolated change, not bundled with other restructuring.
 
 Until that migration happens, treat the repository root as the website's source, and this directory as a placeholder/pointer only.
+
+## Development
+
+The website is a Next.js app at the repository root. Use Node 24, run `npm ci`, then `npm run dev`. Validate with `npm run typecheck` and `npm run build`.
+
+## Private deployment
+
+Keep Vercel Authentication enabled for **all deployments**, including production aliases. Do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
+
+## Intake migration limitation
+
+The original Sites-era intake used ChatGPT authenticated identity headers and Cloudflare R2 storage, neither available on Vercel. The original source is preserved in `migration/` at the repository root. The submissions endpoint returns 503 and never claims to save files. Persistent authenticated storage must be configured before intake is re-enabled. This migration does not copy existing submissions.
+
+## Preserved assets
+
+Nine languages, pages, layout, contact details, video and poster are retained. Video/poster filenames retain their historical names; their bytes are unchanged. Main brand text is MatterTurn Ai.
