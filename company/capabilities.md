@@ -22,4 +22,8 @@ MatterTurn's private foundation (judgment runtime, case evidence, orchestration)
 
 ## System-by-system status
 
-See [`systems/`](../systems/) for per-domain index pages, and the live product pages on the [website](../website/) for the full catalog across real estate, brand strategy, banking frontline, travel, cross-border trade, everyday life assistance, securities, and medical business decisions — each labeled with its own current status.
+See [`systems/`](../systems/) for per-domain index pages grouped by maturity, and the live product pages on the [website](../website/) for the full catalog across real estate, brand strategy, banking frontline, travel, cross-border trade, everyday life assistance, securities, and medical business decisions — each labeled with its own current status.
+
+## Fact-level evidence and capability reuse
+
+For the fact-by-fact engineering evidence behind each maturity label, see [`engineering-evidence.md`](engineering-evidence.md). For how work on one system becomes reusable infrastructure for the next without copying domain-specific conclusions across domains, see [`capability-evolution.md`](capability-evolution.md).

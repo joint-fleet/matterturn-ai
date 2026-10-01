@@ -36,7 +36,17 @@ const en = {
   caseStep3:"System analysis completed — the professional system and experts do the work.",
   caseStep4:"Professional report delivered — you receive a reviewable result.",
   caseNote:"Today, only the first step is connected. Case acceptance, system analysis and report delivery are reviewed and confirmed by a person, not generated automatically.",
-  caseFoot:"Every case is reviewed by a person before any system work begins."
+  caseFoot:"Every case is reviewed by a person before any system work begins.",
+  result:"Result",newReality:"New reality",rejudgment:"Re-judgment",
+  reopenKicker:"Selective reopening",reopenTitle:"MatterTurn doesn't just answer once.",
+  reopenText:"When reality changes, MatterTurn finds the evidence and assumptions a judgment depended on, checks whether the change is material, reopens only the affected part, keeps the rest as it was, and sends the result to a person before anything updates.",
+  valueKicker:"Why this matters",valueTitle:"What MatterTurn reduces.",
+  valueText:"Re-running a full analysis from scratch every time something changes. A stale judgment staying in use because nobody re-checked it. Several AI tools giving contradictory answers. Senior experts re-verifying the same ground repeatedly. A material change going unnoticed. The reasoning behind a conclusion getting lost. A one-time report that nobody keeps watching. A new system built from zero every time.",
+  proofKicker:"Proof",proofTitle:"This isn't only a concept.",
+  proofText:"Our strongest public evidence is the Real Estate Judgment System: a working runtime with tests, a public-safe real case, and a clearly labeled formal/candidate/research boundary. Other systems are shown with their own honest maturity label — not all claims are equal.",
+  proofLink:"See the engineering evidence on GitHub",
+  tierAdvanced:"Proven / Advanced engineering",tierActive:"Active engineering / validation",tierResearch:"Design / research",
+  tierMapKicker:"System maturity",tierMapIntro:"Systems are grouped by how far they actually are, not by how many exist."
 };
 export type Messages = Record<keyof typeof en,string>;
 const translations:Record<Locale,Messages> = {
@@ -69,7 +79,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"系统分析完成 —— 专业系统与专家完成工作。",
     caseStep4:"专业报告交付 —— 你收到一份可供审查的结果。",
     caseNote:"目前只有第一步已经接通。案例是否被接受、系统分析和报告交付，都由人工审核确认，不会自动生成。",
-    caseFoot:"每个案例在任何系统工作开始之前，都会先经过人工审查。"
+    caseFoot:"每个案例在任何系统工作开始之前，都会先经过人工审查。",
+    result:"结果",newReality:"新的现实",rejudgment:"重新判断",
+    reopenKicker:"选择性重启",reopenTitle:"MatterTurn 不只回答一次。",
+    reopenText:"当现实发生变化，MatterTurn 会找到判断所依赖的证据与假设，判断这次变化是否重要，只重新打开受影响的部分，其余部分保持不变，并把结果交给人工审核后再更新。",
+    valueKicker:"为什么这有价值",valueTitle:"MatterTurn 减少了什么。",
+    valueText:"每次变化都重新做一遍全面分析；过期的判断继续被使用，因为没人重新核对；多个 AI 工具给出相互矛盾的答案；资深专家反复检查同样的内容；重要变化没有人发现；结论背后的依据丢失；一次性报告完成后无人继续跟踪；每进入一个新领域都要从零开始搭建系统。",
+    proofKicker:"证据",proofTitle:"这不只是一个概念。",
+    proofText:"目前最强的公开证据是房地产判断系统：一个可运行的 runtime，配有测试、一个可公开的真实案例，并清楚区分正式 / 候选 / 研究边界。其他系统也各自标注了真实的成熟度，不是所有说法分量都一样。",
+    proofLink:"在 GitHub 上查看工程证据",
+    tierAdvanced:"已验证 / 深度工程",tierActive:"积极工程 / 验证中",tierResearch:"设计 / 研究阶段",
+    tierMapKicker:"系统成熟度",tierMapIntro:"系统按真实进展分组展示，而不是按数量堆砌。"
   },
   "zh-TW":{
     navSystems:"專業系統",navApproach:"工作方式",navWorkspace:"私人工作區",language:"語言",
@@ -99,7 +119,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"系統分析完成 —— 專業系統與專家完成工作。",
     caseStep4:"專業報告交付 —— 你收到一份可供審查的結果。",
     caseNote:"目前只有第一步已經接通。案例是否被接受、系統分析和報告交付，都由人工審核確認，不會自動產生。",
-    caseFoot:"每個案例在任何系統工作開始之前，都會先經過人工審查。"
+    caseFoot:"每個案例在任何系統工作開始之前，都會先經過人工審查。",
+    result:"結果",newReality:"新的現實",rejudgment:"重新判斷",
+    reopenKicker:"選擇性重啟",reopenTitle:"MatterTurn 不只回答一次。",
+    reopenText:"當現實發生變化，MatterTurn 會找到判斷所依賴的證據與假設，判斷這次變化是否重要，只重新打開受影響的部分，其餘部分保持不變，並把結果交給人工審查後再更新。",
+    valueKicker:"為什麼這有價值",valueTitle:"MatterTurn 減少了甚麼。",
+    valueText:"每次變化都重新做一遍全面分析；過期的判斷繼續被使用，因為沒人重新核對；多個 AI 工具給出相互矛盾的答案；資深專家反覆檢查同樣的內容；重要變化沒有人發現；結論背後的依據遺失；一次性報告完成後無人繼續追蹤；每進入一個新領域都要從零開始建立系統。",
+    proofKicker:"證據",proofTitle:"這不只是一個概念。",
+    proofText:"目前最強的公開證據是房地產判斷系統：一個可運行的 runtime，配有測試、一個可公開的真實案例，並清楚區分正式 / 候選 / 研究邊界。其他系統也各自標註了真實的成熟度，不是所有說法分量都一樣。",
+    proofLink:"在 GitHub 上查看工程證據",
+    tierAdvanced:"已驗證 / 深度工程",tierActive:"積極工程 / 驗證中",tierResearch:"設計 / 研究階段",
+    tierMapKicker:"系統成熟度",tierMapIntro:"系統按真實進展分組展示，而非按數量堆砌。"
   },
   fr:{
     navSystems:"Systèmes",navApproach:"Méthode",navWorkspace:"Espace privé",language:"Langue",
@@ -129,7 +159,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"Analyse du système terminée — le système professionnel et les experts font le travail.",
     caseStep4:"Rapport professionnel livré — vous recevez un résultat examinable.",
     caseNote:"Aujourd’hui, seule la première étape est connectée. L’acceptation du cas, l’analyse du système et la livraison du rapport sont examinées et confirmées par une personne, pas générées automatiquement.",
-    caseFoot:"Chaque cas est examiné par une personne avant tout travail du système."
+    caseFoot:"Chaque cas est examiné par une personne avant tout travail du système.",
+    result:"Résultat",newReality:"Nouvelle réalité",rejudgment:"Nouveau jugement",
+    reopenKicker:"Réouverture sélective",reopenTitle:"MatterTurn ne répond pas qu’une seule fois.",
+    reopenText:"Quand la réalité change, MatterTurn retrouve les preuves et hypothèses dont dépendait un jugement, vérifie si le changement est significatif, ne rouvre que la partie concernée, conserve le reste tel quel, puis soumet le résultat à une personne avant toute mise à jour.",
+    valueKicker:"Pourquoi c’est utile",valueTitle:"Ce que MatterTurn réduit.",
+    valueText:"Refaire une analyse complète à chaque changement. Un jugement périmé qui reste utilisé faute de revérification. Plusieurs outils d’IA donnant des réponses contradictoires. Des experts seniors qui revérifient sans cesse les mêmes éléments. Un changement important qui passe inaperçu. Le raisonnement derrière une conclusion qui se perd. Un rapport ponctuel que plus personne ne suit. Un nouveau système reconstruit à partir de rien à chaque fois.",
+    proofKicker:"Preuves",proofTitle:"Ce n’est pas qu’un concept.",
+    proofText:"Notre preuve publique la plus solide est le Real Estate Judgment System : un runtime fonctionnel avec des tests, un cas réel public, et une frontière claire entre formel, candidat et recherche. Les autres systèmes portent leur propre étiquette honnête de maturité — toutes les affirmations n’ont pas le même poids.",
+    proofLink:"Voir les preuves techniques sur GitHub",
+    tierAdvanced:"Éprouvé / ingénierie avancée",tierActive:"Ingénierie active / validation",tierResearch:"Conception / recherche",
+    tierMapKicker:"Maturité des systèmes",tierMapIntro:"Les systèmes sont classés selon leur avancement réel, pas selon leur nombre."
   },
   ar:{
     navSystems:"الأنظمة",navApproach:"منهجنا",navWorkspace:"مساحة العمل الخاصة",language:"اللغة",
@@ -159,7 +199,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"اكتمل تحليل النظام — ينجز النظام المهني والخبراء العمل.",
     caseStep4:"تم تسليم التقرير المهني — تستلم نتيجة قابلة للمراجعة.",
     caseNote:"اليوم، الخطوة الأولى فقط متصلة. قبول الحالة وتحليل النظام وتسليم التقرير تتم مراجعتها وتأكيدها من قِبل شخص، وليست مولّدة تلقائياً.",
-    caseFoot:"تتم مراجعة كل حالة من قِبل شخص قبل بدء أي عمل على النظام."
+    caseFoot:"تتم مراجعة كل حالة من قِبل شخص قبل بدء أي عمل على النظام.",
+    result:"النتيجة",newReality:"واقع جديد",rejudgment:"إعادة الحكم",
+    reopenKicker:"إعادة فتح انتقائية",reopenTitle:"MatterTurn لا يجيب مرة واحدة فقط.",
+    reopenText:"عندما يتغير الواقع، يحدد MatterTurn الأدلة والافتراضات التي اعتمد عليها الحكم، ويتحقق مما إذا كان التغيير جوهرياً، ويعيد فتح الجزء المتأثر فقط، ويُبقي الباقي كما هو، ثم يعرض النتيجة على شخص قبل أي تحديث.",
+    valueKicker:"لماذا هذا مهم",valueTitle:"ما الذي يقلّله MatterTurn.",
+    valueText:"إعادة تحليل كامل من الصفر مع كل تغيير؛ حكم قديم ما زال مستخدماً لأن أحداً لم يراجعه؛ أدوات ذكاء اصطناعي متعددة تعطي إجابات متناقضة؛ خبراء كبار يراجعون نفس الأمور مراراً؛ تغيير مهم يمر دون ملاحظة؛ ضياع الأساس المنطقي وراء النتيجة؛ تقرير لمرة واحدة لا يتابعه أحد بعدها؛ نظام جديد يُبنى من الصفر في كل مرة.",
+    proofKicker:"الإثبات",proofTitle:"هذا ليس مجرد فكرة.",
+    proofText:"أقوى دليل علني لدينا هو نظام الحكم العقاري: نظام تشغيل فعلي مزوّد باختبارات، وحالة حقيقية قابلة للنشر، وحدود واضحة بين الرسمي والمرشح والبحثي. الأنظمة الأخرى تحمل كل منها تصنيف نضج صادقاً خاصاً بها — ليست كل الادعاءات متساوية الوزن.",
+    proofLink:"اطّلع على الأدلة الهندسية على GitHub",
+    tierAdvanced:"مثبت / هندسة متقدمة",tierActive:"هندسة نشطة / قيد التحقق",tierResearch:"تصميم / بحث",
+    tierMapKicker:"نضج الأنظمة",tierMapIntro:"تُصنَّف الأنظمة حسب مدى تقدمها الفعلي، لا حسب عددها."
   },
   ary:{
     navSystems:"الأنظمة",navApproach:"كيفاش خدامين",navWorkspace:"فضاء الخدمة الخاص",language:"اللغة",
@@ -189,7 +239,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"تحليل النظام كيكمل — النظام المهني والخبراء كيديرو الخدمة.",
     caseStep4:"التقرير المهني كيتسلّم — كتوصلك نتيجة تقدر تراجعها.",
     caseNote:"دابا، غير الخطوة الأولى مربوطة. قبول الحالة وتحليل النظام وتسليم التقرير كلهم كيتراجعو وكيتأكدو من طرف شخص، ماشي كيتولدو بشكل تلقائي.",
-    caseFoot:"كل حالة كتتراجع من طرف شخص قبل ما تبدا أي خدمة فالنظام."
+    caseFoot:"كل حالة كتتراجع من طرف شخص قبل ما تبدا أي خدمة فالنظام.",
+    result:"النتيجة",newReality:"واقع جديد",rejudgment:"تقدير جديد",
+    reopenKicker:"فتح انتقائي",reopenTitle:"MatterTurn ما كيجاوبش غير مرة وحدة.",
+    reopenText:"ملي كيتبدل الواقع، MatterTurn كيلقى الدلائل والفرضيات اللي كان مبني عليها الحكم، كيشوف واش التغيير مهم، كيعاود يفتح غير الجزء المتأثر، كيخلي الباقي بحالو، ومن بعد كيورّي النتيجة لشخص قبل ما يتحدث شي حاجة.",
+    valueKicker:"علاش هادشي مهم",valueTitle:"شنو كينقص MatterTurn.",
+    valueText:"تعاود دير تحليل كامل من الصفر كل مرة كيتبدل شي حاجة؛ حكم قديم باقي كيتستعمل حيت حتى واحد ما راجعو؛ عدة أدوات ذكاء اصطناعي كتعطي أجوبة متعارضة؛ خبراء كبار كيراجعو نفس الحوايج بزاف ديال المرات؛ تغيير مهم كيدوز بلا ما حد ينتبه ليه؛ الأساس ديال النتيجة كيضيع؛ تقرير لمرة وحدة ما حد كيتبعو من بعد؛ نظام جديد كيتبنى من الصفر كل مرة.",
+    proofKicker:"الدليل",proofTitle:"هادشي ماشي غير فكرة.",
+    proofText:"أقوى دليل علني عندنا هو نظام الحكم العقاري: نظام خدام بصح فيه اختبارات، وحالة حقيقية ممكن تتعرض، وحدود واضحة بين الرسمي والمرشح والبحثي. الأنظمة الآخرين كل وحدة فيهم عندها تصنيف نضج صادق خاص بيها.",
+    proofLink:"شوف الدلائل التقنية فـ GitHub",
+    tierAdvanced:"مثبت / هندسة متقدمة",tierActive:"هندسة نشيطة / قيد التحقق",tierResearch:"تصميم / بحث",
+    tierMapKicker:"نضج الأنظمة",tierMapIntro:"الأنظمة متصنفة حسب التقدم الحقيقي ديالها، ماشي حسب العدد."
   },
   es:{
     navSystems:"Sistemas",navApproach:"Método",navWorkspace:"Espacio privado",language:"Idioma",
@@ -219,7 +279,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"Análisis del sistema completado — el sistema profesional y los expertos hacen el trabajo.",
     caseStep4:"Informe profesional entregado — recibes un resultado revisable.",
     caseNote:"Hoy solo el primer paso está conectado. La aceptación del caso, el análisis del sistema y la entrega del informe son revisados y confirmados por una persona, no generados automáticamente.",
-    caseFoot:"Cada caso es revisado por una persona antes de iniciar cualquier trabajo del sistema."
+    caseFoot:"Cada caso es revisado por una persona antes de iniciar cualquier trabajo del sistema.",
+    result:"Resultado",newReality:"Nueva realidad",rejudgment:"Nuevo juicio",
+    reopenKicker:"Reapertura selectiva",reopenTitle:"MatterTurn no responde una sola vez.",
+    reopenText:"Cuando la realidad cambia, MatterTurn localiza las pruebas y supuestos de los que dependía un juicio, comprueba si el cambio es relevante, reabre solo la parte afectada, conserva el resto tal cual, y envía el resultado a una persona antes de actualizar nada.",
+    valueKicker:"Por qué importa",valueTitle:"Qué reduce MatterTurn.",
+    valueText:"Repetir un análisis completo cada vez que algo cambia. Un juicio caducado que sigue usándose porque nadie lo revisó. Varias herramientas de IA dando respuestas contradictorias. Expertos senior revisando una y otra vez lo mismo. Un cambio importante que pasa inadvertido. El razonamiento de una conclusión que se pierde. Un informe puntual que nadie vuelve a seguir. Un sistema nuevo construido desde cero cada vez.",
+    proofKicker:"Pruebas",proofTitle:"Esto no es solo un concepto.",
+    proofText:"Nuestra prueba pública más sólida es el Real Estate Judgment System: un sistema en funcionamiento con pruebas, un caso real público, y una frontera clara entre formal, candidato e investigación. Los demás sistemas muestran su propia etiqueta honesta de madurez — no todas las afirmaciones pesan igual.",
+    proofLink:"Ver la evidencia técnica en GitHub",
+    tierAdvanced:"Probado / ingeniería avanzada",tierActive:"Ingeniería activa / validación",tierResearch:"Diseño / investigación",
+    tierMapKicker:"Madurez de los sistemas",tierMapIntro:"Los sistemas se agrupan según su avance real, no según su cantidad."
   },
   ja:{
     navSystems:"システム",navApproach:"取り組み",navWorkspace:"非公開ワークスペース",language:"言語",
@@ -249,7 +319,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"システム分析完了 —— 専門システムと専門家が作業を行います。",
     caseStep4:"専門レポート納品 —— 検証可能な結果をお届けします。",
     caseNote:"現在接続されているのは最初のステップのみです。案件受付、システム分析、レポート納品は人が確認・承認するもので、自動生成ではありません。",
-    caseFoot:"システムでの作業を始める前に、すべての案件は人が確認します。"
+    caseFoot:"システムでの作業を始める前に、すべての案件は人が確認します。",
+    result:"結果",newReality:"新しい現実",rejudgment:"再判断",
+    reopenKicker:"選択的な再検討",reopenTitle:"MatterTurn は一度答えて終わりではありません。",
+    reopenText:"現実が変化すると、MatterTurn は判断が依拠していた証拠と前提を特定し、その変化が重要かどうかを確認し、影響を受けた部分だけを再検討し、それ以外はそのまま保持したうえで、更新前に人による確認に回します。",
+    valueKicker:"なぜ重要か",valueTitle:"MatterTurn が減らすもの。",
+    valueText:"変化のたびに一から全体分析をやり直すこと。誰も見直さないまま古い判断が使われ続けること。複数のAIツールが矛盾した答えを出すこと。上級専門家が同じ内容を何度も確認すること。重要な変化が見過ごされること。結論の根拠が失われること。一度きりのレポートをその後誰も追跡しないこと。新しい分野に入るたびにシステムを一から作り直すこと。",
+    proofKicker:"証拠",proofTitle:"概念だけではありません。",
+    proofText:"最も強力な公開証拠は不動産判断システムです。テストを備えた実働ランタイム、公開可能な実案件、そして正式 / 候補 / 研究の境界が明確です。他のシステムもそれぞれ正直な成熟度ラベルを掲げており、すべての主張が同じ重みを持つわけではありません。",
+    proofLink:"GitHub でエンジニアリング上の証拠を見る",
+    tierAdvanced:"実証済み / 高度なエンジニアリング",tierActive:"積極的なエンジニアリング・検証中",tierResearch:"設計 / 研究段階",
+    tierMapKicker:"システムの成熟度",tierMapIntro:"システムは数ではなく、実際の進捗段階でグループ分けしています。"
   },
   th:{
     navSystems:"ระบบ",navApproach:"แนวทาง",navWorkspace:"พื้นที่ทำงานส่วนตัว",language:"ภาษา",
@@ -279,7 +359,17 @@ const translations:Record<Locale,Messages> = {
     caseStep3:"วิเคราะห์ระบบเสร็จสิ้น — ระบบเฉพาะทางและผู้เชี่ยวชาญลงมือทำงาน",
     caseStep4:"ส่งมอบรายงานโดยผู้เชี่ยวชาญ — คุณได้รับผลลัพธ์ที่ตรวจสอบได้",
     caseNote:"ปัจจุบันมีเพียงขั้นตอนแรกเท่านั้นที่เชื่อมต่อแล้ว การยอมรับเคส การวิเคราะห์ระบบ และการส่งมอบรายงาน ล้วนผ่านการตรวจทานและยืนยันโดยคน ไม่ได้สร้างขึ้นอัตโนมัติ",
-    caseFoot:"ทุกเคสจะได้รับการตรวจทานโดยคนก่อนเริ่มงานในระบบใด ๆ"
+    caseFoot:"ทุกเคสจะได้รับการตรวจทานโดยคนก่อนเริ่มงานในระบบใด ๆ",
+    result:"ผลลัพธ์",newReality:"ความจริงใหม่",rejudgment:"วินิจฉัยใหม่",
+    reopenKicker:"การเปิดใหม่แบบเลือกจุด",reopenTitle:"MatterTurn ไม่ได้ตอบแค่ครั้งเดียว",
+    reopenText:"เมื่อความจริงเปลี่ยนไป MatterTurn จะหาหลักฐานและสมมติฐานที่การวินิจฉัยเดิมพึ่งพาอยู่ ตรวจสอบว่าการเปลี่ยนแปลงนั้นสำคัญหรือไม่ เปิดใหม่เฉพาะส่วนที่ได้รับผลกระทบ คงส่วนที่เหลือไว้เหมือนเดิม แล้วส่งผลลัพธ์ให้คนตรวจสอบก่อนอัปเดตใด ๆ",
+    valueKicker:"ทำไมเรื่องนี้ถึงสำคัญ",valueTitle:"สิ่งที่ MatterTurn ช่วยลด",
+    valueText:"การวิเคราะห์ใหม่ทั้งหมดทุกครั้งที่มีการเปลี่ยนแปลง การวินิจฉัยที่ล้าสมัยแต่ยังถูกใช้อยู่เพราะไม่มีใครตรวจทานซ้ำ เครื่องมือ AI หลายตัวให้คำตอบที่ขัดแย้งกัน ผู้เชี่ยวชาญอาวุโสต้องตรวจสอบเรื่องเดิมซ้ำแล้วซ้ำเล่า การเปลี่ยนแปลงสำคัญที่ไม่มีใครสังเกตเห็น เหตุผลเบื้องหลังข้อสรุปที่สูญหายไป รายงานครั้งเดียวที่ไม่มีใครติดตามต่อ ระบบใหม่ที่ต้องสร้างจากศูนย์ทุกครั้ง",
+    proofKicker:"หลักฐาน",proofTitle:"นี่ไม่ใช่แค่แนวคิด",
+    proofText:"หลักฐานสาธารณะที่แข็งแกร่งที่สุดของเราคือ Real Estate Judgment System ซึ่งเป็นระบบที่ทำงานได้จริง มีชุดทดสอบ มีกรณีจริงที่เปิดเผยต่อสาธารณะได้ และมีเส้นแบ่งที่ชัดเจนระหว่างทางการ / ผู้สมัคร / งานวิจัย ระบบอื่น ๆ ก็ติดป้ายระดับความพร้อมตามจริงของตนเอง ไม่ใช่ทุกข้ออ้างจะมีน้ำหนักเท่ากัน",
+    proofLink:"ดูหลักฐานเชิงวิศวกรรมบน GitHub",
+    tierAdvanced:"พิสูจน์แล้ว / วิศวกรรมขั้นสูง",tierActive:"วิศวกรรมเชิงรุก / กำลังตรวจสอบ",tierResearch:"ออกแบบ / วิจัย",
+    tierMapKicker:"ความพร้อมของระบบ",tierMapIntro:"ระบบถูกจัดกลุ่มตามความคืบหน้าจริง ไม่ใช่ตามจำนวน"
   }
 };
 export const messages = (locale:Locale):Messages => translations[locale];
