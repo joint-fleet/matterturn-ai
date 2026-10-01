@@ -67,24 +67,26 @@ export function ProjectsView({locale}:{locale:Locale}){
         </div>
       </section>
     )}
-    <section className="projects-group projects-activity">
-      <h2 className="projects-group-title">{al.heading}</h2>
-      <p className="projects-activity-intro">{al.intro}</p>
-      <div className="projects-group-list">
-        {researchActivities.map(activity=>
-          <article className="project-card" key={activity.id}>
-            <div className="project-card-head"><span className="small-label">{activity.classification} · {al.relatedSystem}: {productTitle(activity.relatedSlug)}</span><h3>{activity.title}</h3></div>
-            <dl className="project-card-body">
-              <div><dt>{al.investigated}</dt><dd>{activity.investigated}</dd></div>
-              <div><dt>{al.source}</dt><dd>{activity.source}</dd></div>
-              <div><dt>{al.completed}</dt><dd>{activity.completed}</dd></div>
-              <div><dt>{al.unresolved}</dt><dd>{activity.unresolved}</dd></div>
-              <div><dt className="small-label">{activity.stage}</dt></div>
-            </dl>
-            <a href={pathFor(locale,`/systems/${activity.relatedSlug}`)} className="text-link">{l.view} <ArrowIcon/></a>
-          </article>
-        )}
-      </div>
-    </section>
+    {researchActivities.length>0&&
+      <section className="projects-group projects-activity">
+        <h2 className="projects-group-title">{al.heading}</h2>
+        <p className="projects-activity-intro">{al.intro}</p>
+        <div className="projects-group-list">
+          {researchActivities.map(activity=>
+            <article className="project-card" key={activity.id}>
+              <div className="project-card-head"><span className="small-label">{activity.classification} · {al.relatedSystem}: {productTitle(activity.relatedSlug)}</span><h3>{activity.title}</h3></div>
+              <dl className="project-card-body">
+                <div><dt>{al.investigated}</dt><dd>{activity.investigated}</dd></div>
+                <div><dt>{al.source}</dt><dd>{activity.source}</dd></div>
+                <div><dt>{al.completed}</dt><dd>{activity.completed}</dd></div>
+                <div><dt>{al.unresolved}</dt><dd>{activity.unresolved}</dd></div>
+                <div><dt className="small-label">{activity.stage}</dt></div>
+              </dl>
+              <a href={pathFor(locale,`/systems/${activity.relatedSlug}`)} className="text-link">{l.view} <ArrowIcon/></a>
+            </article>
+          )}
+        </div>
+      </section>
+    }
   </main></>;
 }

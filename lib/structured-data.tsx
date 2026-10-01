@@ -4,12 +4,21 @@ import {siteUrl, brandName} from "./site-config";
 import type {Product} from "./products";
 
 /**
- * Page-level JSON-LD builders. Conservative on purpose: Service (not
- * SoftwareApplication) so wording never implies a finished commercial
- * product, and only fields with a real schema.org home or that fit in
- * additionalProperty/PropertyValue. No offers, price, AggregateRating,
- * Review, customer counts, awards or usage metrics — those would be
- * fabricated for every system currently described in lib/products.ts.
+ * Page-level JSON-LD builders. Conservative on purpose.
+ *
+ * Every system in lib/products.ts is pre-commercial right now: workspace
+ * submission is disabled site-wide (see components/workspace-form.tsx),
+ * so none of them is an available, orderable service today, whatever its
+ * individual status label (Internal validation / In development /
+ * Synthetic testing / Design stage / ...). schema.org's Service and
+ * SoftwareApplication types both carry a "this can be used/ordered"
+ * connotation that none of them currently earn, so every system uses
+ * CreativeWork instead — a description of documented work, not an offer.
+ * additionalProperty/PropertyValue (not standard CreativeWork fields)
+ * carries the maturity-specific facts: decision question, development
+ * status (lib/products.ts's own status string, unchanged) and current
+ * limits. No offers, price, AggregateRating, Review, customer counts,
+ * awards or usage metrics — none of that is true for any system yet.
  */
 
 const absoluteUrl = (locale: Locale, path: string) => `${siteUrl}${prefix(locale)}${path}` || siteUrl;
@@ -27,13 +36,13 @@ export function systemJsonLd({
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "CreativeWork",
     name: translatedTitle,
     description: translatedSummary,
     url: absoluteUrl(locale, `/systems/${product.slug}`),
     inLanguage: locale,
-    category: product.domain,
-    provider: {
+    keywords: product.domain,
+    creator: {
       "@type": "Organization",
       name: brandName,
       url: siteUrl,
