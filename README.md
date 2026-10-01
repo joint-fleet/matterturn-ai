@@ -2,6 +2,14 @@
 
 Private product demonstration migrated from Sites version 26, source commit c6a3b380e23a5666e7b1c96f99522332bc029711.
 
+## Chiang Mai Build Lab 2026
+
+Public competition material for **MatterTurn RWA Judgment Continuity for Solana** is available in [`build-lab/`](build-lab/).
+
+> Tokenized assets can have live onchain prices while the professional judgment behind them becomes stale. MatterTurn tests whether new real-world evidence materially changes the prior judgment, then publishes the current judgment state to Solana.
+
+The Build Lab material is public-safe. The proprietary MatterTurn judgment runtime, private case evidence, and reconstruction-enabling professional assets remain private.
+
 ## Development
 Use Node 24 and run `npm ci`, `npm run dev`. Validate with `npm run typecheck` and `npm run build`.
 
