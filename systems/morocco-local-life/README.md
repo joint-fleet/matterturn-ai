@@ -1,5 +1,7 @@
 # Morocco Life Personal Assistant
 
+**Maturity: Active engineering / validation.**
+
 **Problem addressed:** Given a resident's or visitor's circumstances, what they need to know or arrange next in Morocco — documents, housing, transport, and everyday local services.
 
 **Judgment supported:** Translating personal circumstances, location, and official requirements into a practical next-step guide, with uncertainties and official confirmation points shown rather than assumed away.

@@ -1,46 +1,87 @@
 # MatterTurn Ai
 
-## What MatterTurn is
+## 1. What MatterTurn is
 
-MatterTurn builds judgment systems that keep professional decisions connected to changing reality. Each system organizes real evidence, assumptions, and expert review around one real commercial or professional question, and returns a reviewable result — not an autonomous decision.
+MatterTurn builds judgment systems that keep professional decisions connected to changing reality. It is not a general chatbot or a generic autonomous agent. Each system organizes real evidence, professional assumptions, and expert review around one real decision, and keeps checking — after the first answer — whether that decision still holds.
 
-## Why it is different
+## 2. The flow: Reality → Evidence → Judgment → Action → Result → New Reality
 
-Generic AI gives answers. MatterTurn is built around a narrower, harder question: after reality changes — a new event, a new piece of evidence, a new market condition — does a professional's prior judgment still hold? If not, what specifically needs re-judging, and what action follows? The goal isn't to alert on every change; it's to decide whether the change actually matters to a decision someone already made, and to reopen only the parts of that decision the change actually affects.
+```text
+Reality  →  Evidence  →  Judgment  →  Action  →  Result  →  New Reality
+   ^                                                              |
+   └──────────────────────  Re-judgment  ────────────────────────┘
+```
 
-## Core capabilities
+MatterTurn doesn't answer once and stop. A judgment produces an action and a result, but reality keeps moving — and the new reality becomes the next input, not a one-time output.
 
-- Structuring a professional decision around explicit evidence, assumptions, and risk.
-- Tracing a conclusion back to the facts and assumptions it depends on.
-- Distinguishing an irrelevant change from one that invalidates a specific assumption.
-- Selectively reopening only the affected parts of a prior judgment, preserving the rest.
+## 3. Selective reopening
 
-Full breakdown by maturity (verified / prototype / planned): [`company/capabilities.md`](company/capabilities.md).
+```text
+Reality changes
+      │
+      ▼
+Find the evidence / assumption the prior judgment depended on
+      │
+      ▼
+Is the change material?
+      │
+      ├── No  → leave the judgment as is
+      ▼
+Yes
+      │
+      ▼
+Reopen only the affected part — unaffected parts are preserved
+      │
+      ▼
+Human review
+      │
+      ▼
+Updated judgment / action
+```
 
-## Systems
+MatterTurn doesn't alert on every change. It decides whether a change is material to a judgment someone already made, and if so, reopens only what that change actually affects.
 
-Public-safe, system-by-system index — real estate, financial securities, banking frontline, travel, cross-border trade, international market & brand, Morocco local life, sales opportunity, and medical business. See [`systems/`](systems/).
+## 4. What already exists
 
-## Competitions
+This is what MatterTurn has actually built, stated first — the boundaries and labels come after, in sections 8–10.
 
-Active public competition entries, e.g. [Chiang Mai Build Lab 2026](competitions/chiang-mai-build-lab-2026/).
+- **Expert workflows.** Each system is an abstracted version of how a specific professional works through a decision, organized into a workflow of expert roles, not a single prompt — dynamically selected per question, not a fixed pipeline run in full every time. See [`company/expert-workflows.md`](company/expert-workflows.md).
+- **A private Central Capability Library.** Work on one system — including its failures — doesn't stay siloed. Reusable capabilities, validated lessons and failure knowledge accumulate centrally, so a new problem checks what already exists before anything new gets built. See [`company/capability-evolution.md`](company/capability-evolution.md).
+- **Case & failure history.** More development, validation, and failure cases exist than are publicly released, and MatterTurn does not delete failures — it keeps them as an asset. See [`company/case-and-failure-history.md`](company/case-and-failure-history.md) and [`cases/`](cases/).
+- **One founder, agents, and domain experts — not a conventional engineering team.** MatterTurn is built by one founder and core operator, Michael Xie, combining his own domain experience, AI agents, external domain-expert input, and the capability library above. See [`company/operating-model.md`](company/operating-model.md).
 
-## Demos
+## 5. System evidence
 
-Long-term product concepts shown publicly ahead of full production, e.g. [RWA Judgment Continuity](demos/rwa-judgment-continuity/).
+A per-system, honestly-labeled index — not nine equal "products." See [`systems/`](systems/) for the full maturity map, and [`company/engineering-evidence.md`](company/engineering-evidence.md) for what each system's public-safe engineering facts actually are.
 
-## Public cases
+## 6. Public cases
 
-Published, public-safe case results, each linked from its own source repository — no private evidence copied in. See [`cases/`](cases/).
+Published, public-safe case results — client/professional cases, engineering/learning cases, and historical fixtures are kept clearly distinct. Not every entry has an independently linked source record; where one doesn't, that's stated on the entry itself rather than implied. See [`cases/`](cases/) for the index and [`company/case-and-failure-history.md`](company/case-and-failure-history.md) for the fuller, per-system history.
 
-## Research
+## 7. Engineering evidence
 
-Public research write-ups, once cleared for public release. See [`research/`](research/).
+Public-safe engineering facts per system. Only Real Estate currently has a fact-by-fact breakdown by engineering status with public source links; other systems' facts are disclosed as internal description unless a source link is given. No private source code. See [`company/engineering-evidence.md`](company/engineering-evidence.md).
 
-## Website
+## 8. Maturity map
 
-The live product website, built from this repository. See [`website/README.md`](website/README.md) for current layout, development, and deployment notes.
+These are system-level stages, not fact-level labels — they say how far a system is overall, not that every fact about it is independently verified. Only Real Estate currently has a finer fact-by-fact breakdown — Established Engineering (source-side), Formal runtime / authority mechanism, and Candidate / Research frontier, kept as separate facts rather than one merged status (see [`company/engineering-evidence.md`](company/engineering-evidence.md)). Real Estate's "Advanced Engineering / Controlled Validation" label reflects engineering verification — tests, CI, a formal runtime, one published case — not fully validated professional effectiveness, production readiness, or proven commercial ROI, which remain unestablished for every system here.
 
-## Public/private boundary
+- **Advanced Engineering / Controlled Validation** — Real Estate Judgment System.
+- **Active engineering / validation** — Banking Frontline, Travel, Financial Securities, Cross-border Goods Trade, International Market & Brand, Morocco Local Life, Sales Opportunity.
+- **Design / research** — Medical Business and other early-stage systems.
 
-This repository shows MatterTurn's public-facing company material, system descriptions, competition entries, demo concepts, and linked public cases. It deliberately does **not** include MatterTurn's core judgment runtime, private case evidence, internal orchestration, or any reconstruction-enabling professional assets — those stay in private repositories. Where a capability shown here is still a prototype or a plan rather than a verified, production capability, that status is stated explicitly rather than implied away. See [`company/capabilities.md`](company/capabilities.md) and [`company/principles.md`](company/principles.md).
+Full per-system detail: [`systems/README.md`](systems/README.md).
+
+## 9. Public / private boundary
+
+This repository shows MatterTurn's public-facing company material, system descriptions, competition entries, demo concepts, and linked public cases. It deliberately does **not** include MatterTurn's core judgment runtime, private case evidence, internal orchestration, reconstruction-enabling schemas, or internal capability-registry identifiers. Where a capability shown here is still a prototype or a plan rather than a verified, production capability, that status is stated explicitly. See [`company/capabilities.md`](company/capabilities.md) and [`company/principles.md`](company/principles.md).
+
+## 10. Where to start
+
+- New here? Start with [`company/vision.md`](company/vision.md) and [`company/capabilities.md`](company/capabilities.md).
+- Want to know what MatterTurn has actually built? [`company/expert-workflows.md`](company/expert-workflows.md), [`company/capability-evolution.md`](company/capability-evolution.md), and [`company/case-and-failure-history.md`](company/case-and-failure-history.md).
+- Want to know who's behind it? [`company/operating-model.md`](company/operating-model.md).
+- Want proof, not just concept? Go straight to [`company/engineering-evidence.md`](company/engineering-evidence.md) and [`cases/`](cases/).
+- Looking for a specific system? [`systems/`](systems/).
+- Here for the competition? [`competitions/chiang-mai-build-lab-2026/`](competitions/chiang-mai-build-lab-2026/) and [`demos/rwa-judgment-continuity/`](demos/rwa-judgment-continuity/).
+- Here for the live product? [`website/README.md`](website/README.md).

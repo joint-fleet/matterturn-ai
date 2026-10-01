@@ -1,5 +1,7 @@
 # Cross-border Goods Trade Services
 
+**Maturity: Active engineering / validation.**
+
 **Problem addressed:** Whether a sourcing opportunity across Chinese platforms and a destination market is commercially and operationally sound.
 
 **Judgment supported:** Comparing an offer against platform and supplier evidence, surfacing unknowns and platform limits, and assessing commercial and operational risk before commitment.

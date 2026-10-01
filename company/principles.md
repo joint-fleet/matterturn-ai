@@ -11,3 +11,5 @@
 **Public/private boundary by default.** This repository shows what MatterTurn is and what its public-safe systems do. The proprietary judgment runtime, private case evidence, and internal orchestration stay in private repositories, always.
 
 **No premature production claims.** Nothing here implies a working, generally-available commercial product unless it is one. Where a system is not yet live, the honest status is stated plainly instead of implied away.
+
+**We do not delete failure.** Failed tests, rejected assumptions, negative results and known limitations are preserved as engineering memory. A system that only keeps its successes hasn't shown anyone how it handles being wrong — this reduces the risk of repeating a failure, it does not guarantee one can never recur. See [`company/case-and-failure-history.md`](case-and-failure-history.md) and [`company/capability-evolution.md`](capability-evolution.md).

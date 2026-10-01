@@ -14,7 +14,7 @@ The website is a Next.js app at the repository root. Use Node 24, run `npm ci`, 
 
 ## Private deployment
 
-Keep Vercel Authentication enabled for **all deployments**, including production aliases. Do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
+Deployment access policy is managed separately from application content. Production exposure must be verified against the current Vercel project configuration before authentication is treated as an access-control boundary. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
 
 ## Intake migration limitation
 
