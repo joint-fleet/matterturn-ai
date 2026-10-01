@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MatterTurn Judgment Continuity Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "asset_id",
+    "event_id",
+    "materiality",
+    "judgment_state",
+    "reason",
+    "affected_judgments",
+    "preserved_judgments"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "materiality": {
+      "enum": [
+        "NO_MATERIAL_CHANGE",
+        "MATERIAL_CHANGE",
+        "UNRESOLVED"
+      ]
+    },
+    "judgment_state": {
+      "enum": [
+        "JUDGMENT_CURRENT",
+        "CHANGE_OBSERVED",
+        "REASSESSMENT_REQUIRED",
+        "JUDGMENT_REFRESHED"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "affected_judgments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "preserved_judgments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}
