@@ -1,0 +1,46 @@
+# Public Case Library
+
+What MatterTurn actually produced, organized by what each result proves — not by which system produced it. Every case below traces back to real internal evidence, re-checked against its original source for this release rather than written from memory or from earlier summaries.
+
+**One published case does not mean one case exists.** These are a representative selection, not the complete development and validation history — see [`company/case-and-failure-history.md`](../../company/case-and-failure-history.md) for the fuller, per-system picture.
+
+**Format.** Every case below answers the same six questions: the question, what the system was given, what it found, the judgment, what stayed blocked or unresolved, and what the case demonstrates. What's deliberately left out of every case: prompts, routing rules, internal capability/asset identifiers, evaluator-private rubrics, internal thresholds, the order in which internal roles are invoked, admission or dependency-propagation implementation, and private client evidence.
+
+## Judgment Cases — what professional judgment the system actually formed
+
+- [A-05 — Refusing to Compute Rather Than Guess](a05-controlled-comparison.md)
+- [Nvidia, 2025 — Two Shocks, Two Different Reassessments](nvidia-selective-reassessment.md)
+
+## Blocked Cases — why the system refused to proceed
+
+- [Select-Service Hotel Acquisition — Blocked Pending Diligence](hotel-acquisition-screening.md)
+- [CASE-002 — Blocked Despite Strong Analysis](case-002-blocked-judgment.md)
+
+## Reassessment Cases — what changed when reality changed
+
+- [Nvidia, 2025 — Two Shocks, Two Different Reassessments](nvidia-selective-reassessment.md)
+
+## Failure Cases — what went wrong, and what was kept
+
+- [A-03 — When the Right Answer Hides a Bad Process](a03-failure-decomposition.md)
+- [Crown MedRealty — A Lead That Wasn't One, Plus a Defect Caught Along the Way](sales-crown-medrealty-negative-result.md)
+
+## Negative Cases — when there was no opportunity to find
+
+- [Crown MedRealty — A Lead That Wasn't One, Plus a Defect Caught Along the Way](sales-crown-medrealty-negative-result.md)
+
+## Evidence Boundary Cases — where the system stopped short of a claim it couldn't support
+
+- [Kiosque Hassan II — When Nearby Isn't the Same Thing](morocco-spatial-identity-boundary.md)
+
+## Historical Blind Validation
+
+- [1740 Broadway — Historical Blind Validation](1740-broadway-blind-validation.md)
+
+## Synthetic Stress Tests
+
+- [A Customer With Four Problems at Once](bank-composite-case.md)
+
+---
+
+Not every category has a case yet, and a case may belong to more than one category — the same result can prove more than one thing. New cases are added here as they clear review, using the same six-part format and the same disclosure boundary: real result, not reconstructable method.

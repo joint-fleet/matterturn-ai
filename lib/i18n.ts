@@ -58,7 +58,14 @@ const en = {
   clLink:"See the capability library on GitHub",
   cfKicker:"We do not delete failure",cfTitle:"Built through cases, not just prompts.",
   cfText:"Successes, HOLDs, and negative results are all preserved. A documented failure lets a later system check for it earlier instead of rediscovering it from scratch.",
-  cfLink:"See the case & failure history on GitHub"
+  cfLink:"See the case & failure history on GitHub",
+  pclKicker:"Public Case Library",pclTitle:"Built through cases, not just prompts.",
+  pclIntro:"A representative selection of real results — not demos, not success-only highlights — organized by what each one proves.",
+  pclLink:"See the full case library on GitHub",
+  pclC1Tag:"Historical Blind Validation",pclC1Title:"1740 Broadway",pclC1Text:"Two isolated runs rejected a $605M acquisition before anyone knew the outcome — or the asset's identity.",
+  pclC2Tag:"Blocked Judgment",pclC2Title:"CASE-002",pclC2Text:"Strong analysis, one overstated legal claim — independent review failed it anyway.",
+  pclC3Tag:"Negative Result",pclC3Title:"Crown MedRealty",pclC3Text:"Real research, a real defect found and fixed, and still zero verified opportunities.",
+  pclC4Tag:"Evidence Boundary",pclC4Title:"Kiosque Hassan II",pclC4Text:"Coordinates 0.62m apart aren't proof of the same place — so no recommendation was made."
 };
 export type Messages = Record<keyof typeof en,string>;
 const translations:Record<Locale,Messages> = {
@@ -113,7 +120,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"在 GitHub 上查看能力库",
     cfKicker:"我们不删除失败",cfTitle:"靠真实案例，而不只是提示词，构建出来。",
     cfText:"成功、HOLD 和负结果都会被保留。一个记录在案的失败，能让后来的系统提前核对，而不是从头再踩一遍坑。",
-    cfLink:"在 GitHub 上查看案例与失败历史"
+    cfLink:"在 GitHub 上查看案例与失败历史",
+    pclKicker:"公开案例库",pclTitle:"靠真实案例，而不只是提示词，构建出来。",
+    pclIntro:"精选的真实结果——不是演示，也不只挑成功案例——按每个案例证明了什么来组织。",
+    pclLink:"在 GitHub 上查看完整案例库",
+    pclC1Tag:"历史盲测验证",pclC1Title:"1740 Broadway",pclC1Text:"在任何人知道结果或资产身份之前，两次独立运行就拒绝了这笔 6.05 亿美元的收购。",
+    pclC2Tag:"判断被阻断",pclC2Title:"CASE-002",pclC2Text:"分析本身很扎实，但一个被夸大的法律主张,还是让独立评审判定失败。",
+    pclC3Tag:"负结果",pclC3Title:"Crown MedRealty",pclC3Text:"真实的研究、一个被发现并修复的真实缺陷，结果依然是零个已验证的机会。",
+    pclC4Tag:"证据边界",pclC4Title:"Kiosque Hassan II",pclC4Text:"坐标相差 0.62 米不等于同一个地方——所以系统没有给出任何建议。"
   },
   "zh-TW":{
     navSystems:"專業系統",navApproach:"工作方式",navWorkspace:"私人工作區",language:"語言",
@@ -165,7 +179,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"在 GitHub 上查看能力庫",
     cfKicker:"我們不刪除失敗",cfTitle:"靠真實案例，而不只是提示詞，建構出來。",
     cfText:"成功、HOLD 和負面結果都會被保留。一個記錄在案的失敗，能讓後來的系統提前核對，而不是從頭再踩一次坑。",
-    cfLink:"在 GitHub 上查看案例與失敗歷史"
+    cfLink:"在 GitHub 上查看案例與失敗歷史",
+    pclKicker:"公開案例庫",pclTitle:"靠真實案例，而不只是提示詞，建構出來。",
+    pclIntro:"精選的真實結果——不是演示，也不只挑成功案例——按每個案例證明了什麼來組織。",
+    pclLink:"在 GitHub 上查看完整案例庫",
+    pclC1Tag:"歷史盲測驗證",pclC1Title:"1740 Broadway",pclC1Text:"在任何人知道結果或資產身分之前，兩次獨立運行就拒絕了這筆 6.05 億美元的收購。",
+    pclC2Tag:"判斷被阻斷",pclC2Title:"CASE-002",pclC2Text:"分析本身很扎實，但一個被誇大的法律主張，還是讓獨立評審判定失敗。",
+    pclC3Tag:"負結果",pclC3Title:"Crown MedRealty",pclC3Text:"真實的研究、一個被發現並修復的真實缺陷，結果依然是零個已驗證的機會。",
+    pclC4Tag:"證據邊界",pclC4Title:"Kiosque Hassan II",pclC4Text:"座標相差 0.62 公尺不等於同一個地方——所以系統沒有給出任何建議。"
   },
   fr:{
     navSystems:"Systèmes",navApproach:"Méthode",navWorkspace:"Espace privé",language:"Langue",
@@ -217,7 +238,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"Voir la bibliothèque de capacités sur GitHub",
     cfKicker:"Nous ne supprimons pas les échecs",cfTitle:"Construit à partir de cas réels, pas seulement de prompts.",
     cfText:"Succès, statuts HOLD et résultats négatifs sont tous conservés. Un échec documenté permet à un système ultérieur de le vérifier plus tôt plutôt que de le redécouvrir à partir de zéro.",
-    cfLink:"Voir l'historique des cas et échecs sur GitHub"
+    cfLink:"Voir l'historique des cas et échecs sur GitHub",
+    pclKicker:"Bibliothèque publique de cas",pclTitle:"Construit à partir de cas réels, pas seulement de prompts.",
+    pclIntro:"Une sélection représentative de résultats réels — ni démos, ni succès triés sur le volet — organisée selon ce que chacun démontre.",
+    pclLink:"Voir la bibliothèque complète de cas sur GitHub",
+    pclC1Tag:"Validation à l'aveugle historique",pclC1Title:"1740 Broadway",pclC1Text:"Deux exécutions isolées ont rejeté une acquisition de 605 M$ avant que quiconque ne connaisse le résultat — ni l'identité de l'actif.",
+    pclC2Tag:"Jugement bloqué",pclC2Title:"CASE-002",pclC2Text:"Analyse solide, une affirmation juridique exagérée — l'examen indépendant l'a quand même rejetée.",
+    pclC3Tag:"Résultat négatif",pclC3Title:"Crown MedRealty",pclC3Text:"Recherche réelle, un vrai défaut trouvé et corrigé, et toujours zéro opportunité vérifiée.",
+    pclC4Tag:"Frontière de la preuve",pclC4Title:"Kiosque Hassan II",pclC4Text:"Des coordonnées distantes de 0,62 m ne prouvent pas qu'il s'agit du même lieu — aucune recommandation n'a donc été émise."
   },
   ar:{
     navSystems:"الأنظمة",navApproach:"منهجنا",navWorkspace:"مساحة العمل الخاصة",language:"اللغة",
@@ -269,7 +297,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"اطّلع على مكتبة القدرات على GitHub",
     cfKicker:"لا نحذف الإخفاقات",cfTitle:"مبني من خلال حالات حقيقية، لا مجرد أوامر.",
     cfText:"يتم الاحتفاظ بالنجاحات وحالات الانتظار والنتائج السلبية جميعها. الإخفاق الموثق يتيح لنظام لاحق التحقق منه مبكراً بدلاً من اكتشافه من جديد.",
-    cfLink:"اطّلع على سجل الحالات والإخفاقات على GitHub"
+    cfLink:"اطّلع على سجل الحالات والإخفاقات على GitHub",
+    pclKicker:"مكتبة الحالات العامة",pclTitle:"مبني من خلال حالات حقيقية، لا مجرد أوامر.",
+    pclIntro:"مجموعة مختارة وممثلة من نتائج حقيقية — ليست عروضاً توضيحية، ولا نجاحات منتقاة فقط — منظمة حسب ما يثبته كل منها.",
+    pclLink:"اطّلع على مكتبة الحالات الكاملة على GitHub",
+    pclC1Tag:"تحقق أعمى تاريخي",pclC1Title:"1740 Broadway",pclC1Text:"رفضت عمليتان مستقلتان صفقة استحواذ بقيمة 605 مليون دولار قبل أن يعرف أحد النتيجة — أو هوية الأصل.",
+    pclC2Tag:"حكم محجوب",pclC2Title:"CASE-002",pclC2Text:"تحليل قوي، وادّعاء قانوني مُبالغ فيه واحد — ومع ذلك أسقطته المراجعة المستقلة.",
+    pclC3Tag:"نتيجة سلبية",pclC3Title:"Crown MedRealty",pclC3Text:"بحث حقيقي، وخلل حقيقي تم اكتشافه وإصلاحه، ومع ذلك صفر فرص موثقة.",
+    pclC4Tag:"حدود الأدلة",pclC4Title:"Kiosque Hassan II",pclC4Text:"إحداثيات متباعدة بـ 0.62 متر لا تثبت أنه المكان نفسه — فلم تُصدر أي توصية."
   },
   ary:{
     navSystems:"الأنظمة",navApproach:"كيفاش خدامين",navWorkspace:"فضاء الخدمة الخاص",language:"اللغة",
@@ -321,7 +356,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"شوف مكتبة القدرات فـ GitHub",
     cfKicker:"ما كنمسحوش الإخفاقات",cfTitle:"مبني بحالات حقيقية، ماشي غير بأوامر.",
     cfText:"النجاحات وحالات الانتظار والنتائج السلبية كلهم كيتحافظ عليهم. الإخفاق الموثق كيخلي نظام لاحق يتحقق منو بكري بدل ما يكتشفو من جديد.",
-    cfLink:"شوف سجل الحالات والإخفاقات فـ GitHub"
+    cfLink:"شوف سجل الحالات والإخفاقات فـ GitHub",
+    pclKicker:"مكتبة الحالات العامة",pclTitle:"مبني بحالات حقيقية، ماشي غير بأوامر.",
+    pclIntro:"مجموعة مختارة ديال نتائج حقيقية — ماشي عروض توضيحية، ولا غير نجاحات مختارة — منظمة حسب شنو كيبين كل واحدة منهم.",
+    pclLink:"شوف مكتبة الحالات الكاملة فـ GitHub",
+    pclC1Tag:"تحقق أعمى تاريخي",pclC1Title:"1740 Broadway",pclC1Text:"جوج عمليات مستقلة رفضو صفقة استحواذ بقيمة 605 مليون دولار قبل ما حتى واحد يعرف النتيجة — ولا هوية الأصل.",
+    pclC2Tag:"حكم محجوب",pclC2Title:"CASE-002",pclC2Text:"تحليل قوي، وادّعاء قانوني مُبالغ فيه وحد — ومع ذلك المراجعة المستقلة رفضاتو.",
+    pclC3Tag:"نتيجة سلبية",pclC3Title:"Crown MedRealty",pclC3Text:"بحث حقيقي، وخلل حقيقي تلقى وتصلح، ومع ذلك صفر فرص موثقة.",
+    pclC4Tag:"حدود الدليل",pclC4Title:"Kiosque Hassan II",pclC4Text:"إحداثيات متباعدة بـ 0.62 متر ما كتثبتش بلي هو نفس المكان — فما تصدرت حتى توصية."
   },
   es:{
     navSystems:"Sistemas",navApproach:"Método",navWorkspace:"Espacio privado",language:"Idioma",
@@ -373,7 +415,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"Ver la biblioteca de capacidades en GitHub",
     cfKicker:"No eliminamos los fallos",cfTitle:"Construido a partir de casos reales, no solo de prompts.",
     cfText:"Éxitos, estados HOLD y resultados negativos se conservan todos. Un fallo documentado permite que un sistema posterior lo detecte antes en lugar de redescubrirlo desde cero.",
-    cfLink:"Ver el historial de casos y fallos en GitHub"
+    cfLink:"Ver el historial de casos y fallos en GitHub",
+    pclKicker:"Biblioteca pública de casos",pclTitle:"Construido a partir de casos reales, no solo de prompts.",
+    pclIntro:"Una selección representativa de resultados reales — ni demos, ni solo éxitos seleccionados — organizada según lo que cada uno demuestra.",
+    pclLink:"Ver la biblioteca completa de casos en GitHub",
+    pclC1Tag:"Validación ciega histórica",pclC1Title:"1740 Broadway",pclC1Text:"Dos ejecuciones aisladas rechazaron una adquisición de 605 M$ antes de que nadie conociera el resultado — ni la identidad del activo.",
+    pclC2Tag:"Juicio bloqueado",pclC2Title:"CASE-002",pclC2Text:"Análisis sólido, una afirmación legal exagerada — la revisión independiente la rechazó igualmente.",
+    pclC3Tag:"Resultado negativo",pclC3Title:"Crown MedRealty",pclC3Text:"Investigación real, un defecto real encontrado y corregido, y aun así cero oportunidades verificadas.",
+    pclC4Tag:"Frontera de la evidencia",pclC4Title:"Kiosque Hassan II",pclC4Text:"Coordenadas separadas por 0,62 m no prueban que sea el mismo lugar — así que no se emitió ninguna recomendación."
   },
   ja:{
     navSystems:"システム",navApproach:"取り組み",navWorkspace:"非公開ワークスペース",language:"言語",
@@ -425,7 +474,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"GitHub でケイパビリティ・ライブラリを見る",
     cfKicker:"失敗を削除しません",cfTitle:"プロンプトだけでなく、実際の案件を通じて作られています。",
     cfText:"成功、HOLD、否定的な結果はすべて保存されます。記録された失敗により、後のシステムはゼロから再発見するのではなく、早期にそれを確認できます。",
-    cfLink:"GitHub で案件と失敗の履歴を見る"
+    cfLink:"GitHub で案件と失敗の履歴を見る",
+    pclKicker:"公開ケースライブラリ",pclTitle:"プロンプトだけでなく、実際の案件を通じて作られています。",
+    pclIntro:"デモでも成功例だけの抜粋でもない、実際の結果の代表的な選集を、それぞれが何を証明するかで整理しています。",
+    pclLink:"GitHub で完全なケースライブラリを見る",
+    pclC1Tag:"歴史的ブラインド検証",pclC1Title:"1740 Broadway",pclC1Text:"誰も結果も資産の正体も知らないうちに、2つの独立した実行が6億500万ドルの買収を拒否しました。",
+    pclC2Tag:"判断の阻止",pclC2Title:"CASE-002",pclC2Text:"分析自体は堅実でしたが、過大に主張された一つの法的根拠が原因で、独立レビューは不合格と判定しました。",
+    pclC3Tag:"否定的結果",pclC3Title:"Crown MedRealty",pclC3Text:"実際の調査、発見・修正された実際の欠陥、それでも検証済みの機会はゼロでした。",
+    pclC4Tag:"証拠の境界",pclC4Title:"Kiosque Hassan II",pclC4Text:"座標が0.62メートル離れていることは同じ場所である証拠にはならないため、推奨は一切行われませんでした。"
   },
   th:{
     navSystems:"ระบบ",navApproach:"แนวทาง",navWorkspace:"พื้นที่ทำงานส่วนตัว",language:"ภาษา",
@@ -477,7 +533,14 @@ const translations:Record<Locale,Messages> = {
     clLink:"ดูคลังความสามารถบน GitHub",
     cfKicker:"เราไม่ลบความล้มเหลว",cfTitle:"สร้างขึ้นผ่านกรณีจริง ไม่ใช่แค่พรอมต์",
     cfText:"ความสำเร็จ สถานะ HOLD และผลลัพธ์เชิงลบ ล้วนถูกเก็บรักษาไว้ทั้งหมด ความล้มเหลวที่บันทึกไว้ช่วยให้ระบบรุ่นหลังตรวจสอบได้เร็วขึ้นแทนที่จะค้นพบใหม่ตั้งแต่ต้น",
-    cfLink:"ดูประวัติกรณีและความล้มเหลวบน GitHub"
+    cfLink:"ดูประวัติกรณีและความล้มเหลวบน GitHub",
+    pclKicker:"คลังกรณีศึกษาสาธารณะ",pclTitle:"สร้างขึ้นผ่านกรณีจริง ไม่ใช่แค่พรอมต์",
+    pclIntro:"ตัวอย่างผลลัพธ์จริงที่คัดเลือกมา ไม่ใช่การสาธิตหรือเลือกเฉพาะความสำเร็จ จัดกลุ่มตามสิ่งที่แต่ละกรณีพิสูจน์",
+    pclLink:"ดูคลังกรณีศึกษาฉบับสมบูรณ์บน GitHub",
+    pclC1Tag:"การตรวจสอบแบบปิดตาเชิงประวัติศาสตร์",pclC1Title:"1740 Broadway",pclC1Text:"การรันสองครั้งที่เป็นอิสระกันปฏิเสธการเข้าซื้อมูลค่า 605 ล้านดอลลาร์ ก่อนที่ใครจะรู้ผลลัพธ์หรือแม้แต่ตัวตนของสินทรัพย์",
+    pclC2Tag:"คำตัดสินที่ถูกปิดกั้น",pclC2Title:"CASE-002",pclC2Text:"การวิเคราะห์แข็งแรง แต่ข้อกล่าวอ้างทางกฎหมายที่เกินจริงหนึ่งข้อ ทำให้การตรวจสอบอิสระตัดสินว่าล้มเหลวอยู่ดี",
+    pclC3Tag:"ผลลัพธ์เชิงลบ",pclC3Title:"Crown MedRealty",pclC3Text:"การวิจัยจริง ข้อบกพร่องจริงที่ถูกพบและแก้ไข และยังคงไม่มีโอกาสที่ได้รับการยืนยันเลย",
+    pclC4Tag:"ขอบเขตของหลักฐาน",pclC4Title:"Kiosque Hassan II",pclC4Text:"พิกัดที่ห่างกัน 0.62 เมตรไม่ได้พิสูจน์ว่าเป็นที่เดียวกัน จึงไม่มีการให้คำแนะนำใด ๆ"
   }
 };
 export const messages = (locale:Locale):Messages => translations[locale];
