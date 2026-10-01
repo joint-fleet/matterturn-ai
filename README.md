@@ -1,23 +1,35 @@
 # MatterTurn Ai
 
-Private product demonstration migrated from Sites version 26, source commit c6a3b380e23a5666e7b1c96f99522332bc029711.
+MatterTurn builds judgment systems that keep professional decisions connected to changing reality.
 
-## Chiang Mai Build Lab 2026
+Generic AI gives answers. MatterTurn is built around a narrower, harder question: after reality changes — a new event, a new piece of evidence, a new market condition — does a professional's prior judgment still hold? If not, what specifically needs re-judging, and what action follows? The goal isn't to alert on every change; it's to decide whether the change actually matters to a decision someone already made.
 
-Public competition material for **MatterTurn RWA Judgment Continuity for Solana** is available in [`build-lab/`](build-lab/).
+## In this repository
 
-> Tokenized assets can have live onchain prices while the professional judgment behind them becomes stale. MatterTurn tests whether new real-world evidence materially changes the prior judgment, then publishes the current judgment state to Solana.
+- [**Company**](company/) — vision, principles, capabilities, and how we work.
+- [**Systems**](systems/) — public-safe index of MatterTurn's judgment system categories.
+- [**Competitions**](competitions/) — active public competition entries, e.g. [Chiang Mai Build Lab 2026](competitions/chiang-mai-build-lab-2026/).
+- [**Demos**](demos/) — long-term product concepts shown publicly ahead of full production, e.g. [RWA Judgment Continuity](demos/rwa-judgment-continuity/).
+- [**Cases**](cases/) — public case studies (none published yet; see [`cases/README.md`](cases/README.md)).
+- [**Research**](research/) — public research write-ups (none published yet; see [`research/README.md`](research/README.md)).
+- [**Website**](website/) — the live product website, built from this repository (see [`website/README.md`](website/README.md) for current layout).
 
-The Build Lab material is public-safe. The proprietary MatterTurn judgment runtime, private case evidence, and reconstruction-enabling professional assets remain private.
+## What's public vs. private
+
+This repository shows MatterTurn's public-facing company material, system descriptions, competition entries, and demo concepts. It deliberately does **not** include MatterTurn's core judgment runtime, private case evidence, internal orchestration, or any reconstruction-enabling professional assets — those stay in private repositories. Where a capability shown here is still a prototype or a plan rather than a verified, production capability, that status is stated explicitly rather than implied away. See [`company/capabilities.md`](company/capabilities.md).
 
 ## Development
-Use Node 24 and run `npm ci`, `npm run dev`. Validate with `npm run typecheck` and `npm run build`.
+
+The website is a Next.js app at the repository root. Use Node 24, run `npm ci`, then `npm run dev`. Validate with `npm run typecheck` and `npm run build`. See [`website/README.md`](website/README.md) for the current repository-layout note, and the sections below (preserved from the previous README) for deployment and migration details.
 
 ## Private deployment
+
 Keep Vercel Authentication enabled for **all deployments**, including production aliases. Do not attach an unprotected custom domain. The noindex header is supplementary and is not access control. Intended project name: `matterturn-ai`.
 
 ## Intake migration limitation
-Sites used ChatGPT authenticated identity headers and Cloudflare R2 storage. These are not available on Vercel. The original source is preserved in `migration/`. The submissions endpoint returns 503 and never claims to save files. Persistent authenticated storage must be configured before intake is re-enabled. This migration does not copy existing submissions.
+
+The original Sites-era intake used ChatGPT authenticated identity headers and Cloudflare R2 storage, neither available on Vercel. The original source is preserved in `migration/`. The submissions endpoint returns 503 and never claims to save files. Persistent authenticated storage must be configured before intake is re-enabled. This migration does not copy existing submissions.
 
 ## Preserved assets
+
 Nine languages, pages, layout, contact details, video and poster are retained. Video/poster filenames retain their historical names; their bytes are unchanged. Main brand text is MatterTurn Ai.
