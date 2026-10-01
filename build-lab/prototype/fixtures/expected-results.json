@@ -1,0 +1,33 @@
+{
+  "event_id": "EVENT-ANCHOR-NONRENEWAL-001",
+  "cases": [
+    {
+      "asset_id": "RWA-ASSET-A",
+      "expected_materiality": "NO_MATERIAL_CHANGE",
+      "expected_judgment_state": "CHANGE_OBSERVED",
+      "expected_follow_on_state": "JUDGMENT_CURRENT",
+      "expected_affected_judgments": [],
+      "expected_preserved_judgments": [
+        "NOI",
+        "VALUATION",
+        "DEBT_CAPACITY",
+        "TITLE",
+        "OWNERSHIP"
+      ]
+    },
+    {
+      "asset_id": "RWA-ASSET-B",
+      "expected_materiality": "MATERIAL_CHANGE",
+      "expected_judgment_state": "REASSESSMENT_REQUIRED",
+      "expected_affected_judgments": [
+        "NOI",
+        "VALUATION",
+        "DEBT_CAPACITY"
+      ],
+      "expected_preserved_judgments": [
+        "TITLE",
+        "OWNERSHIP"
+      ]
+    }
+  ]
+}
