@@ -1,24 +1,38 @@
-# Capability Evolution
+# Capability Evolution & the Central Capability Library
 
-MatterTurn does not rebuild every mechanism from zero for each new domain. Real work on one system feeds a second growth chain, alongside judgment continuity:
+MatterTurn does not rebuild every mechanism from zero for each new domain. Real work on one system feeds a central capability library — a second growth chain, alongside judgment continuity — that later systems check before building something new:
 
 ```text
-Real work
+New problem
    │
    ▼
-Reusable capability / candidate
+Check existing assets in the Central Capability Library
    │
    ▼
-Evidence & failure history
+Reuse
    │
    ▼
-Reuse / adapt / domain-local
+Adapt
    │
    ▼
-Next system
+Domain-local
+   │
+   ▼
+Build a new candidate only if necessary
 ```
 
-Internally, MatterTurn tracks this through a central capability-asset mechanism (capability, candidate, failure and composition records, organized by expert-role families, with reuse-before-build as a standing rule). This repository does not publish that registry's internal identifiers, counts, or structure — those are reconstruction-enabling implementation detail. What's below is the public-safe shape of how it works.
+This is a meaningful part of why one founder, working with agents and domain experts (see [`company/operating-model.md`](operating-model.md)), can keep entering new domains instead of starting over each time.
+
+## What the library holds
+
+Internally, MatterTurn tracks this through a central capability-asset mechanism with at least four kinds of record, organized by expert-role families (see [`company/expert-workflows.md`](expert-workflows.md)), with reuse-before-build as a standing rule:
+
+- **Reusable capabilities** — mechanisms proven out in one system and available to the next.
+- **Candidate capabilities** — mechanisms built for one system, not yet proven elsewhere, available to try.
+- **Capability combinations** — capabilities that have been composed together for a specific kind of problem.
+- **Failure memory** — preserved negative results (see [`company/case-and-failure-history.md`](case-and-failure-history.md) and [`company/principles.md`](principles.md)).
+
+Each record also carries provenance (where it came from), use/test history, known limitations, and reuse boundaries (where it stops applying). **This repository does not publish the registry's internal identifiers, exact counts, or internal structure** — those are reconstruction-enabling implementation detail. Publishing that this library exists and roughly what it holds is not the same as publishing it.
 
 **This page describes engineering practice and a governing design rule, not a demonstrated public instance.** No source-system → candidate-capability → receiving-system example is published or linked from this repository yet. Treat the flow and the reuse/never-reuse lists below as a statement of how MatterTurn intends to and internally reports working, not as independently verified evidence of a specific capability moving between two named systems.
 

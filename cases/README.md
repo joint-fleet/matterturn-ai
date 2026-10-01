@@ -1,6 +1,6 @@
 # Cases
 
-Index of MatterTurn public-safe case material. Three kinds of entries live here, and they are never mixed together:
+Index of MatterTurn public-safe case material. For the fuller, per-system picture of development, validation, and failure history — not just what's released at full public-case detail here — see [`company/case-and-failure-history.md`](../company/case-and-failure-history.md). Three kinds of entries live here, and they are never mixed together:
 
 - **Client / Professional Case** — a real client or professional decision, generalized/redacted, never identifying the client, asset, or private evidence.
 - **Engineering / Learning Case** — a described engineering run (including a failure and its fix) on synthetic or self-generated data, disclosed to demonstrate how MatterTurn builds and corrects itself — not a client result, and not necessarily independently sourced from this repository.
