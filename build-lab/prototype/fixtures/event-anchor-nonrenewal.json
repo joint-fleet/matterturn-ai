@@ -1,0 +1,11 @@
+{
+  "event_id": "EVENT-ANCHOR-NONRENEWAL-001",
+  "event_type": "LEASE_NONRENEWAL",
+  "source_class": "DEMO_TRUSTED_SOURCE",
+  "statement": "Anchor tenant will not renew at lease expiry.",
+  "affects": [
+    "tenant_roll",
+    "occupancy"
+  ],
+  "event_status": "CONFIRMED_FOR_DEMO"
+}
