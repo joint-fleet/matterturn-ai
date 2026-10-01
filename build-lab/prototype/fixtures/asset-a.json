@@ -1,0 +1,27 @@
+{
+  "asset_id": "RWA-ASSET-A",
+  "asset_type": "tokenized_real_estate_income_asset",
+  "baseline_judgment_state": "JUDGMENT_CURRENT",
+  "anchor_tenant_noi_share": 0.05,
+  "debt_rate_type": "fixed",
+  "judgment_dependencies": {
+    "NOI": [
+      "tenant_roll",
+      "occupancy"
+    ],
+    "VALUATION": [
+      "NOI",
+      "exit_assumptions"
+    ],
+    "DEBT_CAPACITY": [
+      "NOI",
+      "debt_terms"
+    ],
+    "TITLE": [
+      "recorded_title_evidence"
+    ],
+    "OWNERSHIP": [
+      "ownership_evidence"
+    ]
+  }
+}
