@@ -62,8 +62,9 @@ export function systemJsonLd({
  * quote: who it's for, what's analyzed, what's received, and the limits.
  */
 export function problemPageJsonLd(
-  page: {systemSlug: string; problemSlug: string; title: string; summary: string; who: string; analyzes: string[]; receives: string[]; limits: string},
+  page: {systemSlug: string; problemSlug: string; title: string; summary: string; maturity: string; who: string; analyzes: string[]; receives: string[]; limits: string},
   systemTitle: string,
+  maturityText: string,
 ) {
   return {
     "@context": "https://schema.org",
@@ -76,6 +77,7 @@ export function problemPageJsonLd(
     creator: {"@type": "Organization", name: brandName, url: siteUrl},
     audience: {"@type": "Audience", audienceType: page.who},
     additionalProperty: [
+      {"@type": "PropertyValue", name: "Maturity", value: maturityText},
       {"@type": "PropertyValue", name: "What is analyzed", value: page.analyzes.join("; ")},
       {"@type": "PropertyValue", name: "What you receive", value: page.receives.join("; ")},
       {"@type": "PropertyValue", name: "Important limits", value: page.limits},

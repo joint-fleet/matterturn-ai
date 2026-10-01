@@ -3,6 +3,7 @@ import {ArrowIcon} from "./arrow-icon";
 import {SiteHeader} from "./site-header";
 import {products} from "@/lib/products";
 import {type ProblemPage} from "@/lib/problem-pages";
+import {maturityLabel} from "@/lib/capability-bundles";
 import {breadcrumbJsonLd, problemPageJsonLd, JsonLdScript} from "@/lib/structured-data";
 import {navigation} from "@/lib/navigation";
 
@@ -16,7 +17,7 @@ export function ProblemPageView({page}: {page: ProblemPage}) {
   const n = navigation.en;
   return (
     <>
-      <JsonLdScript data={problemPageJsonLd(page, system?.title ?? page.systemSlug)} />
+      <JsonLdScript data={problemPageJsonLd(page, system?.title ?? page.systemSlug, maturityLabel[page.maturity])} />
       <JsonLdScript
         data={breadcrumbJsonLd("en", [
           {name: n.home, path: "/"},
@@ -36,6 +37,7 @@ export function ProblemPageView({page}: {page: ProblemPage}) {
             <h1>{page.title}</h1>
           </div>
         </div>
+        <span className={`maturity-badge maturity-${page.maturity}`}>{maturityLabel[page.maturity]}</span>
         <p className="detail-lead">{page.summary}</p>
 
         <section className="problem-section">

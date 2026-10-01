@@ -19,7 +19,6 @@ What MatterTurn actually produced, organized by what each result proves — not 
 ## Reassessment Cases — what changed when reality changed
 
 - [Nvidia, 2025 — Two Shocks, Two Different Reassessments](nvidia-selective-reassessment.md)
-- [Boeing and Hertz — Decomposing a Credit Event Into Its Real Causes](financial-credit-event-decomposition.md)
 
 ## Failure Cases — what went wrong, and what was kept
 

@@ -35,18 +35,15 @@ export const siteUrl = (() => {
  * AI crawlers (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ClaudeBot,
  * Google-Extended, PerplexityBot, etc.) can index this site at all. Both
  * app/robots.ts and next.config.ts's X-Robots-Tag header read this flag, so
- * there is exactly one place to flip it.
+ * there is exactly one place to flip it — that bug (robots.ts allowing
+ * while vercel.json unconditionally disallowed) is fixed regardless of
+ * this flag's value.
  *
- * THIS IS AN OWNER DECISION, NOT A ROUTINE CODE CHANGE: flipping this to
- * true is what makes the live production site discoverable by name-blind
- * problem search for the first time, once this PR is merged and deployed.
- * It has been set to true here because the GEO upgrade this PR implements
- * is otherwise inert — but merging this PR with this flag on is the actual
- * go-live decision and should be made deliberately, not inherited by
- * default. Set back to false before merge if indexing should stay off a
- * while longer.
+ * Kept OFF deliberately. Going live is the Owner's own cutover decision,
+ * made separately once the site content itself is approved — an agent
+ * does not flip this on its own authority.
  */
-export const isPublicIndexingEnabled = true;
+export const isPublicIndexingEnabled = false;
 
 export const social = {
   ogImage: "/clarity-world-poster.jpg",

@@ -1,5 +1,7 @@
 # Boeing and Hertz — Decomposing a Credit Event Into Its Real Causes
 
+> **⚠ PENDING OWNER REVIEW — not yet in the published Case Library index.** Removing kernel/schema detail does not by itself establish this is public-safe (see the same principle applied to the Sales and Morocco cases). This file is kept here as a drafted candidate, not linked from `cases/library/README.md`, `cases/README.md`, or the root `README.md`, until it clears an independent public-disclosure review.
+
 **Tags:** Evidence Boundary · Reassessment · Engineering Validation
 
 ## The Question

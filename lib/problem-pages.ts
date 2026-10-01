@@ -7,15 +7,19 @@
  * densely enough that a page stands on its own if an AI crawler only reads
  * this one page.
  *
- * English-only for this round (see PR notes). Populated only where real
- * case or documented-capability evidence exists — no thin pages for
- * concept-stage systems.
+ * English-only for this round (see PR notes). A real, early-stage
+ * capability gets a page too — maturity labeled honestly on the page
+ * itself — rather than being hidden until it's case-backed. What's not
+ * done: a page for a capability with no real engineering evidence at all.
  */
+import type {Maturity} from "./capability-bundles";
+
 export type ProblemPage = {
   systemSlug: string;
   problemSlug: string;
   title: string; // the concrete client problem, as a question-shaped or task-shaped phrase
   summary: string; // one-sentence answer to "what problem does this solve"
+  maturity: Maturity;
   who: string;
   inputs: string[];
   analyzes: string[];
@@ -31,6 +35,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "asset-valuation",
+    maturity: "validated",
     title: "Estimate a Property's Value Under an Acquisition Model",
     summary:
       "MatterTurn builds a scenario-based valuation (downside / base / upside DCF, NPV, implied maximum purchase price) bound to the specific deal's actual assumptions, and preserves the gap between a correct investment direction and a trustworthy number.",
@@ -46,6 +51,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "rent-analysis",
+    maturity: "active-engineering",
     title: "Analyze Comparable Rent for Office, Retail, or Warehouse Space",
     summary:
       "Rent and comparable-lease analysis is part of MatterTurn's Market capability — the same evidence discipline that feeds every other real estate judgment, not a standalone calculator.",
@@ -61,6 +67,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "debt-analysis",
+    maturity: "validated",
     title: "Test Debt Capacity and Debt-Service Coverage",
     summary:
       "MatterTurn calculates debt-service coverage and leverage against a deal's actual cash-flow assumptions, and tests whether those assumptions survive scrutiny before a debt conclusion is produced.",
@@ -79,6 +86,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "refinance-analysis",
+    maturity: "validated",
     title: "Test Whether a Refinancing or Capital-Recycling Assumption Holds Up",
     summary:
       "MatterTurn can move the real decision question upstream — from whether the numbers reconcile to whether the refinancing or capital-recycling assumption underpinning the whole deal thesis is actually achievable.",
@@ -94,6 +102,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "development-feasibility",
+    maturity: "validated",
     title: "Review Development Cost and Feasibility — Teardown, Renovate, or Hold",
     summary:
       "MatterTurn compares development paths (teardown-and-rebuild, renovation, hold-as-is) against cost, market, and financing evidence together, inside one integrated run rather than as separate disconnected estimates.",
@@ -109,6 +118,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "market-analysis",
+    maturity: "validated",
     title: "Review Market Demand and Competitive Positioning",
     summary:
       "MatterTurn's Market capability produces demand and positioning evidence that other judgments (valuation, underwriting, development) depend on — and it is built to block an unsupported valuation shortcut rather than let a thin market read pass silently.",
@@ -123,6 +133,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "underwriting",
+    maturity: "validated",
     title: "Prepare an Underwriting Conclusion — or Learn Why It Isn't Supportable Yet",
     summary:
       "MatterTurn runs a full underwriting review and will return a formal MORE DILIGENCE REQUIRED / BLOCKED determination with every unresolved material fact preserved, rather than forcing a premature accept or reject.",
@@ -137,6 +148,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "operations-review",
+    maturity: "validated",
     title: "Review Operating Performance for an Income-Producing Asset",
     summary:
       "MatterTurn reviews operating performance as part of a full acquisition or asset review — including an asset-specific lens for hospitality and other operating-intensive property types.",
@@ -151,6 +163,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "investment-review",
+    maturity: "validated",
     title: "Prepare an Investment-Committee-Style Synthesis",
     summary:
       "MatterTurn's senior-judgment capability integrates every other capability — valuation, underwriting, debt, development, market, legal, operations — into one synthesis, and is built to preserve conflicts and unresolved facts rather than smooth them into a single confident number.",
@@ -168,6 +181,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "financial-markets",
     problemSlug: "event-impact-analysis",
+    maturity: "validated",
     title: "Evaluate How a Real-World Event Changes an Investment Thesis",
     summary:
       "MatterTurn separates a news event's actual scope from the market's reaction to it, and reopens only the specific assumption the event bears on — not the whole thesis.",
@@ -184,6 +198,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "banking-frontline",
     problemSlug: "multi-issue-customer-review",
+    maturity: "engineering-validated",
     title: "Evaluate a Customer Who Raises Several Problems at Once",
     summary:
       "MatterTurn tracks multiple customer issues in parallel, keeping each one's evidence, policy gates, and conflicts separate — demonstrated today on a synthetic, non-production case, not real customer data.",
@@ -195,6 +210,86 @@ export const problemPages: ProblemPage[] = [
     limits:
       "SYNTHETIC DEMONSTRATION ONLY. No real customer, account, or institution is involved — the repo's own words: \"not connected to a bank and not suitable for real customer decisions.\" This shows engineering capability, not a production banking integration.",
     cases: [{title: "A Customer With Four Problems at Once (synthetic)", href: `${GH_CASES}/bank-composite-case.md`, note: "A synthetic composite case — card loss, two disputed transactions, a payment-continuity need, and a repayment difficulty — tracked in parallel without one issue's resolution overriding the others."}],
+  },
+  {
+    systemSlug: "international-brand",
+    problemSlug: "market-entry-research",
+    maturity: "active-engineering",
+    title: "Research a Cross-Border Market-Entry Question Against Real Evidence",
+    summary:
+      "MatterTurn's active engineering work tracks sourced, dated evidence for a specific market-entry question and reopens only the part of the judgment new evidence actually affects — tested on real companies, not yet a finished market-entry product.",
+    who: "Teams evaluating whether a market-entry judgment engine can be trusted to track real, sourced evidence rather than assumption — not yet a client-ready market-entry deliverable.",
+    inputs: ["A specific market-entry question (product, candidate market, candidate counterparties)", "Public filings, partnership records, and financing disclosures", "A decision mandate describing what's actually being decided"],
+    analyzes: ["Whether claimed evidence holds up against primary sources, not just a summary", "Which specific residual-need or feasibility question remains open", "Whether new evidence resolves, worsens, or leaves untouched the open question"],
+    receives: ["A tracked judgment state — confirmed, contested, or missing — not a finished recommendation", "An explicit refusal to proceed past what the evidence supports", "A reassessment that touches only the specific question new evidence bears on"],
+    relatedCapabilities: ["Market research & evidence capture", "Claim tracking & residual-need assessment", "Selective reassessment"],
+    limits:
+      "ACTIVE ENGINEERING, NOT A FINISHED PRODUCT. This runs in the system's open, unmerged Draft work. No completed commercial judgment has been reached on any real case yet, and no formal runtime authority, promotion, or cutover exists. Brand capabilities often associated with 'market entry' — positioning, naming, messaging, channel activation, go-to-market — are not yet built (see the system's own page for their status).",
+    cases: [],
+  },
+  {
+    systemSlug: "sales-opportunity",
+    problemSlug: "opportunity-research",
+    maturity: "active-engineering",
+    title: "Research and Qualify a Sales Opportunity Against Real Public Evidence",
+    summary:
+      "MatterTurn's active engineering work researches a prospect's real public signals, qualifies or disqualifies the opportunity against explicit evidence, and keeps an auditable ledger of every research action taken — with no live outreach capability at all.",
+    who: "Teams evaluating whether a sales-judgment engine can be trusted to research and qualify real opportunities honestly, including returning zero opportunities when that's the correct answer.",
+    inputs: ["A prospect or target-account identity", "Public signals (hiring activity, public filings, news, vendor coverage)", "A bounded research budget (search and page-read limits)"],
+    analyzes: ["Whether public signals actually indicate a commercial problem, versus looking like one", "Evidence of budget, authority, and residual need before admitting a candidate", "Whether further research is justified, or should explicitly stop"],
+    receives: ["A qualification outcome bound to stated evidence — including a HOLD or zero-opportunity result where that's honest", "A full, auditable record of which research actions were taken and what each one found", "No outreach, contact, or CRM action of any kind"],
+    relatedCapabilities: ["Problem discovery", "Opportunity qualification", "Buyer / authority analysis", "Research action ledger & falsification"],
+    limits:
+      "ACTIVE ENGINEERING, NOT PRODUCTION. This runs in the system's open, unmerged Draft work; the repository's own status label is PHASE 0 / RESEARCH / PRE-IMPLEMENTATION. No autonomous outreach, CRM write, or commercial offer exists, and commercial maturity has not been established.",
+    cases: [],
+  },
+  {
+    systemSlug: "morocco-life",
+    problemSlug: "official-source-verification",
+    maturity: "active-engineering",
+    title: "Check an Official Legal, Regulatory, or Location Question Against Primary Sources",
+    summary:
+      "MatterTurn's active engineering work checks a specific legal/regulatory question against real official government sources, and separately tests whether two location records likely refer to the same real place — refusing to merge or conclude past what the evidence supports.",
+    who: "Teams evaluating whether a research engine can be trusted to use primary official sources honestly, including surfacing version conflicts and refusing identity claims it can't support.",
+    inputs: ["A specific legal, regulatory, or benefits-procedure question", "Primary official government source documents", "For location questions: two or more candidate location records"],
+    analyzes: ["What a primary official source actually currently says, including version and currentness conflicts between related legal texts", "Whether two location records' proximity, naming, and identifiers actually establish they're the same place"],
+    receives: ["A sourced answer bound to what the primary document supports, with unresolved conflicts stated rather than guessed past", "For location matching: an explicit match-confidence state, never an automatic merge on proximity alone"],
+    relatedCapabilities: ["Legal & regulatory research", "Spatial / identity-boundary evidence matching"],
+    limits:
+      "ACTIVE ENGINEERING, NOT A FINISHED ASSISTANT. This runs in the system's own open, unmerged Draft work; the repository's own label is Phase 0 / experimental / not a product. Broader everyday-life guidance (housing, transport, civil documents) is still research-stage, not built and tested to this bar yet.",
+    cases: [],
+  },
+  {
+    systemSlug: "cross-border",
+    problemSlug: "judgment-mechanics-validation",
+    maturity: "engineering-validated",
+    title: "Verify a Judgment Engine's Evidence-Tracking and Selective-Reassessment Mechanics",
+    summary:
+      "MatterTurn has a fully tested, synthetic end-to-end validation of the core mechanics a cross-border purchase or sourcing judgment needs — identity resolution, evidence admission, gap detection, and deterministic replay — with no real-world case run yet.",
+    who: "Teams evaluating the engineering soundness of a judgment system's core mechanics before any real-world case is attempted.",
+    inputs: ["A structured request describing a cross-border purchase or sourcing scenario", "Synthetic evidence rounds, including deliberately conflicting or incomplete evidence"],
+    analyzes: ["Whether identity and context resolve correctly before a suitability judgment forms", "Whether gaps are detected and routed to only the relevant follow-up work", "Whether the same case replays deterministically to the same result"],
+    receives: ["A bounded judgment with supporting and conflicting evidence tracked separately", "A deterministic replay of the full case for verification", "Explicit negative-case handling across 18 required failure scenarios"],
+    relatedCapabilities: ["Identity & context resolution", "Evidence admission & fact ledger", "Gap detection & selective capability routing", "Bounded judgment, synthesis & deterministic replay"],
+    limits:
+      "SYNTHETIC VALIDATION ONLY. The repository's own maturity label is SYNTHETIC_E2E_VERIFIED — no live case, production runtime, formal authority, or real transactions exist. This demonstrates engineering mechanics, not a real sourcing or purchase judgment.",
+    cases: [],
+  },
+  {
+    systemSlug: "travel",
+    problemSlug: "trip-problem-intake",
+    maturity: "active-engineering",
+    title: "Capture a Traveler's Decision Problem Reliably for Later Judgment",
+    summary:
+      "MatterTurn has real, device-tested infrastructure for capturing a traveler's decision problem in text and photos, with context — the professional judgment logic that would act on it is designed but not yet built.",
+    who: "Teams evaluating whether a travel-decision product's data-capture layer is solid enough to build a judgment engine on top of.",
+    inputs: ["A traveler's text description of their decision problem", "Up to five photos", "Location and timestamp context"],
+    analyzes: ["Whether the submission was captured completely and durably, including under network loss or app backgrounding", "Data integrity via checksum cross-check"],
+    receives: ["A reliably captured, durable session record ready for professional judgment to act on", "Confirmation across 10 documented real-device acceptance scenarios (permissions, retries, double-submit protection, network drop, integrity checks)"],
+    relatedCapabilities: ["Problem intake & session capture"],
+    limits:
+      "INTAKE ONLY — NO JUDGMENT YET. The code that would analyze the captured problem and produce a recommendation is an explicit placeholder; no recommendation has ever been produced by this system. Do not read this as a working travel-recommendation product.",
+    cases: [],
   },
 ];
 
