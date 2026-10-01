@@ -6,12 +6,9 @@ MatterTurn does not rebuild every mechanism from zero for each new domain. A pri
 
 ## What actually gets reused
 
-- Evidence discipline — how a claim is traced back to its source and kept auditable.
-- State management — how a judgment's state is tracked and versioned over time.
-- Selective reopening — the mechanism for finding and reopening only the affected part of a judgment.
-- Evaluation — how a system's output is checked against an expected result.
-- Execution / readback separation — doing a thing and independently confirming what actually happened are kept as separate checks.
-- Failure memory — reusable engineering lessons and failure knowledge, so later systems can check for a known failure earlier.
+- Evidence and traceability patterns.
+- Judgment-state and review patterns.
+- Engineering lessons and failure knowledge.
 
 ## What never gets reused across domains
 

@@ -11,16 +11,7 @@ Each MatterTurn system is built as a multi-role expert workflow — organized ar
 
 See [`systems/`](../systems/) for the public-safe per-system status and [`company/engineering-evidence.md`](engineering-evidence.md) for what's independently sourced versus internally described.
 
-## Expert role families
-
-Each system's workflow draws on a family of expert roles, not one generalist model asked everything at once:
-
-- **Real Estate:** investment, underwriting, finance, development, legal / regulation, market, land, operations, senior synthesis.
-- **Banking Frontline:** frontline service, policy applicability, risk / escalation, action / readback.
-- **Financial Securities:** evidence / state, fundamental analysis, horizon / transmission, valuation / capital judgment.
-- **International Market & Brand:** market sensing, consumer / local reality, positioning, narrative, activation, measurement / feedback.
-
-**These are expert roles, not a roster of long-term, individually-named human employees.** Some roles are carried out by AI agents operating inside a defined workflow boundary; others require human expert input, particularly at senior-synthesis and approval points.
+**These are multi-role expert workflows, not a roster of long-term, individually-named human employees.** Some roles are carried out by AI agents operating inside a defined workflow boundary; others require human expert input.
 
 ## What's deliberately not shown here
 

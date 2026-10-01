@@ -35,32 +35,7 @@ Michael taught himself to code and to use AI tools specifically to engineer the 
 
 ## How one person builds several systems
 
-MatterTurn is not one founder claiming to be an expert in every domain it touches — nobody is. The actual mechanism is:
-
-```text
-Founder
-   │
-   ▼
-Expert workflow
-   │
-   ▼
-Agents
-   │
-   ▼
-System
-   │
-   ▼
-Real case
-   │
-   ▼
-Learning
-   │
-   ▼
-Central assets
-   │
-   ▼
-Next system
-```
+MatterTurn is not one founder claiming to be an expert in every domain it touches — nobody is. MatterTurn currently has one founder/core operator and no conventional in-house engineering team. Systems are built using domain experience, AI agents, domain-expert input, real cases and private reusable assets.
 
 **What the founder does:** defines each system's direction, organizes the expert workflow and domain input behind it, tests it through real cases, and decides what's learned — including failures — becomes a reusable capability. See [`company/expert-workflows.md`](expert-workflows.md) and [`company/capability-evolution.md`](capability-evolution.md).
 
