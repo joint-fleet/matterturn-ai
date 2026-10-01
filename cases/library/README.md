@@ -23,15 +23,7 @@ What MatterTurn actually produced, organized by what each result proves — not 
 ## Failure Cases — what went wrong, and what was kept
 
 - [A-03 — When the Right Answer Hides a Bad Process](a03-failure-decomposition.md)
-- [Crown MedRealty — A Lead That Wasn't One, Plus a Defect Caught Along the Way](sales-crown-medrealty-negative-result.md)
-
-## Negative Cases — when there was no opportunity to find
-
-- [Crown MedRealty — A Lead That Wasn't One, Plus a Defect Caught Along the Way](sales-crown-medrealty-negative-result.md)
-
-## Evidence Boundary Cases — where the system stopped short of a claim it couldn't support
-
-- [Kiosque Hassan II — When Nearby Isn't the Same Thing](morocco-spatial-identity-boundary.md)
+- [CASE-002 — Blocked Despite Strong Analysis](case-002-blocked-judgment.md)
 
 ## Historical Blind Validation
 
@@ -39,7 +31,9 @@ What MatterTurn actually produced, organized by what each result proves — not 
 
 ## Synthetic Stress Tests
 
-- [A Customer With Four Problems at Once](bank-composite-case.md)
+> **⚠ Synthetic data. No real customer, account, or institution involved.** The case below is a constructed engineering stress test, built to exercise multiple judgment paths at once — it is not a report on any real bank, customer, or transaction, and should not be read alongside the real-evidence cases above as if it were one.
+
+- [A Customer With Four Problems at Once](bank-composite-case.md) — **synthetic**
 
 ---
 

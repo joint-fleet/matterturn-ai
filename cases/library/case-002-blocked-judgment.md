@@ -4,7 +4,7 @@
 
 ## The Question
 
-An integrated commercial-judgment run on a real M&A situation (Standard BioTools × Treeline Biosciences) was reviewed by an independent evaluator working from a frozen evaluation package only. Could a technically sophisticated, well-executed analytical run still fail?
+An integrated commercial-judgment run on a real biotech M&A situation was reviewed by an independent evaluator working from a frozen evaluation package only. Could a technically sophisticated, well-executed analytical run still fail? (The transaction's parties are not named here — the point this case demonstrates doesn't depend on who they were.)
 
 ## What the system was given
 

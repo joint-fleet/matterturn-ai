@@ -64,8 +64,8 @@ const en = {
   pclLink:"See the full case library on GitHub",
   pclC1Tag:"Historical Blind Validation",pclC1Title:"1740 Broadway",pclC1Text:"Two isolated runs rejected a $605M acquisition before anyone knew the outcome — or the asset's identity.",
   pclC2Tag:"Blocked Judgment",pclC2Title:"CASE-002",pclC2Text:"Strong analysis, one overstated legal claim — independent review failed it anyway.",
-  pclC3Tag:"Negative Result",pclC3Title:"Crown MedRealty",pclC3Text:"Real research, a real defect found and fixed, and still zero verified opportunities.",
-  pclC4Tag:"Evidence Boundary",pclC4Title:"Kiosque Hassan II",pclC4Text:"Coordinates 0.62m apart aren't proof of the same place — so no recommendation was made."
+  pclC3Tag:"Failure Preserved",pclC3Title:"A-03",pclC3Text:"The final direction was right — and the system still flagged four separate ways its own process got there wrong.",
+  pclC4Tag:"Judgment",pclC4Title:"A-05",pclC4Text:"Asked for a number it couldn't support, the system refused to compute one rather than guess."
 };
 export type Messages = Record<keyof typeof en,string>;
 const translations:Record<Locale,Messages> = {
@@ -126,8 +126,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"在 GitHub 上查看完整案例库",
     pclC1Tag:"历史盲测验证",pclC1Title:"1740 Broadway",pclC1Text:"在任何人知道结果或资产身份之前，两次独立运行就拒绝了这笔 6.05 亿美元的收购。",
     pclC2Tag:"判断被阻断",pclC2Title:"CASE-002",pclC2Text:"分析本身很扎实，但一个被夸大的法律主张,还是让独立评审判定失败。",
-    pclC3Tag:"负结果",pclC3Title:"Crown MedRealty",pclC3Text:"真实的研究、一个被发现并修复的真实缺陷，结果依然是零个已验证的机会。",
-    pclC4Tag:"证据边界",pclC4Title:"Kiosque Hassan II",pclC4Text:"坐标相差 0.62 米不等于同一个地方——所以系统没有给出任何建议。"
+    pclC3Tag:"失败被保留",pclC3Title:"A-03",pclC3Text:"最终方向是对的——但系统依然指出了自己得出这个方向的过程中四种不同的失误。",
+    pclC4Tag:"判断",pclC4Title:"A-05",pclC4Text:"面对一个无法支撑的数字，系统拒绝计算，而不是硬猜。"
   },
   "zh-TW":{
     navSystems:"專業系統",navApproach:"工作方式",navWorkspace:"私人工作區",language:"語言",
@@ -185,8 +185,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"在 GitHub 上查看完整案例庫",
     pclC1Tag:"歷史盲測驗證",pclC1Title:"1740 Broadway",pclC1Text:"在任何人知道結果或資產身分之前，兩次獨立運行就拒絕了這筆 6.05 億美元的收購。",
     pclC2Tag:"判斷被阻斷",pclC2Title:"CASE-002",pclC2Text:"分析本身很扎實，但一個被誇大的法律主張，還是讓獨立評審判定失敗。",
-    pclC3Tag:"負結果",pclC3Title:"Crown MedRealty",pclC3Text:"真實的研究、一個被發現並修復的真實缺陷，結果依然是零個已驗證的機會。",
-    pclC4Tag:"證據邊界",pclC4Title:"Kiosque Hassan II",pclC4Text:"座標相差 0.62 公尺不等於同一個地方——所以系統沒有給出任何建議。"
+    pclC3Tag:"失敗被保留",pclC3Title:"A-03",pclC3Text:"最終方向是對的——但系統依然指出了自己得出這個方向的過程中四種不同的失誤。",
+    pclC4Tag:"判斷",pclC4Title:"A-05",pclC4Text:"面對一個無法支撐的數字，系統拒絕計算，而不是硬猜。"
   },
   fr:{
     navSystems:"Systèmes",navApproach:"Méthode",navWorkspace:"Espace privé",language:"Langue",
@@ -244,8 +244,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"Voir la bibliothèque complète de cas sur GitHub",
     pclC1Tag:"Validation à l'aveugle historique",pclC1Title:"1740 Broadway",pclC1Text:"Deux exécutions isolées ont rejeté une acquisition de 605 M$ avant que quiconque ne connaisse le résultat — ni l'identité de l'actif.",
     pclC2Tag:"Jugement bloqué",pclC2Title:"CASE-002",pclC2Text:"Analyse solide, une affirmation juridique exagérée — l'examen indépendant l'a quand même rejetée.",
-    pclC3Tag:"Résultat négatif",pclC3Title:"Crown MedRealty",pclC3Text:"Recherche réelle, un vrai défaut trouvé et corrigé, et toujours zéro opportunité vérifiée.",
-    pclC4Tag:"Frontière de la preuve",pclC4Title:"Kiosque Hassan II",pclC4Text:"Des coordonnées distantes de 0,62 m ne prouvent pas qu'il s'agit du même lieu — aucune recommandation n'a donc été émise."
+    pclC3Tag:"Échec préservé",pclC3Title:"A-03",pclC3Text:"La direction finale était correcte — et le système a quand même signalé quatre défauts distincts dans la façon dont il y est parvenu.",
+    pclC4Tag:"Jugement",pclC4Title:"A-05",pclC4Text:"Face à un chiffre qu'il ne pouvait pas justifier, le système a refusé de le calculer plutôt que de deviner."
   },
   ar:{
     navSystems:"الأنظمة",navApproach:"منهجنا",navWorkspace:"مساحة العمل الخاصة",language:"اللغة",
@@ -303,8 +303,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"اطّلع على مكتبة الحالات الكاملة على GitHub",
     pclC1Tag:"تحقق أعمى تاريخي",pclC1Title:"1740 Broadway",pclC1Text:"رفضت عمليتان مستقلتان صفقة استحواذ بقيمة 605 مليون دولار قبل أن يعرف أحد النتيجة — أو هوية الأصل.",
     pclC2Tag:"حكم محجوب",pclC2Title:"CASE-002",pclC2Text:"تحليل قوي، وادّعاء قانوني مُبالغ فيه واحد — ومع ذلك أسقطته المراجعة المستقلة.",
-    pclC3Tag:"نتيجة سلبية",pclC3Title:"Crown MedRealty",pclC3Text:"بحث حقيقي، وخلل حقيقي تم اكتشافه وإصلاحه، ومع ذلك صفر فرص موثقة.",
-    pclC4Tag:"حدود الأدلة",pclC4Title:"Kiosque Hassan II",pclC4Text:"إحداثيات متباعدة بـ 0.62 متر لا تثبت أنه المكان نفسه — فلم تُصدر أي توصية."
+    pclC3Tag:"إخفاق محفوظ",pclC3Title:"A-03",pclC3Text:"كان الاتجاه النهائي صحيحًا — ومع ذلك رصد النظام أربع طرق منفصلة أخطأت بها عمليته في الوصول إليه.",
+    pclC4Tag:"حكم",pclC4Title:"A-05",pclC4Text:"حين طُلب منه رقم لا يملك ما يدعمه، رفض النظام حسابه بدلاً من التخمين."
   },
   ary:{
     navSystems:"الأنظمة",navApproach:"كيفاش خدامين",navWorkspace:"فضاء الخدمة الخاص",language:"اللغة",
@@ -362,8 +362,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"شوف مكتبة الحالات الكاملة فـ GitHub",
     pclC1Tag:"تحقق أعمى تاريخي",pclC1Title:"1740 Broadway",pclC1Text:"جوج عمليات مستقلة رفضو صفقة استحواذ بقيمة 605 مليون دولار قبل ما حتى واحد يعرف النتيجة — ولا هوية الأصل.",
     pclC2Tag:"حكم محجوب",pclC2Title:"CASE-002",pclC2Text:"تحليل قوي، وادّعاء قانوني مُبالغ فيه وحد — ومع ذلك المراجعة المستقلة رفضاتو.",
-    pclC3Tag:"نتيجة سلبية",pclC3Title:"Crown MedRealty",pclC3Text:"بحث حقيقي، وخلل حقيقي تلقى وتصلح، ومع ذلك صفر فرص موثقة.",
-    pclC4Tag:"حدود الدليل",pclC4Title:"Kiosque Hassan II",pclC4Text:"إحداثيات متباعدة بـ 0.62 متر ما كتثبتش بلي هو نفس المكان — فما تصدرت حتى توصية."
+    pclC3Tag:"الفشل محفوظ",pclC3Title:"A-03",pclC3Text:"الاتجاه النهائي كان صحيح — ومع ذلك النظام سجل أربع طرق مختلفة فين العملية ديالو غلطات باش وصل لهاد الاتجاه.",
+    pclC4Tag:"حكم",pclC4Title:"A-05",pclC4Text:"ملي طلبو منو رقم ما كايقدرش يدعمو، النظام رفض يحسبو بدل ما يخمن."
   },
   es:{
     navSystems:"Sistemas",navApproach:"Método",navWorkspace:"Espacio privado",language:"Idioma",
@@ -421,8 +421,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"Ver la biblioteca completa de casos en GitHub",
     pclC1Tag:"Validación ciega histórica",pclC1Title:"1740 Broadway",pclC1Text:"Dos ejecuciones aisladas rechazaron una adquisición de 605 M$ antes de que nadie conociera el resultado — ni la identidad del activo.",
     pclC2Tag:"Juicio bloqueado",pclC2Title:"CASE-002",pclC2Text:"Análisis sólido, una afirmación legal exagerada — la revisión independiente la rechazó igualmente.",
-    pclC3Tag:"Resultado negativo",pclC3Title:"Crown MedRealty",pclC3Text:"Investigación real, un defecto real encontrado y corregido, y aun así cero oportunidades verificadas.",
-    pclC4Tag:"Frontera de la evidencia",pclC4Title:"Kiosque Hassan II",pclC4Text:"Coordenadas separadas por 0,62 m no prueban que sea el mismo lugar — así que no se emitió ninguna recomendación."
+    pclC3Tag:"Fallo preservado",pclC3Title:"A-03",pclC3Text:"La dirección final era correcta — y aun así el sistema señaló cuatro fallos distintos en cómo llegó a ella.",
+    pclC4Tag:"Juicio",pclC4Title:"A-05",pclC4Text:"Ante una cifra que no podía respaldar, el sistema se negó a calcularla en lugar de adivinar."
   },
   ja:{
     navSystems:"システム",navApproach:"取り組み",navWorkspace:"非公開ワークスペース",language:"言語",
@@ -480,8 +480,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"GitHub で完全なケースライブラリを見る",
     pclC1Tag:"歴史的ブラインド検証",pclC1Title:"1740 Broadway",pclC1Text:"誰も結果も資産の正体も知らないうちに、2つの独立した実行が6億500万ドルの買収を拒否しました。",
     pclC2Tag:"判断の阻止",pclC2Title:"CASE-002",pclC2Text:"分析自体は堅実でしたが、過大に主張された一つの法的根拠が原因で、独立レビューは不合格と判定しました。",
-    pclC3Tag:"否定的結果",pclC3Title:"Crown MedRealty",pclC3Text:"実際の調査、発見・修正された実際の欠陥、それでも検証済みの機会はゼロでした。",
-    pclC4Tag:"証拠の境界",pclC4Title:"Kiosque Hassan II",pclC4Text:"座標が0.62メートル離れていることは同じ場所である証拠にはならないため、推奨は一切行われませんでした。"
+    pclC3Tag:"失敗の保存",pclC3Title:"A-03",pclC3Text:"最終的な方向性は正しかった——それでもシステムは、その結論に至る過程における4つの異なる誤りを指摘しました。",
+    pclC4Tag:"判断",pclC4Title:"A-05",pclC4Text:"裏付けのない数値を求められたとき、システムは推測するのではなく計算を拒否しました。"
   },
   th:{
     navSystems:"ระบบ",navApproach:"แนวทาง",navWorkspace:"พื้นที่ทำงานส่วนตัว",language:"ภาษา",
@@ -539,8 +539,8 @@ const translations:Record<Locale,Messages> = {
     pclLink:"ดูคลังกรณีศึกษาฉบับสมบูรณ์บน GitHub",
     pclC1Tag:"การตรวจสอบแบบปิดตาเชิงประวัติศาสตร์",pclC1Title:"1740 Broadway",pclC1Text:"การรันสองครั้งที่เป็นอิสระกันปฏิเสธการเข้าซื้อมูลค่า 605 ล้านดอลลาร์ ก่อนที่ใครจะรู้ผลลัพธ์หรือแม้แต่ตัวตนของสินทรัพย์",
     pclC2Tag:"คำตัดสินที่ถูกปิดกั้น",pclC2Title:"CASE-002",pclC2Text:"การวิเคราะห์แข็งแรง แต่ข้อกล่าวอ้างทางกฎหมายที่เกินจริงหนึ่งข้อ ทำให้การตรวจสอบอิสระตัดสินว่าล้มเหลวอยู่ดี",
-    pclC3Tag:"ผลลัพธ์เชิงลบ",pclC3Title:"Crown MedRealty",pclC3Text:"การวิจัยจริง ข้อบกพร่องจริงที่ถูกพบและแก้ไข และยังคงไม่มีโอกาสที่ได้รับการยืนยันเลย",
-    pclC4Tag:"ขอบเขตของหลักฐาน",pclC4Title:"Kiosque Hassan II",pclC4Text:"พิกัดที่ห่างกัน 0.62 เมตรไม่ได้พิสูจน์ว่าเป็นที่เดียวกัน จึงไม่มีการให้คำแนะนำใด ๆ"
+    pclC3Tag:"ความล้มเหลวที่ถูกเก็บรักษาไว้",pclC3Title:"A-03",pclC3Text:"ทิศทางสุดท้ายถูกต้อง — แต่ระบบยังคงชี้ให้เห็นข้อผิดพลาดสี่ประการที่แยกจากกันในกระบวนการที่นำไปสู่ทิศทางนั้น",
+    pclC4Tag:"คำตัดสิน",pclC4Title:"A-05",pclC4Text:"เมื่อถูกขอให้ระบุตัวเลขที่ไม่มีหลักฐานรองรับ ระบบปฏิเสธที่จะคำนวณแทนที่จะเดา"
   }
 };
 export const messages = (locale:Locale):Messages => translations[locale];

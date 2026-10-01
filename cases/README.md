@@ -2,7 +2,7 @@
 
 Index of MatterTurn public-safe case material.
 
-**[Public Case Library →](library/)** — nine representative, re-verified cases organized by what each one proves (judgment, blocked, reassessment, failure, negative result, evidence boundary), not by which system produced it. This answers "what did MatterTurn actually produce" with results, not methods.
+**[Public Case Library →](library/)** — seven representative, re-verified cases organized by what each one proves (judgment, blocked, reassessment, failure, historical blind validation, synthetic stress test), not by which system produced it. This answers "what did MatterTurn actually produce" with results, not methods.
 
 For the fuller, per-system picture of development, validation, and failure history — not just what's released at full public-case detail here — see [`company/case-and-failure-history.md`](../company/case-and-failure-history.md). Three kinds of entries live here below this index, and they are never mixed together:
 
@@ -18,7 +18,7 @@ Source: [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet
 
 ## Engineering / Learning Case
 
-**Sales Opportunity — a self-correction run.** A research-and-capture pipeline hit a result-integrity failure, preserved that original failure instead of hiding it, had the defect fixed, and reran — still concluding `0 valid candidate` / `0 verified opportunity`. Re-verified against primary internal records for this release. No private source artifact is linked publicly from this repository. It exists to show that the system is allowed to conclude there is no opportunity, and that a failure gets fixed and kept on record rather than quietly discarded. Full case: [`library/sales-crown-medrealty-negative-result.md`](library/sales-crown-medrealty-negative-result.md).
+**Sales Opportunity — a self-correction run.** A research-and-capture pipeline hit a result-integrity failure, preserved that original failure instead of hiding it, had the defect fixed, and reran — still concluding `0 valid candidate` / `0 verified opportunity`. This case is withheld from public release pending a separate disclosure review of the real counterparties and vendor-source material it touches — it is not yet published here or in the library in any form.
 
 ## Historical Fixture
 

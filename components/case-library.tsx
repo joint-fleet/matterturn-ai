@@ -5,7 +5,7 @@ const GITHUB_CASES = "https://github.com/joint-fleet/matterturn-ai/tree/main/cas
 
 /**
  * Four representative cards pointing at the GitHub Public Case Library,
- * not the full nine-case library inline. Per the site's division of
+ * not the full seven-case library inline. Per the site's division of
  * labor: the homepage carries the 10-second version and the proof lives
  * on GitHub.
  */
@@ -14,8 +14,8 @@ export function CaseLibrary({locale}:{locale:Locale}){
   const cards=[
     {tag:m.pclC1Tag,title:m.pclC1Title,text:m.pclC1Text,href:`${GITHUB_CASES}/1740-broadway-blind-validation.md`},
     {tag:m.pclC2Tag,title:m.pclC2Title,text:m.pclC2Text,href:`${GITHUB_CASES}/case-002-blocked-judgment.md`},
-    {tag:m.pclC3Tag,title:m.pclC3Title,text:m.pclC3Text,href:`${GITHUB_CASES}/sales-crown-medrealty-negative-result.md`},
-    {tag:m.pclC4Tag,title:m.pclC4Title,text:m.pclC4Text,href:`${GITHUB_CASES}/morocco-spatial-identity-boundary.md`},
+    {tag:m.pclC3Tag,title:m.pclC3Title,text:m.pclC3Text,href:`${GITHUB_CASES}/a03-failure-decomposition.md`},
+    {tag:m.pclC4Tag,title:m.pclC4Title,text:m.pclC4Text,href:`${GITHUB_CASES}/a05-controlled-comparison.md`},
   ];
   return <section className="case-library shell" dir={direction}>
     <div className="section-heading"><div><p className="overline">{m.pclKicker}</p><h2>{m.pclTitle}</h2></div></div>
