@@ -52,3 +52,38 @@ export const organization = {
 export const hreflangLocales = locales;
 
 export type { Locale };
+
+const defaultTitle = `${brandName} — See the world. Judge with clarity.`;
+
+/**
+ * Base Metadata shared by every root layout (the unprefixed English tree
+ * and app/[locale]/layout.tsx). Each root layout exports this as-is; pages
+ * further down the tree override it via lib/seo.ts's pageMetadata().
+ */
+export function baseMetadata() {
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: defaultTitle,
+      template: `%s | ${brandName}`,
+    },
+    description: defaultMetaDescription,
+    icons: {
+      icon: "/favicon.svg",
+      shortcut: "/favicon.svg",
+    },
+    openGraph: {
+      type: "website" as const,
+      siteName: brandName,
+      title: defaultTitle,
+      description: defaultMetaDescription,
+      images: [{url: social.ogImage, width: social.ogImageWidth, height: social.ogImageHeight}],
+    },
+    twitter: {
+      card: social.twitterCard,
+      title: defaultTitle,
+      description: defaultMetaDescription,
+      images: [social.ogImage],
+    },
+  };
+}
