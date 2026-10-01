@@ -1,6 +1,6 @@
 # Real Estate
 
-**Maturity: Proven / advanced engineering.**
+**Maturity: Advanced Engineering / Controlled Validation.** This reflects engineering verification — tests, CI, a formal runtime, one published case — not fully validated professional effectiveness, production readiness, or proven commercial ROI.
 
 **Problem addressed:** Whether to pursue a property investment, development, or operating-asset decision, and what would change that decision as new evidence arrives.
 

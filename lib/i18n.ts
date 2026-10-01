@@ -45,7 +45,7 @@ const en = {
   proofKicker:"Proof",proofTitle:"This isn't only a concept.",
   proofText:"Our strongest public evidence is the Real Estate Judgment System: a working runtime with tests, a public-safe real case, and a clearly labeled formal/candidate/research boundary. That status reflects engineering verification — it does not mean professional effectiveness or commercial ROI has been independently verified. Other systems are shown with their own honest maturity label — not all claims are equal.",
   proofLink:"See the engineering evidence on GitHub",
-  tierAdvanced:"Proven / Advanced engineering",tierActive:"Active engineering / validation",tierResearch:"Design / research",
+  tierAdvanced:"Advanced engineering / controlled validation",tierActive:"Active engineering / validation",tierResearch:"Design / research",
   tierMapKicker:"System maturity",tierMapIntro:"Systems are grouped by how far they actually are, not by how many exist."
 };
 export type Messages = Record<keyof typeof en,string>;
@@ -88,7 +88,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"证据",proofTitle:"这不只是一个概念。",
     proofText:"目前最强的公开证据是房地产判断系统：一个可运行的 runtime，配有测试、一个可公开的真实案例，并清楚区分正式 / 候选 / 研究边界。这个状态反映的是工程验证，不代表专业有效性或商业 ROI 已经过独立验证。其他系统也各自标注了真实的成熟度，不是所有说法分量都一样。",
     proofLink:"在 GitHub 上查看工程证据",
-    tierAdvanced:"已验证 / 深度工程",tierActive:"积极工程 / 验证中",tierResearch:"设计 / 研究阶段",
+    tierAdvanced:"深度工程 / 受控验证",tierActive:"积极工程 / 验证中",tierResearch:"设计 / 研究阶段",
     tierMapKicker:"系统成熟度",tierMapIntro:"系统按真实进展分组展示，而不是按数量堆砌。"
   },
   "zh-TW":{
@@ -128,7 +128,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"證據",proofTitle:"這不只是一個概念。",
     proofText:"目前最強的公開證據是房地產判斷系統：一個可運行的 runtime，配有測試、一個可公開的真實案例，並清楚區分正式 / 候選 / 研究邊界。這個狀態反映的是工程驗證，不代表專業有效性或商業 ROI 已經過獨立驗證。其他系統也各自標註了真實的成熟度，不是所有說法分量都一樣。",
     proofLink:"在 GitHub 上查看工程證據",
-    tierAdvanced:"已驗證 / 深度工程",tierActive:"積極工程 / 驗證中",tierResearch:"設計 / 研究階段",
+    tierAdvanced:"深度工程 / 受控驗證",tierActive:"積極工程 / 驗證中",tierResearch:"設計 / 研究階段",
     tierMapKicker:"系統成熟度",tierMapIntro:"系統按真實進展分組展示，而非按數量堆砌。"
   },
   fr:{
@@ -168,7 +168,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"Preuves",proofTitle:"Ce n’est pas qu’un concept.",
     proofText:"Notre preuve publique la plus solide est le Real Estate Judgment System : un runtime fonctionnel avec des tests, un cas réel public, et une frontière claire entre formel, candidat et recherche. Ce statut reflète une vérification d'ingénierie — il ne signifie pas que l'efficacité professionnelle ou le retour sur investissement commercial ont été vérifiés de manière indépendante. Les autres systèmes portent leur propre étiquette honnête de maturité — toutes les affirmations n’ont pas le même poids.",
     proofLink:"Voir les preuves techniques sur GitHub",
-    tierAdvanced:"Éprouvé / ingénierie avancée",tierActive:"Ingénierie active / validation",tierResearch:"Conception / recherche",
+    tierAdvanced:"Ingénierie avancée / validation contrôlée",tierActive:"Ingénierie active / validation",tierResearch:"Conception / recherche",
     tierMapKicker:"Maturité des systèmes",tierMapIntro:"Les systèmes sont classés selon leur avancement réel, pas selon leur nombre."
   },
   ar:{
@@ -208,7 +208,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"الإثبات",proofTitle:"هذا ليس مجرد فكرة.",
     proofText:"أقوى دليل علني لدينا هو نظام الحكم العقاري: نظام تشغيل فعلي مزوّد باختبارات، وحالة حقيقية قابلة للنشر، وحدود واضحة بين الرسمي والمرشح والبحثي. هذه الحالة تعكس تحققاً هندسياً — ولا تعني أن الفعالية المهنية أو العائد التجاري على الاستثمار قد تم التحقق منهما بشكل مستقل. الأنظمة الأخرى تحمل كل منها تصنيف نضج صادقاً خاصاً بها — ليست كل الادعاءات متساوية الوزن.",
     proofLink:"اطّلع على الأدلة الهندسية على GitHub",
-    tierAdvanced:"مثبت / هندسة متقدمة",tierActive:"هندسة نشطة / قيد التحقق",tierResearch:"تصميم / بحث",
+    tierAdvanced:"هندسة متقدمة / تحقق مُحكَم",tierActive:"هندسة نشطة / قيد التحقق",tierResearch:"تصميم / بحث",
     tierMapKicker:"نضج الأنظمة",tierMapIntro:"تُصنَّف الأنظمة حسب مدى تقدمها الفعلي، لا حسب عددها."
   },
   ary:{
@@ -248,7 +248,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"الدليل",proofTitle:"هادشي ماشي غير فكرة.",
     proofText:"أقوى دليل علني عندنا هو نظام الحكم العقاري: نظام خدام بصح فيه اختبارات، وحالة حقيقية ممكن تتعرض، وحدود واضحة بين الرسمي والمرشح والبحثي. هاد الحالة كتعكس تحقق هندسي — ماشي معناها بلي الفعالية المهنية ولا العائد التجاري متحقق منهم بشكل مستقل. الأنظمة الآخرين كل وحدة فيهم عندها تصنيف نضج صادق خاص بيها.",
     proofLink:"شوف الدلائل التقنية فـ GitHub",
-    tierAdvanced:"مثبت / هندسة متقدمة",tierActive:"هندسة نشيطة / قيد التحقق",tierResearch:"تصميم / بحث",
+    tierAdvanced:"هندسة متقدمة / تحقق مُحكَم",tierActive:"هندسة نشيطة / قيد التحقق",tierResearch:"تصميم / بحث",
     tierMapKicker:"نضج الأنظمة",tierMapIntro:"الأنظمة متصنفة حسب التقدم الحقيقي ديالها، ماشي حسب العدد."
   },
   es:{
@@ -288,7 +288,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"Pruebas",proofTitle:"Esto no es solo un concepto.",
     proofText:"Nuestra prueba pública más sólida es el Real Estate Judgment System: un sistema en funcionamiento con pruebas, un caso real público, y una frontera clara entre formal, candidato e investigación. Ese estado refleja una verificación de ingeniería — no significa que la eficacia profesional o el retorno de inversión comercial se hayan verificado de forma independiente. Los demás sistemas muestran su propia etiqueta honesta de madurez — no todas las afirmaciones pesan igual.",
     proofLink:"Ver la evidencia técnica en GitHub",
-    tierAdvanced:"Probado / ingeniería avanzada",tierActive:"Ingeniería activa / validación",tierResearch:"Diseño / investigación",
+    tierAdvanced:"Ingeniería avanzada / validación controlada",tierActive:"Ingeniería activa / validación",tierResearch:"Diseño / investigación",
     tierMapKicker:"Madurez de los sistemas",tierMapIntro:"Los sistemas se agrupan según su avance real, no según su cantidad."
   },
   ja:{
@@ -328,7 +328,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"証拠",proofTitle:"概念だけではありません。",
     proofText:"最も強力な公開証拠は不動産判断システムです。テストを備えた実働ランタイム、公開可能な実案件、そして正式 / 候補 / 研究の境界が明確です。この状態はエンジニアリング上の検証を反映したものであり、専門的な有効性や商業的なROIが独立して検証されたことを意味するものではありません。他のシステムもそれぞれ正直な成熟度ラベルを掲げており、すべての主張が同じ重みを持つわけではありません。",
     proofLink:"GitHub でエンジニアリング上の証拠を見る",
-    tierAdvanced:"実証済み / 高度なエンジニアリング",tierActive:"積極的なエンジニアリング・検証中",tierResearch:"設計 / 研究段階",
+    tierAdvanced:"高度なエンジニアリング / 統制された検証",tierActive:"積極的なエンジニアリング・検証中",tierResearch:"設計 / 研究段階",
     tierMapKicker:"システムの成熟度",tierMapIntro:"システムは数ではなく、実際の進捗段階でグループ分けしています。"
   },
   th:{
@@ -368,7 +368,7 @@ const translations:Record<Locale,Messages> = {
     proofKicker:"หลักฐาน",proofTitle:"นี่ไม่ใช่แค่แนวคิด",
     proofText:"หลักฐานสาธารณะที่แข็งแกร่งที่สุดของเราคือ Real Estate Judgment System ซึ่งเป็นระบบที่ทำงานได้จริง มีชุดทดสอบ มีกรณีจริงที่เปิดเผยต่อสาธารณะได้ และมีเส้นแบ่งที่ชัดเจนระหว่างทางการ / ผู้สมัคร / งานวิจัย สถานะนี้สะท้อนการตรวจสอบเชิงวิศวกรรม ไม่ได้หมายความว่าประสิทธิผลทางวิชาชีพหรือผลตอบแทนเชิงพาณิชย์ได้รับการตรวจสอบอย่างเป็นอิสระแล้ว ระบบอื่น ๆ ก็ติดป้ายระดับความพร้อมตามจริงของตนเอง ไม่ใช่ทุกข้ออ้างจะมีน้ำหนักเท่ากัน",
     proofLink:"ดูหลักฐานเชิงวิศวกรรมบน GitHub",
-    tierAdvanced:"พิสูจน์แล้ว / วิศวกรรมขั้นสูง",tierActive:"วิศวกรรมเชิงรุก / กำลังตรวจสอบ",tierResearch:"ออกแบบ / วิจัย",
+    tierAdvanced:"วิศวกรรมขั้นสูง / การตรวจสอบแบบควบคุม",tierActive:"วิศวกรรมเชิงรุก / กำลังตรวจสอบ",tierResearch:"ออกแบบ / วิจัย",
     tierMapKicker:"ความพร้อมของระบบ",tierMapIntro:"ระบบถูกจัดกลุ่มตามความคืบหน้าจริง ไม่ใช่ตามจำนวน"
   }
 };

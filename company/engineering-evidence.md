@@ -1,18 +1,20 @@
 # Engineering Evidence
 
-Public-safe engineering facts, organized by system. A fact-by-fact Formal / Candidate / Research-only breakdown currently exists only for Real Estate — the system with the most mature internal audit trail. For every other system, the facts below describe internal engineering work; unless a public source link is given, they are **not independently verifiable from outside MatterTurn** and should be read as a disclosed description, not as externally-audited proof. No private source code, private case evidence, or internal capability-registry identifiers are included or linked.
+Public-safe engineering facts, organized by system. A fact-by-fact breakdown by engineering status currently exists only for Real Estate — the system with the most mature internal audit trail. For every other system, the facts below describe internal engineering work; unless a public source link is given, they are **not independently verifiable from outside MatterTurn** and should be read as a disclosed description, not as externally-audited proof. No private source code, private case evidence, or internal capability-registry identifiers are included or linked.
 
 ## Real Estate
 
-**Formal / Main:**
+**Established Engineering (source-side):** what has been built and is running as code, independent of any approval mechanism.
 - Package-first canonical execution — professional work is organized around a packaged, repeatable execution path rather than ad-hoc prompting.
 - Nine professional capabilities covering investment, underwriting, valuation, finance, development, market, legal, operations, and senior-management judgment (see [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system)).
 - Dynamic capability discovery / routing, evidence admission, knowledge activation, model execution, selective reopening, synthesis and receipts.
 - Tests and CI exist for the runtime.
-- A formal runtime / authority mechanism distinguishes an approved conclusion from a draft one.
 - One published, public-safe real-case result: a U.S. select-service hotel acquisition screening (MORE DILIGENCE REQUIRED, underwriting BLOCKED, 11 material unresolved facts preserved). See [`cases/`](../cases/).
 
-**Candidate / research:**
+**Formal runtime / authority mechanism:** a separate, specific fact about how a conclusion gets approved — not a status of the source code itself.
+- A formal runtime / authority mechanism exists and distinguishes an approved conclusion from a draft one. This is a statement about execution authority (what counts as approved), not about which source branch or build the engineering above lives on.
+
+**Candidate / Research frontier:**
 - Japan legal routing and candidate integration with official Japanese regulatory sources.
 - PLATEAU / CityGML (Yokohama) research integration — MatterTurn has connected to real Japanese spatial/regulatory data sources and built an observation / identity-candidate / evidence-boundary mechanism around them. No public source record (dataset snapshot, query log, or output sample) is linked from this repository yet — this claim rests on internal description only, pending a public-safe artifact to link.
 

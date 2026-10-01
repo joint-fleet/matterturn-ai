@@ -2,7 +2,7 @@
 
 Public-safe index of MatterTurn's judgment systems, grouped by how far each one actually is — not flattened into nine equal "products." Internal implementation, orchestration, and private case evidence are not included here. See [`company/engineering-evidence.md`](../company/engineering-evidence.md) for the fact-level detail behind each maturity label.
 
-## Proven / advanced engineering
+## Advanced Engineering / Controlled Validation
 
 - [`real-estate/`](real-estate/) — investment, development, and operating-asset decisions. The strongest public evidence: a working runtime with tests, a formal/candidate/research boundary, and one published real case.
 

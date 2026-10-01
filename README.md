@@ -63,9 +63,9 @@ How MatterTurn avoids rebuilding every mechanism from zero for each new domain, 
 
 ## 9. Maturity map
 
-These are system-level stages, not fact-level labels — they say how far a system is overall, not that every fact about it is independently verified. Only Real Estate currently has the finer Formal / Candidate / Research-only breakdown (see [`company/engineering-evidence.md`](company/engineering-evidence.md)). Real Estate's "proven" status itself reflects engineering verification — tests, CI, a formal runtime, one published case — not independently verified professional effectiveness or commercial ROI, which remain unestablished for every system here.
+These are system-level stages, not fact-level labels — they say how far a system is overall, not that every fact about it is independently verified. Only Real Estate currently has the finer Formal / Candidate / Research-only breakdown (see [`company/engineering-evidence.md`](company/engineering-evidence.md)). Real Estate's "Advanced Engineering / Controlled Validation" label reflects engineering verification — tests, CI, a formal runtime, one published case — not fully validated professional effectiveness, production readiness, or proven commercial ROI, which remain unestablished for every system here.
 
-- **Proven / advanced engineering** — Real Estate Judgment System.
+- **Advanced Engineering / Controlled Validation** — Real Estate Judgment System.
 - **Active engineering / validation** — Banking Frontline, Travel, Financial Securities, Cross-border Goods Trade, International Market & Brand, Morocco Local Life, Sales Opportunity.
 - **Design / research** — Medical Business and other early-stage systems.
 
