@@ -97,6 +97,20 @@ export function ProblemPageView({page}: {page: ProblemPage}) {
           ))}
         </section>
 
+        {page.adjacentSystems?.length ? (
+          <section className="problem-section">
+            <span className="small-label">Also relevant: other MatterTurn systems</span>
+            {page.adjacentSystems.map((a) => (
+              <div className="case-library-card problem-case-card" key={a.systemSlug}>
+                <a href={a.problemHref}>
+                  <h3>{a.systemTitle}</h3>
+                </a>
+                <p>{a.reason}</p>
+              </div>
+            ))}
+          </section>
+        ) : null}
+
         <div className="detail-cta">
           <div>
             <span className="small-label">Part of</span>

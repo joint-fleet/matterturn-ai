@@ -12,6 +12,7 @@
 
 **What you actually get, by maturity:**
 - *Active Engineering* — market research & evidence capture, claim tracking & residual-need assessment, selective reassessment. Tested against three real market-entry research efforts (none has reached a completed commercial judgment); a minimal judgment runtime currently passes 64/64 tests in open, unmerged Draft work.
-- *Planned / Not Yet Available* — consumer insight, market prioritization, positioning, naming, messaging, channel activation, go-to-market planning. Named in the system's own long-term scope; no engineering work has started.
+- *Research / Experimental* — market prioritization / competitive structure, positioning / value proposition, go-to-market / entry-mode judgment, channel activation / GTM design. Each is a documented candidate commercial-judgment behavior, independently produced by real work on two structurally unrelated real cases and tracked in the system's own Skill Candidate Registry — real evidence and design, zero implementation, zero test, not authorized for any runtime use.
+- *Planned / Not Yet Available* — consumer insight, naming, messaging, creative direction. Checked directly against the same registry and found absent — no documented candidate, no real work started.
 
 **Link:** Product page on the [website](../../website/) (`/systems/international-brand`).

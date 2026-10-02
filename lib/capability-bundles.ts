@@ -7,19 +7,37 @@
  * (it understates what MatterTurn has actually built), so the rule here is
  * "show it, label it accurately" rather than "only show the finished ones."
  *
- * Maturity labels, in descending order of evidence strength:
- * - Validated / Case-backed: a published, re-verified public case backs it.
- * - Engineering Validated: real, tested, CI-passing engineering work exists
- *   (including synthetic-data end-to-end validation), but no independently
- *   reviewed real-world case is published for it yet.
+ * Maturity labels, in descending order of evidence strength. Note what
+ * the top label deliberately does NOT say: "Validated." A capability
+ * being exercised inside a real case is not the same claim as that
+ * capability's output being independently confirmed correct — MatterTurn's
+ * own principle, demonstrated by its own 1740 Broadway case, is that a
+ * correct final direction does not retroactively validate a defective
+ * reasoning or model path. So "Case-Backed" here means exactly what it
+ * says: a real case exercised it. Where a case also exposed a disclosed
+ * defect or withheld promotion for that specific capability, the
+ * capability is labeled one tier down (Engineering Validated) instead,
+ * and the note says why.
+ *
+ * - Case-Backed — Exercised in Real Case: a published, re-verified real
+ *   case exercised this capability, AND no disclosed defect or withheld
+ *   promotion attaches to that capability's own output in that case.
+ * - Engineering Validated: real, tested, CI-passing engineering work
+ *   exists (including synthetic end-to-end validation, or a real case
+ *   that exercised the capability but also exposed a disclosed defect or
+ *   withheld promotion), but no clean independent real-world proof point
+ *   exists for this specific capability yet.
  * - Active Engineering: real, running code and real-case falsification
  *   testing exist (often in open, unmerged Draft PRs), but the system
  *   itself has not reached a completed, authorized judgment or formal
  *   runtime promotion.
  * - Research / Experimental: real design, data, or early experimentation
- *   exists, but no tested, running capability yet.
+ *   exists — including a documented candidate behavior produced by real
+ *   case work, even with no code behind it yet — but no tested, running
+ *   capability yet.
  * - Planned / Not Yet Available: named because it's part of the system's
- *   own stated scope, but no engineering work on it has started.
+ *   own stated scope, but no real design or engineering work exists yet,
+ *   not even a documented candidate.
  *
  * Sourced from a re-read of each repo's CURRENT state — default branch
  * plus open Draft PRs and active branches, not README-only snapshots.
@@ -29,7 +47,7 @@
 export type Maturity = "validated" | "engineering-validated" | "active-engineering" | "research" | "planned";
 
 export const maturityLabel: Record<Maturity, string> = {
-  validated: "Validated / Case-backed",
+  validated: "Case-Backed — Exercised in Real Case",
   "engineering-validated": "Engineering Validated",
   "active-engineering": "Active Engineering",
   research: "Research / Experimental",
@@ -64,19 +82,19 @@ export const capabilityBundles: CapabilityBundle[] = [
       "Prepare an integrated, investment-committee-style synthesis across all of the above",
     ],
     capabilities: [
-      {name: "Investment analysis & problem diagnosis", note: "frames the real decision question before any model runs", maturity: "validated"},
-      {name: "Asset valuation", note: "DCF / NPV / scenario modeling bound to the decision's actual assumptions", maturity: "validated"},
-      {name: "Underwriting", note: "a formal BLOCKED / MORE DILIGENCE REQUIRED / proceed determination, not a forced answer", maturity: "validated"},
-      {name: "Finance & debt analysis", note: "debt-service coverage, leverage, and lender-constraint testing", maturity: "validated"},
-      {name: "Development & cost review", note: "feasibility, cost, and highest-and-best-use comparison", maturity: "validated"},
-      {name: "Market analysis", note: "demand and positioning evidence behind a valuation or underwriting call", maturity: "validated"},
-      {name: "Legal & regulatory review", note: "jurisdiction-aware constraint checking (current coverage includes the US, UK, China, and Japan)", maturity: "validated"},
-      {name: "Operations review", note: "operating-asset and hospitality-specific performance reading", maturity: "validated"},
+      {name: "Investment analysis & problem diagnosis", note: "frames the real decision question before any model runs — A-05's diagnosis-first step is the clean, defect-free proof point", maturity: "validated"},
+      {name: "Asset valuation", note: "DOWNGRADED from Case-Backed. 1740 Broadway's accept/reject direction matched the real historical outcome, but the valuation itself had a disclosed terminal-value defect and a mislabeled return metric, and the model was explicitly denied promotion. A correct direction does not validate the valuation output — the case exercised this capability, it did not clear it.", maturity: "engineering-validated"},
+      {name: "Underwriting", note: "a formal BLOCKED / MORE DILIGENCE REQUIRED determination, re-verified end-to-end with no regression, and no disclosed defect in the determination itself", maturity: "validated"},
+      {name: "Finance & debt analysis", note: "DOWNGRADED from Case-Backed. The debt-service figures produced so far come from the same 1740 Broadway model that had a disclosed valuation-integrity defect, and from A-03's run, which the casebook itself flags for using invented/unsupported lease dates. Real, tested — not yet a clean proof point.", maturity: "engineering-validated"},
+      {name: "Development & cost review", note: "DOWNGRADED from Case-Backed. Murray Hill completed with no disclosed defect, but the casebook itself flags it as not yet independently human-reviewed — real, executed engineering, not yet an outside-checked result.", maturity: "engineering-validated"},
+      {name: "Market analysis", note: "confirmed work product in the hotel case, and a real guardrail (CASE-003) that blocked an unsupported valuation shortcut — no disclosed defect in the capability itself", maturity: "validated"},
+      {name: "Legal & regulatory review", note: "jurisdiction-aware constraint checking (current coverage includes the US, UK, China, and Japan) — confirmed work product in the hotel case, no disclosed defect", maturity: "validated"},
+      {name: "Operations review", note: "correctly flagged missing trailing financials rather than guessing past them in the hotel case — exercised once, narrowly, but with no disclosed defect", maturity: "validated"},
       {name: "Model selection", note: "decides whether a calculation is useful and which model family fits — exercised inside every case, no dedicated standalone case yet", maturity: "engineering-validated"},
-      {name: "Senior investment judgment", note: "the integrated synthesis across every capability above, with conflicts and gaps preserved rather than smoothed over", maturity: "validated"},
+      {name: "Senior investment judgment", note: "DOWNGRADED from Case-Backed. This is the synthesis across every capability above — it inherits the weakest input it depends on. Because the valuation and finance/debt layers feeding 1740 Broadway's and A-03's synthesis both carry disclosed defects, the overall judgment is Engineering Validated, not an independently clean proof point, even where the final direction was right.", maturity: "engineering-validated"},
     ],
     oneLiner: "One system. Ten professional capabilities. One integrated judgment.",
-    evidenceNote: "Based on five published/re-verified public cases (1740 Broadway, A-03, A-05, the hotel acquisition case, and Murray Hill) plus the system's own tested runtime and capability registry.",
+    evidenceNote: "Based on five published/re-verified public cases (1740 Broadway, A-03, A-05, the hotel acquisition case, and Murray Hill) plus the system's own tested runtime and capability registry. Case-Backed is reserved for capabilities a real case exercised without exposing a disclosed defect or withheld promotion in that capability's own output — not simply for appearing in a case.",
   },
   {
     slug: "financial-markets",
@@ -134,16 +152,17 @@ export const capabilityBundles: CapabilityBundle[] = [
       {name: "Market research & evidence capture", note: "sourced, dated evidence intake tested against three real cases (a historical backtest and two live prospective market-entry research efforts)", maturity: "active-engineering"},
       {name: "Claim tracking & residual-need assessment", note: "a real, tested judgment engine (64/64 tests passing in its current Draft) that tracks what's confirmed vs. contested per case", maturity: "active-engineering"},
       {name: "Selective reassessment", note: "replayed on real evidence updates in two different real shapes (new evidence reopening unresolved work; rebutting evidence closing it) in the system's open Draft runtime", maturity: "active-engineering"},
-      {name: "Consumer insight", note: "named in the system's long-term scope; no research or engineering work has started", maturity: "planned"},
-      {name: "Market prioritization", note: "named in the system's long-term scope; no research or engineering work has started", maturity: "planned"},
-      {name: "Positioning", note: "named in the system's long-term scope; no research or engineering work has started", maturity: "planned"},
-      {name: "Naming", note: "named in the system's long-term scope; no research or engineering work has started", maturity: "planned"},
-      {name: "Messaging", note: "named in the system's long-term scope; no research or engineering work has started", maturity: "planned"},
-      {name: "Channel activation", note: "explicitly deferred to a separate, not-yet-built market-access domain", maturity: "planned"},
-      {name: "Go-to-market planning", note: "explicitly deferred to a separate, not-yet-built market-access domain", maturity: "planned"},
+      {name: "Market prioritization / competitive structure", note: "a documented candidate behavior (not yet code), produced from real evidence — a real market-tier/structure map built from another MatterTurn system's own research, read and reused as cross-case evidence. No implementation, no test, no case run under this system's own name.", maturity: "research"},
+      {name: "Positioning / value proposition", note: "a documented candidate behavior produced from real evidence — real 'claim this, not that' positioning reasoning, read from another MatterTurn system's own market work and reused as cross-case evidence. No implementation, no test yet.", maturity: "research"},
+      {name: "Go-to-market / entry-mode judgment", note: "a documented candidate behavior with one real evidenced instance (a real 'sell the service before the software' entry-mode decision, read from another MatterTurn system's own work) plus raw pricing/channel material gathered but not yet turned into this system's own judgment. No implementation, no test yet.", maturity: "research"},
+      {name: "Channel activation / GTM design", note: "real raw material exists (competitor pricing benchmarks, real GTM patterns, proposed pilot experiments) but no case has yet produced this system's own actual, evidenced channel decision from it — the system's own documentation is explicit that registering this now would be 'registering the homework, not the judgment.'", maturity: "research"},
+      {name: "Consumer insight", note: "not addressed by any documented candidate behavior or real evidence found in this round's review; named in the system's long-term scope only", maturity: "planned"},
+      {name: "Naming", note: "not addressed by any documented candidate behavior or real evidence found in this round's review; named in the system's long-term scope only", maturity: "planned"},
+      {name: "Messaging", note: "not addressed by any documented candidate behavior or real evidence found in this round's review; named in the system's long-term scope only", maturity: "planned"},
+      {name: "Creative direction", note: "not addressed by any documented candidate behavior or real evidence found in this round's review; named in the system's long-term scope only", maturity: "planned"},
     ],
-    oneLiner: "Real evidence-based research and judgment engineering today; brand and go-to-market capabilities are planned, not yet built.",
-    evidenceNote: "Based on the system's own currently open Draft PRs (not yet merged to main): a minimal judgment runtime tested against real evidence from three market-entry research efforts, none of which has reached a completed commercial judgment. No formal runtime authority, promotion, or cutover exists yet.",
+    oneLiner: "Real evidence-based research and judgment engineering today; four brand/GTM capabilities have real documented design behind them but no code yet — four others have no real work started at all.",
+    evidenceNote: "Based on the system's own currently open Draft PRs (not yet merged to main), including its own Skill Candidate Registry: four candidate commercial-judgment behaviors (market structure, positioning, entry-mode comparison, channel/GTM design) were independently produced by real work on two structurally unrelated real cases and are explicitly tracked as CANDIDATE/UNADMITTED — real evidence and design, but zero implementation, zero test, and not authorized for any runtime use. Four other named directions (consumer insight, naming, messaging, creative direction) were checked directly against that same registry and found absent — not downplayed, just not there yet. No formal runtime authority, promotion, or cutover exists for any of this.",
   },
   {
     slug: "sales-opportunity",

@@ -27,6 +27,13 @@ export type ProblemPage = {
   relatedCapabilities: string[];
   limits: string;
   cases: {title: string; href: string; note: string}[];
+  /**
+   * Cross-system adjacency — a different MatterTurn system whose capability
+   * is relevant to THIS problem, with the specific business reason why.
+   * Added selectively, only where there's a real reason, not on every page
+   * as a mechanical cross-sell list.
+   */
+  adjacentSystems?: {systemSlug: string; systemTitle: string; problemHref: string; reason: string}[];
 };
 
 const GH_CASES = "https://github.com/joint-fleet/matterturn-ai/tree/main/cases/library";
@@ -35,7 +42,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "asset-valuation",
-    maturity: "validated",
+    maturity: "engineering-validated",
     title: "Estimate a Property's Value Under an Acquisition Model",
     summary:
       "MatterTurn builds a scenario-based valuation (downside / base / upside DCF, NPV, implied maximum purchase price) bound to the specific deal's actual assumptions, and preserves the gap between a correct investment direction and a trustworthy number.",
@@ -45,7 +52,7 @@ export const problemPages: ProblemPage[] = [
     receives: ["A scenario-based valuation range, not a single point estimate presented as certain", "The specific assumptions the valuation depends on, stated explicitly", "Flags on any input the system could not verify or support"],
     relatedCapabilities: ["Underwriting", "Finance & debt analysis", "Market analysis", "Senior investment judgment"],
     limits:
-      "Valuation direction (buy / don't buy) has been validated against a real historical outcome; precise point-valuation accuracy has not — a known defect (terminal-value robustness) is on record and the model was not promoted into production pending a fix.",
+      "ENGINEERING VALIDATED, NOT A CLEAN PROOF POINT. Valuation direction (buy / don't buy) matched a real historical outcome, but the valuation itself had a disclosed terminal-value defect and a mislabeled return metric, and the model was explicitly denied promotion. A correct direction does not validate the valuation output — this capability was exercised by a real case, not cleared by one.",
     cases: [{title: "1740 Broadway — Historical Blind Validation", href: `${GH_CASES}/1740-broadway-blind-validation.md`, note: "Two outcome-blind runs correctly rejected a deal that later failed — and a real model defect was preserved on record rather than hidden."}],
   },
   {
@@ -63,11 +70,20 @@ export const problemPages: ProblemPage[] = [
     limits:
       "This capability is part of the documented Market domain used across the system's published cases; it has not yet been the sole subject of its own dedicated public case, so treat its depth as consistent with — not independently proven beyond — the system's other market-analysis evidence.",
     cases: [{title: "Select-Service Hotel Acquisition — Blocked Pending Diligence", href: `${GH_CASES}/hotel-acquisition-screening.md`, note: "Market capability contributed confirmed work product toward an underwriting review on the same evidence discipline used for rent analysis."}],
+    adjacentSystems: [
+      {
+        systemSlug: "international-brand",
+        systemTitle: "International Market & Brand",
+        problemHref: "/systems/international-brand/market-entry-research",
+        reason:
+          "A rent read for a retail or mixed-use space often sits inside a bigger question — is this submarket actually right for the tenant mix or brand being planned there. International Market & Brand's market-entry research tests that broader demand/competition question with the same sourced-evidence discipline, instead of treating the rent figure as if it answers it alone.",
+      },
+    ],
   },
   {
     systemSlug: "real-estate",
     problemSlug: "debt-analysis",
-    maturity: "validated",
+    maturity: "engineering-validated",
     title: "Test Debt Capacity and Debt-Service Coverage",
     summary:
       "MatterTurn calculates debt-service coverage and leverage against a deal's actual cash-flow assumptions, and tests whether those assumptions survive scrutiny before a debt conclusion is produced.",
@@ -77,7 +93,7 @@ export const problemPages: ProblemPage[] = [
     receives: ["A debt-capacity read bound to stated cash-flow assumptions, not a generic rule of thumb", "Explicit flags where debt coverage depends on thin or reserve-dependent assumptions"],
     relatedCapabilities: ["Finance & debt analysis", "Asset valuation", "Senior investment judgment"],
     limits:
-      "Debt analysis has been directly exercised inside full acquisition reviews (see cases); it has not yet been independently validated as a standalone lending product.",
+      "ENGINEERING VALIDATED, NOT A CLEAN PROOF POINT. The debt-service figures produced so far come from the same 1740 Broadway model that had a disclosed valuation-integrity defect, and from the A-03 run, which is itself flagged for using invented/unsupported lease dates to force-fit the model's inputs. Real and tested, but neither case gives debt analysis a defect-free result to point to yet.",
     cases: [
       {title: "1740 Broadway — Historical Blind Validation", href: `${GH_CASES}/1740-broadway-blind-validation.md`, note: "Debt-service coverage was calculated as part of the full acquisition model."},
       {title: "A-03 — When the Right Answer Hides a Bad Process", href: `${GH_CASES}/a03-failure-decomposition.md`, note: "Flagged thin current debt coverage and reserve reliance that later proved material — while also preserving the run's own input-quality failures."},
@@ -102,7 +118,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "development-feasibility",
-    maturity: "validated",
+    maturity: "engineering-validated",
     title: "Review Development Cost and Feasibility — Teardown, Renovate, or Hold",
     summary:
       "MatterTurn compares development paths (teardown-and-rebuild, renovation, hold-as-is) against cost, market, and financing evidence together, inside one integrated run rather than as separate disconnected estimates.",
@@ -129,6 +145,15 @@ export const problemPages: ProblemPage[] = [
     relatedCapabilities: ["Asset valuation", "Underwriting", "Development & cost review"],
     limits: "Market analysis has been exercised as a contributing capability inside larger case runs; it has not yet been published as a standalone market-report product.",
     cases: [{title: "Select-Service Hotel Acquisition — Blocked Pending Diligence", href: `${GH_CASES}/hotel-acquisition-screening.md`, note: "Market capability produced confirmed work product as part of a blocked underwriting review."}],
+    adjacentSystems: [
+      {
+        systemSlug: "international-brand",
+        systemTitle: "International Market & Brand",
+        problemHref: "/systems/international-brand/market-entry-research",
+        reason:
+          "When the demand question behind a property is really about whether an industry or brand is expanding into the area at all (e.g., a logistics asset's tenant base, a hospitality brand's regional footprint), that's a market-entry question, not just a real estate one. International Market & Brand's evidence discipline tests that question directly instead of being inferred from real estate comparables alone.",
+      },
+    ],
   },
   {
     systemSlug: "real-estate",
@@ -163,7 +188,7 @@ export const problemPages: ProblemPage[] = [
   {
     systemSlug: "real-estate",
     problemSlug: "investment-review",
-    maturity: "validated",
+    maturity: "engineering-validated",
     title: "Prepare an Investment-Committee-Style Synthesis",
     summary:
       "MatterTurn's senior-judgment capability integrates every other capability — valuation, underwriting, debt, development, market, legal, operations — into one synthesis, and is built to preserve conflicts and unresolved facts rather than smooth them into a single confident number.",
@@ -176,6 +201,15 @@ export const problemPages: ProblemPage[] = [
     cases: [
       {title: "1740 Broadway — Historical Blind Validation", href: `${GH_CASES}/1740-broadway-blind-validation.md`, note: "Correct accept/reject direction on a real historical failure, with the model's own valuation-precision defects preserved rather than hidden."},
       {title: "A-03 — When the Right Answer Hides a Bad Process", href: `${GH_CASES}/a03-failure-decomposition.md`, note: "A directionally correct recommendation was decomposed into four distinct process failures in the same run."},
+    ],
+    adjacentSystems: [
+      {
+        systemSlug: "sales-opportunity",
+        systemTitle: "Sales Opportunity",
+        problemHref: "/systems/sales-opportunity/opportunity-research",
+        reason:
+          "An investment-committee synthesis for an operating asset often depends on one specific counterparty's commercial viability — an anchor tenant, an operating partner, a franchisee. Sales Opportunity's qualification discipline (evidence of need, budget, authority) can independently test that counterparty's own business case rather than taking its stated commitment at face value inside the real estate synthesis.",
+      },
     ],
   },
   {
@@ -193,6 +227,15 @@ export const problemPages: ProblemPage[] = [
     limits: "This is engineering/research validation on historical, public-record events — not investment advice, a trading signal, or a performance claim. The system explicitly disclaims being a price-prediction tool.",
     cases: [
       {title: "Nvidia, 2025 — Two Shocks, Two Different Reassessments", href: `${GH_CASES}/nvidia-selective-reassessment.md`, note: "An export-control shock and a competitor efficiency claim each reopened only the specific assumption they actually bore on."},
+    ],
+    adjacentSystems: [
+      {
+        systemSlug: "real-estate",
+        systemTitle: "Real Estate",
+        problemHref: "/systems/real-estate/investment-review",
+        reason:
+          "The same discipline this page demonstrates for a security — don't let one event's real scope get overstated into a change nothing in it actually supports — applies directly when a macro or credit event (a rate move, a sector shock) is being used to argue a real estate investment thesis should change. Real Estate's investment-review synthesis uses the identical selective-reassessment logic rather than a separate, inconsistent one.",
+      },
     ],
   },
   {
@@ -224,7 +267,7 @@ export const problemPages: ProblemPage[] = [
     receives: ["A tracked judgment state — confirmed, contested, or missing — not a finished recommendation", "An explicit refusal to proceed past what the evidence supports", "A reassessment that touches only the specific question new evidence bears on"],
     relatedCapabilities: ["Market research & evidence capture", "Claim tracking & residual-need assessment", "Selective reassessment"],
     limits:
-      "ACTIVE ENGINEERING, NOT A FINISHED PRODUCT. This runs in the system's open, unmerged Draft work. No completed commercial judgment has been reached on any real case yet, and no formal runtime authority, promotion, or cutover exists. Brand capabilities often associated with 'market entry' — positioning, naming, messaging, channel activation, go-to-market — are not yet built (see the system's own page for their status).",
+      "ACTIVE ENGINEERING, NOT A FINISHED PRODUCT. This runs in the system's open, unmerged Draft work. No completed commercial judgment has been reached on any real case yet, and no formal runtime authority, promotion, or cutover exists. Brand capabilities often associated with 'market entry' — positioning, go-to-market, and channel activation have real documented design (Research/Experimental); consumer insight, naming, messaging, and creative direction have no real work started at all (see the system's own page for the exact split).",
     cases: [],
   },
   {
