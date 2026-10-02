@@ -10,10 +10,11 @@ const maturityOrder: Maturity[] = ["validated", "engineering-validated", "active
 
 /**
  * "MatterTurn total capability landscape." What You Get (capability names)
- * is the primary, first-seen layer for every system, split into "available
- * today" (Case-Backed) and "still in progress" (everything else) so the
- * page never implies every system is purchasable today. Full maturity
- * detail is a second layer, behind each system's <details> toggle. Every
+ * is the primary, first-seen layer for every system, split into "demonstrated
+ * in real cases" (Case-Backed) and "still in progress" (everything else) —
+ * "exercised in a real case" is deliberately not called "available," since
+ * that would overclaim commercial readiness. Full maturity detail is a
+ * second layer, behind each system's <details> toggle. Every
  * real capability domain across every system still appears; none is
  * hidden for being early-stage.
  */
@@ -42,10 +43,11 @@ export function CapabilityNetworkView() {
           </div>
         </div>
         <p className="detail-lead">
-          Not every capability below is available today — most systems have a mix of what&rsquo;s already case-backed and what&rsquo;s
-          still in engineering, research, or planned. Each system below is split exactly that way: <strong>available today</strong>
-          first, then everything still in progress. Maturity detail for each is one layer down, behind each system&rsquo;s detail
-          toggle.
+          Being demonstrated in a real case is not the same claim as being ready for commercial delivery — case-backed means a real
+          case exercised it, not that it&rsquo;s a finished, production-ready deliverable (see each capability&rsquo;s own maturity detail for
+          what it does and doesn&rsquo;t establish). Most systems below have a mix of what&rsquo;s already demonstrated in a real case and
+          what&rsquo;s still in engineering, research, or planned. Each system is split exactly that way: <strong>demonstrated in
+          real cases</strong> first, then everything still in progress.
         </p>
 
         {capabilityBundles.map((b) => {
@@ -58,7 +60,7 @@ export function CapabilityNetworkView() {
               </span>
               <p className="capability-bundle-line">{b.oneLiner}</p>
 
-              <p className="small-label capability-group-label">Available today</p>
+              <p className="small-label capability-group-label">Demonstrated in real cases</p>
               {today.length ? (
                 <div className="capability-chips">
                   {today.map((c) => (

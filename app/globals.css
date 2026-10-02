@@ -73,3 +73,5 @@
 .capability-group-label{margin-top:18px}
 .capability-chips-muted{opacity:.72}
 .capability-chip-muted{border-style:dashed;color:var(--muted);font-weight:500}
+.responsibility-section{padding:96px 0;border-top:1px solid var(--ink)}.responsibility-section .section-heading{margin-bottom:34px}.responsibility-section .section-heading h2{max-width:900px}.responsibility-body{max-width:820px;display:grid;gap:18px;margin-bottom:34px}.responsibility-body p{margin:0;font-size:1.1rem;line-height:1.75;color:var(--muted)}.responsibility-line{color:var(--ink)!important;font-weight:600}
+.case-decline-note{color:var(--ink);font-weight:600;max-width:640px;margin:14px 0 0}

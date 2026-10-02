@@ -5,6 +5,7 @@ import {BrandFilm} from "./brand-film";
 import {type Locale,messages,pathFor,rtl} from "@/lib/i18n";
 import {SystemsCatalog} from "./systems-catalog";
 import {TrustFlow} from "./trust-flow";
+import {ResponsibilitySection} from "./responsibility-section";
 import {EvidenceHub} from "./evidence-hub";
 import {CaseLibrary} from "./case-library";
 export function HomeView({locale}:{locale:Locale}){
@@ -27,6 +28,7 @@ export function HomeView({locale}:{locale:Locale}){
     <BrandFilm locale={locale}/>
     <SystemsCatalog locale={locale}/>
     <TrustFlow locale={locale}/>
+    <ResponsibilitySection locale={locale}/>
     <EvidenceHub locale={locale}/>
     <CaseLibrary locale={locale}/>
     <section id="approach" className="approach-section"><div className="shell approach-inner"><p className="overline">{m.approachKicker}</p><h2>{m.approachTitle1}<br/>{m.approachTitle2}</h2><div className="approach-grid"><p>{m.approach1}</p><p>{m.approach2}</p></div><div className="approach-actions"><Link className="light-link" href={pathFor(locale,"/workspace")}>{m.startACase} <ArrowIcon/></Link>{locale==="en"?<Link className="light-link" href="/capability-network">Capability network <ArrowIcon/></Link>:null}</div></div></section>

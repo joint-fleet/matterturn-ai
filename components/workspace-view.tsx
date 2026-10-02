@@ -20,6 +20,7 @@ export function WorkspaceView({locale}:{locale:Locale}){
       <h2>{m.caseStatusTitle}</h2>
       <ol>{steps.map((step,i)=><li key={i} className={i===0?"is-live":"is-pending"}><span>0{i+1}</span>{step}</li>)}</ol>
       <p className="case-note">{m.caseNote}</p>
+      <p className="case-decline-note">{m.caseDeclineNote}</p>
     </section>
     {locale==="en"?<section className="problem-section example-walkthrough">
       <span className="small-label">Illustrative example — not a live demo</span>
