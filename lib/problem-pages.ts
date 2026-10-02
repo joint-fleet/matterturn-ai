@@ -196,7 +196,7 @@ export const problemPages: ProblemPage[] = [
     inputs: ["Everything gathered across the other capability areas for a given deal", "The specific decision the committee actually needs to make"],
     analyzes: ["Whether conclusions across capability areas are mutually consistent", "Where the strongest unresolved risk to the decision actually sits", "Whether a directionally correct call rests on a trustworthy calculation path"],
     receives: ["An integrated judgment with the underlying tensions and gaps still visible — not a single polished number that hides them", "A record that separates 'the direction was right' from 'the process that produced it was reliable,' since the two are not the same claim"],
-    relatedCapabilities: ["All nine Real Estate capabilities"],
+    relatedCapabilities: ["All ten Real Estate capabilities"],
     limits: "No formal with-system / without-system uplift study exists yet — don't read any case as a quantified performance-improvement claim. A correct final direction in a published case did not, on its own, validate every number behind it, and that distinction is preserved on the record rather than smoothed over.",
     cases: [
       {title: "1740 Broadway — Historical Blind Validation", href: `${GH_CASES}/1740-broadway-blind-validation.md`, note: "Correct accept/reject direction on a real historical failure, with the model's own valuation-precision defects preserved rather than hidden."},
