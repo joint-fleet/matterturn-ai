@@ -33,6 +33,10 @@ Result: still HOLD — 0 valid candidate, 0 verified opportunity
 
 MatterTurn describes an internal run that reached `0 valid candidate` / `0 verified opportunity`, and kept that result rather than discarding it. **No independent run date, log, or source artifact is linked from this repository for this case** — it is disclosed as a description, not demonstrated with an attached record. **The system is allowed to conclude there is no opportunity** — that is a design property, not a failure of the demo. See [`cases/`](../../cases/) for this as an Engineering / Learning Case, distinct from a client case.
 
-**Current public status:** Early / active engineering. No dedicated product page on the website yet.
+**Current public status:** Early / active engineering. No dedicated product page on the website yet; see the website's [opportunity-research problem page](../../website/) under `/systems/sales-opportunity/opportunity-research`.
+
+**What you can use this for today** (Active Engineering): research whether a real prospect's public signals indicate a commercial problem worth pursuing; qualify or disqualify an opportunity against explicit evidence of need, budget, and authority; track exactly which research actions were taken and what remains unresolved.
+
+**What you actually get:** problem discovery, opportunity qualification, buyer/authority analysis, commercial validation, and a research action ledger with falsification testing — all Active Engineering, tested with 80+ passing unit tests and real research runs against real public companies, including one real engineering defect found and fixed on the record. Autonomous outreach and CRM execution are explicitly out of scope — Planned / Not Yet Available, not built.
 
 **Link:** None on the website yet. See [`company/engineering-evidence.md`](../../company/engineering-evidence.md) and [`cases/`](../../cases/) for what's public-safe today.

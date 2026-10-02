@@ -20,4 +20,4 @@ Public-safe index of MatterTurn's judgment systems, grouped by how far each one 
 
 - [`medical-business/`](medical-business/) — healthcare business decisions (design stage).
 
-For the live, individually-maintained product pages, see the [website](../website/). For published public-safe cases, see [`cases/`](../cases/).
+For the live, individually-maintained product pages, see the [website](../website/). For published public-safe cases, see [`cases/`](../cases/). For how capability grows across systems as more are added, see the website's Capability Network page (`/capability-network`) — public terms only; the Central Asset Library's internal reuse/routing mechanics stay private.

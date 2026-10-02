@@ -10,4 +10,10 @@
 
 **What's still incomplete:** the core professional judgment layer — the part that decides which travel options are actually sound for a given traveler — is still under development. The device-and-pipeline plumbing runs end to end; the judgment it's meant to carry does not yet. This is not presented as a mature Travel Judgment System.
 
+**What you can use this for today** (Active Engineering): capture a traveler's decision problem (text and photos, with context) reliably for later professional judgment to act on.
+
+**What you actually get, by maturity:**
+- *Active Engineering* — problem intake & session capture, real-device tested across 10 documented acceptance scenarios.
+- *Planned / Not Yet Available* — the judgment/recommendation engine itself. Professional judgment criteria are drafted as structured data, but the code that would apply them is an explicit placeholder; no recommendation has ever been produced.
+
 **Link:** Product page on the [website](../../website/) (`/systems/travel`).

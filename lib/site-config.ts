@@ -30,7 +30,19 @@ export const siteUrl = (() => {
   return "http://localhost:3000";
 })();
 
-/** Internal / controlled-review mode: public indexing is intentionally off. */
+/**
+ * Public indexing — the single on/off switch for whether search engines and
+ * AI crawlers (Googlebot, Bingbot, GPTBot, OAI-SearchBot, ClaudeBot,
+ * Google-Extended, PerplexityBot, etc.) can index this site at all. Both
+ * app/robots.ts and next.config.ts's X-Robots-Tag header read this flag, so
+ * there is exactly one place to flip it — that bug (robots.ts allowing
+ * while vercel.json unconditionally disallowed) is fixed regardless of
+ * this flag's value.
+ *
+ * Kept OFF deliberately. Going live is the Owner's own cutover decision,
+ * made separately once the site content itself is approved — an agent
+ * does not flip this on its own authority.
+ */
 export const isPublicIndexingEnabled = false;
 
 export const social = {

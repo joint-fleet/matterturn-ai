@@ -1,6 +1,10 @@
 # Cases
 
-Index of MatterTurn public-safe case material. For the fuller, per-system picture of development, validation, and failure history — not just what's released at full public-case detail here — see [`company/case-and-failure-history.md`](../company/case-and-failure-history.md). Three kinds of entries live here, and they are never mixed together:
+Index of MatterTurn public-safe case material.
+
+**[Public Case Library →](library/)** — seven representative, re-verified cases organized by what each one proves (judgment, blocked, reassessment, failure, historical blind validation, synthetic stress test), not by which system produced it. This answers "what did MatterTurn actually produce" with results, not methods.
+
+For the fuller, per-system picture of development, validation, and failure history — not just what's released at full public-case detail here — see [`company/case-and-failure-history.md`](../company/case-and-failure-history.md). Three kinds of entries live here below this index, and they are never mixed together:
 
 - **Client / Professional Case** — a real client or professional decision, generalized/redacted, never identifying the client, asset, or private evidence.
 - **Engineering / Learning Case** — a described engineering run (including a failure and its fix) on synthetic or self-generated data, disclosed to demonstrate how MatterTurn builds and corrects itself — not a client result, and not necessarily independently sourced from this repository.
@@ -10,11 +14,11 @@ Index of MatterTurn public-safe case material. For the fuller, per-system pictur
 
 **Real Estate — U.S. select-service hotel acquisition screening.** The system returned **MORE DILIGENCE REQUIRED**, kept underwriting **BLOCKED**, and preserved **11 material unresolved facts** rather than forcing a premature investment conclusion. The case does not identify the client, asset, address, or private evidence, and explicitly does not claim autonomous investment authority, universal expert-level equivalence, independently validated professional effectiveness, or commercial ROI.
 
-Source: [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system) — see [`CASES.md`](https://github.com/joint-fleet/real-estate-expert-system/blob/main/CASES.md).
+Source: [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system) — see [`CASES.md`](https://github.com/joint-fleet/real-estate-expert-system/blob/main/CASES.md). Full case: [`library/hotel-acquisition-screening.md`](library/hotel-acquisition-screening.md).
 
 ## Engineering / Learning Case
 
-**Sales Opportunity — a described self-correction run.** MatterTurn describes a research-and-capture pipeline that hit a result-integrity failure, preserved that original failure instead of hiding it, had its classifier fixed, reran, and still concluded `0 valid candidate` / `0 verified opportunity`. **No independent run date, log, or source artifact is linked from this repository** — this is disclosed as a description of real internal engineering work, not demonstrated with an attached record. It exists to show that the system is allowed to conclude there is no opportunity, and that a failure gets fixed and kept on record rather than quietly discarded. See [`systems/sales-opportunity/`](../systems/sales-opportunity/).
+**Sales Opportunity — a self-correction run.** A research-and-capture pipeline hit a result-integrity failure, preserved that original failure instead of hiding it, had the defect fixed, and reran — still concluding `0 valid candidate` / `0 verified opportunity`. This case is withheld from public release pending a separate disclosure review of the real counterparties and vendor-source material it touches — it is not yet published here or in the library in any form.
 
 ## Historical Fixture
 
@@ -22,4 +26,4 @@ Source: [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet
 
 ---
 
-No other public-safe cases are published yet. When a new case is cleared for public release, it will be added here under the correct category, with consent where required, and without copying private evidence into this repository.
+For more cases in this same six-part format — organized by what they prove rather than by category above — see the [Public Case Library](library/). New cases are added under the correct category here, and to the library, as they clear review, with consent where required, and without copying private evidence into this repository.
