@@ -6,7 +6,7 @@ Public-safe engineering facts, organized by system. A fact-by-fact breakdown by 
 
 **Established Engineering (source-side):** what has been built and is running as code, independent of any approval mechanism.
 - Package-first canonical execution — professional work is organized around a packaged, repeatable execution path rather than ad-hoc prompting.
-- Nine professional capabilities covering investment, underwriting, valuation, finance, development, market, legal, operations, and senior-management judgment (see [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system)).
+- Ten public capability areas covering investment/problem diagnosis, underwriting, valuation, finance/debt, development/cost, market, legal/regulatory, operations, model selection, and senior investment judgment (see [`joint-fleet/real-estate-expert-system`](https://github.com/joint-fleet/real-estate-expert-system)).
 - Dynamic capability discovery / routing, evidence admission, knowledge activation, model execution, selective reopening, synthesis and receipts.
 - Tests and CI exist for the runtime.
 - One published, public-safe real-case result: a U.S. select-service hotel acquisition screening (MORE DILIGENCE REQUIRED, underwriting BLOCKED, 11 material unresolved facts preserved). See [`cases/`](../cases/).
