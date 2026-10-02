@@ -7,6 +7,7 @@ import {type Locale,messages,pathFor,rtl} from "@/lib/i18n";
 import {translatedProduct} from "@/lib/product-i18n";
 import {BrandStrategyView} from "./brand-strategy-view";
 import {MoroccoLifeView} from "./morocco-life-view";
+import {RealEstateView} from "./real-estate-view";
 import {navigation} from "@/lib/navigation";
 import {systemJsonLd, breadcrumbJsonLd, JsonLdScript} from "@/lib/structured-data";
 import {capabilityBundleFor, maturityLabel} from "@/lib/capability-bundles";
@@ -20,6 +21,7 @@ export function ProductView({locale,slug}:{locale:Locale;slug:string}){
   </>;
   if(slug==="international-brand")return <>{jsonLd}<BrandStrategyView locale={locale} product={product}/></>;
   if(slug==="morocco-life")return <>{jsonLd}<MoroccoLifeView locale={locale} product={product}/></>;
+  if(slug==="real-estate")return <>{jsonLd}<RealEstateView locale={locale}/></>;
   const bundle=locale==="en"?capabilityBundleFor(slug):undefined;
   const pages=locale==="en"?problemPagesFor(slug):[];
   return <>{jsonLd}<SiteHeader locale={locale}/><main className="shell detail" dir={direction}><a className="back-link" href={pathFor(locale,"/#systems")}><ArrowIcon direction="left"/> {m.allSystems}</a><div className="detail-intro"><div><p className="overline">{product.number} / {product.domain}</p><h1>{product.title}<span className="detail-dot">.</span></h1></div><span className="status">{product.status}</span></div><p className="detail-lead">{product.summary}</p>
