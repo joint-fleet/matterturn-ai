@@ -10,9 +10,10 @@ const maturityOrder: Maturity[] = ["validated", "engineering-validated", "active
 
 /**
  * "MatterTurn total capability landscape." What You Get (capability names)
- * is the primary, first-seen layer for every system; maturity is real but
- * deliberately second-layer — behind a <details> toggle — so this reads as
- * a capability showcase first, not an engineering-status dashboard. Every
+ * is the primary, first-seen layer for every system, split into "available
+ * today" (Case-Backed) and "still in progress" (everything else) so the
+ * page never implies every system is purchasable today. Full maturity
+ * detail is a second layer, behind each system's <details> toggle. Every
  * real capability domain across every system still appears; none is
  * hidden for being early-stage.
  */
@@ -37,44 +38,68 @@ export function CapabilityNetworkView() {
         <div className="detail-intro">
           <div>
             <p className="overline">MatterTurn Capability Network</p>
-            <h1>Each MatterTurn system you add unlocks another professional capability domain.</h1>
+            <h1>Each MatterTurn system expands the professional capability connected to your real business problem.</h1>
           </div>
         </div>
         <p className="detail-lead">
-          Buying more MatterTurn systems is not buying more software next to the same software — it&rsquo;s expanding the range of
-          professional capability available to the same real business problem. What you get, per system, comes first below.
-          Maturity — how far each capability actually is — is real information too, just one layer down, behind each system&rsquo;s
-          detail toggle.
+          Not every capability below is available today — most systems have a mix of what&rsquo;s already case-backed and what&rsquo;s
+          still in engineering, research, or planned. Each system below is split exactly that way: <strong>available today</strong>
+          first, then everything still in progress. Maturity detail for each is one layer down, behind each system&rsquo;s detail
+          toggle.
         </p>
 
-        {capabilityBundles.map((b) => (
-          <section className="problem-section capability-network-system" key={b.slug}>
-            <span className="small-label">
-              <Link href={`/systems/${b.slug}`}>{titleFor(b.slug)}</Link>
-            </span>
-            <div className="capability-chips">
-              {b.capabilities.map((c) => (
-                <span className="capability-chip" key={c.name}>
-                  {c.name}
-                </span>
-              ))}
-            </div>
-            <p className="capability-bundle-line">{b.oneLiner}</p>
-            <details className="capability-detail-toggle">
-              <summary>Maturity detail, capability by capability</summary>
-              <div className="case-library-grid">
-                {b.capabilities.map((c) => (
-                  <div className="case-library-card" key={c.name}>
-                    <h3>{c.name}</h3>
-                    <span className={`maturity-badge maturity-${c.maturity}`}>{maturityLabel[c.maturity]}</span>
-                    <p>{c.note}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="case-note capability-bundle-evidence">{b.evidenceNote}</p>
-            </details>
-          </section>
-        ))}
+        {capabilityBundles.map((b) => {
+          const today = b.capabilities.filter((c) => c.maturity === "validated");
+          const inProgress = b.capabilities.filter((c) => c.maturity !== "validated");
+          return (
+            <section className="problem-section capability-network-system" key={b.slug}>
+              <span className="small-label">
+                <Link href={`/systems/${b.slug}`}>{titleFor(b.slug)}</Link>
+              </span>
+              <p className="capability-bundle-line">{b.oneLiner}</p>
+
+              <p className="small-label capability-group-label">Available today</p>
+              {today.length ? (
+                <div className="capability-chips">
+                  {today.map((c) => (
+                    <span className="capability-chip" key={c.name}>
+                      {c.name}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <p className="case-note">No capability here has cleared to case-backed yet — everything is still in progress, below.</p>
+              )}
+
+              <p className="small-label capability-group-label">Still in progress — Engineering, Research &amp; Planned</p>
+              {inProgress.length ? (
+                <div className="capability-chips capability-chips-muted">
+                  {inProgress.map((c) => (
+                    <span className="capability-chip capability-chip-muted" key={c.name}>
+                      {c.name}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <p className="case-note">Every capability below has already cleared to case-backed.</p>
+              )}
+
+              <details className="capability-detail-toggle">
+                <summary>Maturity detail, capability by capability</summary>
+                <div className="case-library-grid">
+                  {b.capabilities.map((c) => (
+                    <div className="case-library-card" key={c.name}>
+                      <h3>{c.name}</h3>
+                      <span className={`maturity-badge maturity-${c.maturity}`}>{maturityLabel[c.maturity]}</span>
+                      <p>{c.note}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="case-note capability-bundle-evidence">{b.evidenceNote}</p>
+              </details>
+            </section>
+          );
+        })}
 
         <section className="problem-section">
           <span className="small-label">How to read the maturity labels</span>
@@ -114,8 +139,9 @@ export function CapabilityNetworkView() {
             <span className="small-label">Working across systems</span>
             <p>
               {totalCapabilities} capability domains exist across {capabilityBundles.length} systems today, at every stage from
-              Research to Case-Backed. Multiple systems can connect around the same real business problem — not as a discount
-              bundle, but as a wider set of professional capability available to the same decision.
+              Planned to Case-Backed — not all of them available yet. As more of each system&rsquo;s capabilities clear to Case-Backed,
+              connecting multiple systems around the same real business problem becomes a wider set of professional capability,
+              not a discount bundle of software.
             </p>
           </div>
           <Link className="button-dark" href="/workspace">

@@ -70,3 +70,6 @@
 .capability-detail-toggle[open] summary{color:var(--ink)}
 .capability-detail-toggle .case-library-grid{margin-top:16px}
 .capability-detail-toggle .case-library-card .maturity-badge{margin:8px 0 10px}
+.capability-group-label{margin-top:18px}
+.capability-chips-muted{opacity:.72}
+.capability-chip-muted{border-style:dashed;color:var(--muted);font-weight:500}

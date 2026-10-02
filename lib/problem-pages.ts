@@ -208,7 +208,7 @@ export const problemPages: ProblemPage[] = [
         systemTitle: "Sales Opportunity",
         problemHref: "/systems/sales-opportunity/opportunity-research",
         reason:
-          "An investment-committee synthesis for an operating asset often depends on one specific counterparty's commercial viability — an anchor tenant, an operating partner, a franchisee. Sales Opportunity's qualification discipline (evidence of need, budget, authority) can independently test that counterparty's own business case rather than taking its stated commitment at face value inside the real estate synthesis.",
+          "When an investment thesis depends on filling a space — finding a tenant, an operating partner, or a B2B buyer for the asset — that's a separate research question from the real estate synthesis itself. Sales Opportunity can research which candidate organizations actually show evidence of relevant need, budget, and decision authority, rather than the real estate synthesis assuming a counterparty exists because the thesis needs one to.",
       },
     ],
   },
@@ -234,7 +234,7 @@ export const problemPages: ProblemPage[] = [
         systemTitle: "Real Estate",
         problemHref: "/systems/real-estate/investment-review",
         reason:
-          "The same discipline this page demonstrates for a security — don't let one event's real scope get overstated into a change nothing in it actually supports — applies directly when a macro or credit event (a rate move, a sector shock) is being used to argue a real estate investment thesis should change. Real Estate's investment-review synthesis uses the identical selective-reassessment logic rather than a separate, inconsistent one.",
+          "The same discipline this page demonstrates for a security — don't let one event's real scope get overstated into a change nothing in it actually supports — applies directly when a macro or credit event (a rate move, a sector shock) is being used to argue a real estate investment thesis should change. Real Estate's investment-review synthesis applies the same selective-reassessment principle, built and tested separately for its own domain, not a shared implementation between the two systems.",
       },
     ],
   },
