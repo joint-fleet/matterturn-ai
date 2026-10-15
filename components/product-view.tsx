@@ -6,7 +6,6 @@ import {Walkthrough} from "./walkthrough";
 import {type Locale,messages,pathFor,rtl} from "@/lib/i18n";
 import {translatedProduct} from "@/lib/product-i18n";
 import {BrandStrategyView} from "./brand-strategy-view";
-import {MoroccoLifeView} from "./morocco-life-view";
 import {RealEstateView} from "./real-estate-view";
 import {navigation} from "@/lib/navigation";
 import {systemJsonLd, breadcrumbJsonLd, JsonLdScript} from "@/lib/structured-data";
@@ -20,7 +19,6 @@ export function ProductView({locale,slug}:{locale:Locale;slug:string}){
     <JsonLdScript data={breadcrumbJsonLd(locale,[{name:navigation[locale].home,path:"/"},{name:navigation[locale].systems,path:"/systems"},{name:product.title,path:`/systems/${slug}`}])}/>
   </>;
   if(slug==="international-brand")return <>{jsonLd}<BrandStrategyView locale={locale} product={product}/></>;
-  if(slug==="morocco-life")return <>{jsonLd}<MoroccoLifeView locale={locale} product={product}/></>;
   if(slug==="real-estate"&&["en","zh-CN","zh-TW"].includes(locale))return <>{jsonLd}<RealEstateView locale={locale}/></>;
   const bundle=locale==="en"?capabilityBundleFor(slug):undefined;
   const pages=locale==="en"?problemPagesFor(slug):[];
