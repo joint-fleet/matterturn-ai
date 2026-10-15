@@ -185,22 +185,6 @@ export const capabilityBundles: CapabilityBundle[] = [
     evidenceNote: "Based on the system's own currently open Draft PRs (not on its minimal main branch): 80+ passing unit tests, multiple real research runs against real public companies, and one real engineering defect (a research-result misclassification) found and fixed on the record. The repository's own status label is PHASE 0 / RESEARCH / PRE-IMPLEMENTATION; no production behavior, outreach, or CRM write exists.",
   },
   {
-    slug: "morocco-life",
-    intro:
-      "This system's most tested work today is two specific engineering capabilities — official-source legal/regulatory research and spatial identity-boundary matching — not yet a finished everyday-life assistant.",
-    problems: [
-      "Check an official legal or regulatory question (e.g., a residency or benefits procedure) against primary government sources, with conflicts and version gaps preserved rather than guessed past",
-      "Determine whether two location records likely refer to the same real place, or only look alike — without ever auto-merging on proximity alone",
-    ],
-    capabilities: [
-      {name: "Legal & regulatory research", note: "tested against real official Moroccan government sources, including currentness and version conflicts between legal texts", maturity: "active-engineering"},
-      {name: "Spatial / identity-boundary evidence matching", note: "an entity-resolution engine tested against real public mapping-service queries, explicitly refusing to treat coordinate proximity as identity", maturity: "active-engineering"},
-      {name: "Everyday-service procedure guidance", note: "housing, banking, transport, and civil-document guidance across many procedure types is referenced in the project's own planning record; not yet built and tested to the same bar as the two capabilities above", maturity: "research"},
-    ],
-    oneLiner: "Two real, tested engineering capabilities today; broader everyday-life guidance is still research-stage.",
-    evidenceNote: "Based on the system's own currently open Draft PR (not yet merged): 300+ passing tests across legal-research and geo-identity capabilities, including real one-off live queries against official sources and a public mapping service. The repo's own label is Phase 0 / experimental / not a product.",
-  },
-  {
     slug: "cross-border",
     intro:
       "This system has a complete, tested synthetic engineering validation of its core judgment mechanics — evidence intake, gap detection, selective reassessment, and replay — but no real-world case run yet.",
