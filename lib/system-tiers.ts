@@ -5,7 +5,7 @@ export type Tier = "advanced" | "active" | "research";
 
 const tierBySlug: Record<string,Tier> = {
   "real-estate":"advanced",
-  "international-brand":"active","banking-frontline":"active","travel":"active","cross-border":"active","morocco-life":"active","financial-markets":"active","sales-opportunity":"active",
+  "international-brand":"active","banking-frontline":"active","travel":"active","cross-border":"active","thai-herbal-regulatory":"active","financial-markets":"active","sales-opportunity":"active",
   "medical-business":"research"
 };
 
