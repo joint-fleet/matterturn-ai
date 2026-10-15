@@ -287,22 +287,6 @@ export const problemPages: ProblemPage[] = [
     cases: [],
   },
   {
-    systemSlug: "morocco-life",
-    problemSlug: "official-source-verification",
-    maturity: "active-engineering",
-    title: "Check an Official Legal, Regulatory, or Location Question Against Primary Sources",
-    summary:
-      "MatterTurn's active engineering work checks a specific legal/regulatory question against real official government sources, and separately tests whether two location records likely refer to the same real place — refusing to merge or conclude past what the evidence supports.",
-    who: "Teams evaluating whether a research engine can be trusted to use primary official sources honestly, including surfacing version conflicts and refusing identity claims it can't support.",
-    inputs: ["A specific legal, regulatory, or benefits-procedure question", "Primary official government source documents", "For location questions: two or more candidate location records"],
-    analyzes: ["What a primary official source actually currently says, including version and currentness conflicts between related legal texts", "Whether two location records' proximity, naming, and identifiers actually establish they're the same place"],
-    receives: ["A sourced answer bound to what the primary document supports, with unresolved conflicts stated rather than guessed past", "For location matching: an explicit match-confidence state, never an automatic merge on proximity alone"],
-    relatedCapabilities: ["Legal & regulatory research", "Spatial / identity-boundary evidence matching"],
-    limits:
-      "ACTIVE ENGINEERING, NOT A FINISHED ASSISTANT. This runs in the system's own open, unmerged Draft work; the repository's own label is Phase 0 / experimental / not a product. Broader everyday-life guidance (housing, transport, civil documents) is still research-stage, not built and tested to this bar yet.",
-    cases: [],
-  },
-  {
     systemSlug: "cross-border",
     problemSlug: "judgment-mechanics-validation",
     maturity: "engineering-validated",
