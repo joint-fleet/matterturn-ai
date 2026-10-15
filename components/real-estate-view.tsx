@@ -21,9 +21,9 @@ const copy:Record<Locale,Copy>={
   en:{
     status:"Advanced engineering / controlled validation",
     eyebrow:"Real estate investment & asset judgment system",
-    lead:"From valuation, rent, debt and refinancing to development, market, legal, operations and investment-committee synthesis — one system for consequential real-estate decisions.",
+    lead:"Three customer products for development and investment analysis, property document investigation, and asset change monitoring, powered by REJS professional subsystems. Current workflows remain under engineering and case validation.",
     useTitle:"What can you bring to this system?",useIntro:"Start with the real decision, not with an AI feature list.",
-    capabilityTitle:"One system. Ten professional capabilities.",capabilityIntro:"Capabilities are exposed separately so maturity can be judged honestly, but they work together inside one case.",
+    capabilityTitle:"Professional foundation and three customer products.",capabilityIntro:"REJS professional subsystems support different tasks. Customer products A, B and C select the relevant capabilities; system-level end-to-end delivery is still under validation.",
     modelTitle:"What the system can calculate",modelIntro:"Customer-facing calculations already exist behind the judgment layer. The system does not expose internal model IDs or implementation details.",
     refuseTitle:"When the system refuses to calculate",refuseIntro:"Responsibility also means refusing a number when the evidence cannot support it.",
     evidenceTitle:"Evidence from real cases",evidenceIntro:"The case library is an accountability record, not a trophy cabinet. Correct calls, blocked judgments and preserved failures all remain visible.",
@@ -54,9 +54,9 @@ const copy:Record<Locale,Copy>={
   },
   "zh-CN":{
     status:"深度工程 / 受控验证",eyebrow:"房地产投资与资产判断系统",
-    lead:"从资产估值、租金、债务与再融资，到开发可行性、市场、法律、运营和投资委员会级综合判断——用一套系统处理高价值房地产决策。",
+    lead:"面向客户的三套产品：A 开发与投资测算、B 房地产资料调查、C 资产动态监控。底层按需调用 REJS 专业子系统，真实案例的自主分析和交付闭环仍在验证。",
     useTitle:"你可以把什么问题交给这个系统？",useIntro:"从真实决策问题开始，而不是从 AI 功能列表开始。",
-    capabilityTitle:"一个系统，十项专业能力。",capabilityIntro:"能力会分别展示成熟度，但在真实案例中由同一判断链协同工作。",
+    capabilityTitle:"专业底座与三套客户产品。",capabilityIntro:"REJS 专业子系统是底层能力。A、B、C 三套客户产品按任务调用；完整自主交付链路仍在验证。",
     modelTitle:"系统实际能做哪些测算",modelIntro:"这些是判断层背后已经存在的客户可理解计算能力；内部模型 ID、registry 和实现细节不会公开。",
     refuseTitle:"系统什么时候会拒绝计算",refuseIntro:"负责任不只是给答案，也包括在证据不足时拒绝制造一个看似精确的数字。",
     evidenceTitle:"真实案例证据",evidenceIntro:"案例库不是战绩墙，而是责任记录：正确判断、阻断结论和失败过程都保留。",
@@ -87,9 +87,9 @@ const copy:Record<Locale,Copy>={
   },
   "zh-TW":{
     status:"深度工程 / 受控驗證",eyebrow:"房地產投資與資產判斷系統",
-    lead:"從資產估值、租金、債務與再融資，到開發可行性、市場、法律、營運與投資委員會級綜合判斷——用一套系統處理高價值房地產決策。",
+    lead:"面向客戶的三套產品：A 開發與投資測算、B 房地產資料調查、C 資產動態監控。底層調用 REJS 專業子系統，完整交付流程仍在驗證。",
     useTitle:"你可以把甚麼問題交給這個系統？",useIntro:"從真實決策問題開始，而不是從 AI 功能清單開始。",
-    capabilityTitle:"一個系統，十項專業能力。",capabilityIntro:"能力分別標示成熟度，但在真實案例中由同一判斷鏈協同工作。",
+    capabilityTitle:"專業底座與三套客戶產品。",capabilityIntro:"REJS 專業子系統提供底層能力，A、B、C 三套客戶產品按任務組合調用；完整自主交付仍待驗證。",
     modelTitle:"系統實際能做哪些測算",modelIntro:"這些是判斷層背後已存在的客戶可理解計算能力；內部模型 ID、registry 與實作細節不公開。",
     refuseTitle:"系統甚麼時候會拒絕計算",refuseIntro:"負責任不只是給答案，也包括在證據不足時拒絕製造看似精確的數字。",
     evidenceTitle:"真實案例證據",evidenceIntro:"案例庫不是戰績牆，而是責任記錄：正確判斷、阻斷結論與失敗過程都保留。",
@@ -132,6 +132,20 @@ export function RealEstateView({locale}:{locale:Locale}){
     <div className="detail-intro"><div><p className="overline">{c.eyebrow}</p><h1>{product.title}<span className="detail-dot">.</span></h1></div><span className="status">{c.status}</span></div>
     <p className="detail-lead">{c.lead}</p>
 
+
+    <section className="problem-section"><span className="small-label">{locale==="zh-CN"?"三套面向客户的产品":locale==="zh-TW"?"三套面向客戶的產品":"Three customer-facing products"}</span><div className="case-library-grid">{(locale==="zh-CN"?[
+      ["A · 开发与投资测算","项目开发可行性、现金流、融资及投资方案比较；数据不足时显示假设与未解决项。"],
+      ["B · 房地产资料调查","收集和梳理物业、权利、规划及财务资料，保留原始文件来源和证据缺口；专业分析仍在接入验证。"],
+      ["C · 资产动态监控","关注资产相关权利、审批、市场及运营信息的变化，识别需要重新调查或重新判断的事项。"]
+    ]:locale==="zh-TW"?[
+      ["A · 開發與投資測算","開發可行性、現金流、融資及投資方案比較；呈現假設與資料缺口。"],
+      ["B · 房地產資料調查","整理物業、權利、規劃與財務資料，保留來源與證據缺口；專業分析仍在驗證。"],
+      ["C · 資產動態監控","跟蹤權利、審批、市場與營運變化，指出需要重新核實或評估的事項。"]
+    ]:[
+      ["A · Development & investment analysis","Compare feasibility, cash flow, financing and investment options while exposing missing inputs."],
+      ["B · Property document investigation","Organize property, title, planning and financial evidence; professional analysis integration remains under validation."],
+      ["C · Asset change monitoring","Track relevant changes in permissions, title, market and operations and identify questions to reopen."]
+    ]).map(([title,description])=><div className="case-library-card" key={title}><h3>{title}</h3><p>{description}</p></div>)}</div><p className="case-note">{locale==="zh-CN"?"研发状态：三套产品不是三套已验收上线的自动化服务。REJS 的20项专业子系统是研发组织范围，不能据此推断20项均已通过真实客户验收。":locale==="zh-TW"?"研發狀態：三套產品尚非已通過客戶驗收的自動化服務；20項專業子系統不能等同20項已完成驗證。":"Engineering status: these are product tracks, not three independently accepted production services. The 20-subsystem REJS development scope does not imply 20 customer-validated capabilities."}</p></section>
     <section className="problem-section"><span className="small-label">{c.useTitle}</span><p>{c.useIntro}</p>
       <div className="case-library-grid">{c.problems.map((p,i)=>englishLinks?<a className="case-library-card" href={`/systems/real-estate/${["asset-valuation","rent-analysis","debt-analysis","refinance-analysis","development-feasibility","market-analysis","underwriting","operations-review","investment-review"][i]}`} key={p}><h3>{p}</h3><span className="case-library-arrow"><ArrowIcon/></span></a>:<div className="case-library-card" key={p}><h3>{p}</h3></div>)}</div>
     </section>
